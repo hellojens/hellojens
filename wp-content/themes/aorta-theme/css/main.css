@@ -13,23 +13,41 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
-  margin: 20px;
   color: #2A2A2A;
-  background-color: #ffffff; 
-}
-
-p {
-  font-family: "Droid Serif", sans-serif;
-  font-weight: normal; 
-}
-
-a {
-  color: #78A1BB;
-  text-decoration: none; 
+  background-color: #f2f2f2; 
 }
 
 img {
   max-width: 100%; 
+}
+
+
+/* -------------------------------- 
+  Colors, Links & Fonts
+
+  GreenHex: #143C37;
+-------------------------------- */
+
+h1, h2, h3, h4, h5 {
+  font-family: "Droid Serif", sans-serif;
+}
+
+
+p {
+  font-family: "muli", sans-serif;
+  font-weight: normal; 
+}
+
+
+a {
+  color: #143C37;
+  text-decoration: none; 
+  -webkit-transition: all 0.1s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.1s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+
+a:hover {
+  opacity: 0.7;
 }
 
 ::selection {
@@ -44,114 +62,165 @@ img {
 
 
 
+
 /* -------------------------------- 
-Header styles
+  Header styles
 -------------------------------- */
-canvas {
-    display: block;
-    vertical-align: bottom; 
-}
-
-#particles-js {
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: 660px;
-    overflow: hidden;
-    background-color: #E6E6E6; 
-}
-
-#particles-js .background-count {
-    position: absolute;
-    font-size: 100px;
-    color: #E0E0E0;
-    z-index: -1;
-    right: 20px;
-    top: 15px;
-    height: 100%;
-    overflow: hidden;
-    line-height: 0.8; 
-}
 
 header {
-    height: 170px;
-    padding: 120px 0px 410px 0px;
-    text-align: center;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    z-index: 3;
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 25px;
-    cursor: pointer; 
+  background-color: white;
+  border-top: 10px solid #143C37;
+  height: 190px;
+  text-align: center;
+  width: 100%;
 }
 
-header:before {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100%;
-    content: '';
-    z-index: -1;
-    opacity: 0.2; 
+.main-navigation a {
+  font-family: "Droid Serif", sans-serif;
+  font-size: 22px;
+
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 60px;
+}
+.main-navigation a {
+  border-bottom: 1px solid #eee;
 }
 
-header h1 {
-    font-size: 2rem;
-    color: #ffffff;
-    line-height: 1.8;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 1px #ddd;
-    cursor: default; 
-    position: relative;
+.main-navigation .logo {
+  display: inline-block;
+  background-image: url('../img/logo.svg');
+  background-position: center;
 
 }
 
-header h2 {
-    font-family: "Droid Serif", sans-serif;
-    font-style: italic;
-    color: #D84B4B;
-    font-weight: normal;
-    font-size: 1rem;
-    position: relative;
-    top: -22px;
-    left: -50px; 
-    display: inline-block;
-}
-.textjam-words-wrapper {
-  width: 120px !important;
+
+/* -------------------------------- 
+  Sections 
+-------------------------------- */
+.all {
+
 }
 
-@media only screen and (min-width: 768px) {
-
-    header {
-        line-height: 1.2; 
-    }
-
-    header h1 {
-        font-size: 4rem; 
-    } 
+.top-section {
+  background-color: #143C37;
+  color: white;
 }
 
-.splash-background {
-  position: absolute;
-  top: 0px;
-  z-index: 0;
-  width: 99%;
+.top-section h1, .top-section h2, .top-section p, .top-section a {
+  color: white;
 }
 
-.login-box-wrapper {
-  margin-top: 220px;
+.top-section a:hover {
+  color: white;
+}
+
+.content-section {
+  background: white;
+  padding-top: 35px;
+}
+
+.related-section {
+  background: #E5EAEA;
+  padding-top: 35px;
+}
+
+.related-section h3 {
+  font-size: 6rem;
+  color: #143C37;
+  padding-bottom: 35px;
+}
+
+/* -------------------------------- 
+  HOME 
+-------------------------------- */
+
+
+.top-section.home-hero {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.home-hero .hero-content {
+  padding: 25px;
+}
+
+.home-hero h1 a {
+  font-size: 5rem;
+  line-height: 1.2;
+  padding-bottom: 10px;
+}
+
+.home-hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 100;
+}
+
+.home-hero a.readmore {
+  font-size: 22px;
+  font-family: "Droid Serif", sans-serif;
+}
+.home-hero a.readmore:hover {
+  border-bottom: 1px solid #fff;
+}
+
+/* -------------------------------- 
+  People  
+-------------------------------- */
+
+.top-section.people {
+   
+}
+
+.top-section.people h1 {
+   font-size: 3rem;
+   padding: 35px 0px;
 }
 
 
+/* -------------------------------- 
+  Posts 
+-------------------------------- */
+
+.home-post {
+  padding-bottom: 35px;
+}
+
+.home-post h2 {
+  font-family: "muli", helvetica;
+  font-size: 26px;
+  line-height: 1.2;
+  padding: 15px 0px 5px 0px;
+}
+
+.home-post p {
+  font-size: 13px;
+}
+
+
+
+
+
+
+/* -------------------------------- 
+  Footer 
+-------------------------------- */
+
+.footer-wrapper {
+  background: #143C37;
+  color: white;
+}
+
+.footer p {
+  padding: 35px 0px;
+  font-size: 12px;
+}
+
+.footer a {
+  color: white;
+}
 
 
 

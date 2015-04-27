@@ -27,7 +27,8 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 700, '', true); // Large Thumbnail
+    add_image_size('large', 750, 650, true); // Large Thumbnail
+    add_image_size('post', 300, 300, true); // Post Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
@@ -245,7 +246,7 @@ function html5wp_pagination()
 // Custom Excerpts
 function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
 {
-    return 20;
+    return 28;
 }
 
 // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
@@ -275,7 +276,7 @@ function html5wp_excerpt($length_callback = '', $more_callback = '')
 function html5_blank_view_article($more)
 {
     global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'html5blank') . '</a>';
+    // return '. <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('Read more.', 'html5blank') . '</a>';
 }
 
 // Remove Admin bar
@@ -469,24 +470,26 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
 function create_post_type_html5()
 {
-    register_taxonomy_for_object_type('category', 'html5-blank'); // Register Taxonomies for Category
-    register_taxonomy_for_object_type('post_tag', 'html5-blank');
-    register_post_type('html5-blank', // Register Custom Post Type
+    // register_taxonomy_for_object_type('category', 'people'); // Register Taxonomies for Category
+    // register_taxonomy_for_object_type('post_tag', 'people');
+
+    register_post_type('people', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('HTML5 Blank Custom Post', 'html5blank'), // Rename these to suit
-            'singular_name' => __('HTML5 Blank Custom Post', 'html5blank'),
-            'add_new' => __('Add New', 'html5blank'),
-            'add_new_item' => __('Add New HTML5 Blank Custom Post', 'html5blank'),
-            'edit' => __('Edit', 'html5blank'),
-            'edit_item' => __('Edit HTML5 Blank Custom Post', 'html5blank'),
-            'new_item' => __('New HTML5 Blank Custom Post', 'html5blank'),
-            'view' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'view_item' => __('View HTML5 Blank Custom Post', 'html5blank'),
-            'search_items' => __('Search HTML5 Blank Custom Post', 'html5blank'),
-            'not_found' => __('No HTML5 Blank Custom Posts found', 'html5blank'),
-            'not_found_in_trash' => __('No HTML5 Blank Custom Posts found in Trash', 'html5blank')
+            'name' => __('People', 'people'), // Rename these to suit
+            'singular_name' => __('People', 'people'),
+            'add_new' => __('Add New', 'Editor'),
+            'add_new_item' => __('Add New Editor', 'editor'),
+            'edit' => __('Edit', 'edit'),
+            'edit_item' => __('Edit', 'edit'),
+            'new_item' => __('New Editor', 'editor'),
+            'view' => __('View People', 'viewpeople'),
+            'view_item' => __('View People', 'viewpeople'),
+            'search_items' => __('Search people', 'searchpeople'),
+            'not_found' => __('No editors found', 'notfound'),
+            'not_found_in_trash' => __('No editors found in Trash', 'notfound')
         ),
+        'supports' => array('thumbnail'),
         'public' => true,
         'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
         'has_archive' => true,
@@ -497,12 +500,24 @@ function create_post_type_html5()
             'thumbnail'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-            'post_tag',
-            'category'
-        ) // Add Category and Post Tags support
+        // 'taxonomies' => array(
+        //     'post_tag',
+        //     'category'
+        // ) // Add Category and Post Tags support
     ));
 }
+
+
+function my_connection_types() {
+    p2p_register_connection_type( array(
+        'name' => 'multiple_authors',
+        'from' => 'people',
+        'to' => 'user',
+    ) );
+}
+add_action( 'p2p_init', 'my_connection_types' );
+
+
 
 /*------------------------------------*\
 	ShortCode Functions

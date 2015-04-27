@@ -524,7 +524,7 @@ class Theme_My_Login_Template extends Theme_My_Login_Abstract {
 	 *
 	 * @param string $action The action
 	 */
-	public function the_redirect_url( $action = '' ) {
+	public function the_redirect_url( $action = '///' ) {
 		echo esc_attr( $this->get_redirect_url( $action ) );
 	}
 

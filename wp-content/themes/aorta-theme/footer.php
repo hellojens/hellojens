@@ -1,16 +1,25 @@
-			<!-- footer -->
-			<footer class="footer small-6 text-center small-centered columns" role="contentinfo">
 
-				<!-- copyright -->
-<!-- 				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p> -->
-				<!-- /copyright -->
 
-			</footer>
-			<!-- /footer -->
+						<!-- end small-12 col -->
+					<div class="footer-wrapper">
+						<!-- footer -->
+						<footer class="footer small-11 small-centered columns" role="contentinfo">
 
+							<!-- copyright -->
+							<p class="copyright">
+								&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Developed by ', 'hellojens.com'); ?>
+								<a href="//hellojens.com" title="hellojens.com">hellojens</a>.
+							</p>
+							<!-- /copyright -->
+
+						</footer>
+						<!-- /footer -->
+					</div>
+
+				</div>
+				<!-- end of row -->
+			</div>
+			<!-- end of row -->
 		</div>
 		<!-- /wrapper -->
 

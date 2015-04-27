@@ -28,50 +28,37 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-    <div class="splash-background">
-
-      <div id="particles-js">
-        <div class="background-count">
-          <span></span>
-        </div>
-      </div>
-
-    	<header class="header clear" role="banner">
-
-          <h1>HelloJens</h1>
-          <h2 class="textjam-headline slide">
-            <span></span> 
-            <span class="textjam-words-wrapper waiting">
-              <b class="is-visible">The Madeby Network </b>
-
-                <?php // list all multi sites
-                $blogs = get_blog_list( 0, 'all' );
-                if ( 0 < count( $blogs ) ) :
-                  foreach( $blogs as $blog ) : 
-                    switch_to_blog( $blog[ 'blog_id' ] );
-
-                    if ( get_theme_mod( 'show_in_home', 'on' ) !== 'on' ) {
-                        continue;
-                    }
-                    $blog_details = get_blog_details( $blog[ 'blog_id' ] );
-                    ?>
-                      <b><?php echo  $blog_details->blogname; ?></b>
-                <?php endforeach; 
-                endif; 
-                ?>
-
-            </span>
-          </h2>
-
-          			<!-- nav 
-              	<nav class="nav" role="navigation">
-          				<?php// html5blank_nav(); ?>
-          			</nav> -->
-          			<!-- /nav -->
-    	</header>
-    </div>
-
     <!-- wrapper -->
-    <div class="row splash-template">
+    <div class="all">
 
-      <div class="small-12 small-centered columns">
+      <div class="row">
+        <div class="small-12 small-centered columns">
+
+          <div class="row">
+            <div class="small-12 small-centered columns">
+
+            	<header class="header clear" role="banner">
+
+                <nav class="nav" role="navigation">
+                  <?php // html5blank_nav(); ?><br><br>
+                </nav>
+
+                <div class="row main-navigation">
+                  <div class="small-2 large-4 text-center columns">
+                    <a href="/">Reading</a>
+                  </div>
+                  <div class="small-8 large-4 logo text-center columns">
+                    <a  href="/">
+                      <span style="visibility: hidden;">home</span>
+                      <!-- <img  src="<?php echo get_template_directory_uri(); ?>"> -->
+                    </a>
+                  </div>
+                  <div class="small-2 large-4 text-center columns">
+                    <a href="/people">People</a>
+                  </div>
+                </div>
+            	</header>
+            </div>
+
+          </div>
+
