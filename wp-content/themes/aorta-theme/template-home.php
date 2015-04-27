@@ -1,6 +1,5 @@
 <?php /* Template Name: Home */ get_header(); ?>
 
-
 	<div class="top-section home-hero">
 		<div class="row"> 
 	 			<section class="small-11 small-centered columns">
@@ -8,13 +7,13 @@
 		    	<?php $the_query = new WP_Query( array("posts_per_page" => "1") ); ?>
 		     		<?php while($the_query->have_posts()): $the_query->the_post(); ?>
 							<article class="row">
-								<div class="small-12 medium-6 large-6 columns">
+								<div class="small-12 medium-11 text-center medium-centered large-uncentered large-6 columns">
 									<?php the_post_thumbnail(large, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 								</div>
-								<div class="hero-content medium-6 small-12  large-6 columns">
+								<div class="hero-content small-12 medium-10 medium-only-text-center medium-centered large-uncentered large-5 columns">
 									<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-									<p class="show-for-medium-up"><?php the_content(); ?></p>
-									<a class="readmore show-for-medium-up" href="<?php the_permalink(); ?>"> Read More > </a>
+									<p class="show-for-medium-up"><?php html5wp_excerpt('html5wp_index'); ?></p>
+									<a class="readmore" href="<?php the_permalink(); ?>"> Read More > </a>
 								</div>
 							</article>
 

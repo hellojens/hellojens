@@ -17,7 +17,7 @@
 
 	<div class="content-section">
 		<div class="row"> 
-			<section class="small-11 small-centered columns main-grid">
+			<section class="small-10 medium-11 small-centered columns main-grid">
 				<div class="row">
 
 	    	<?php $the_query = new WP_Query( array("post_type" => "people" ) ); ?>

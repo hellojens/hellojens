@@ -1,62 +1,64 @@
 <?php get_header(); ?>
 
-	<main role="main">
-	<!-- section -->
-	<section>
+	<div class="top-section single-post">
+		<div class="row"> 
+ 			<section class="small-6 text-center small-centered columns">
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php //the_post_thumbnail(full, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
-			<?php endif; ?>
-			<!-- /post thumbnail -->
+      	<?php endwhile; endif;?>    
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+			</section>
+		</div>			
+	</div>
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
+	<div class="content-section">
+		<div class="row"> 
+			<div class="small-11 small-centered columns">
+				<div class="row">
+					<section class="large-9 right post-content columns">
+						<div class="row">
+							<div class="large-9 columns">
+								<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+										<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "single-post-content")); ?>>
+											<div class="small-7 columns signatur"> 
+												<?php echo get_avatar( get_the_author_meta( 'ID' ), 512 ); ?>
+											</div>
+											<div class="small-12 columns"> 
+												<h1><?php the_title(); ?></h1>
+												<p><?php the_content(); ?></p>
+											</div>
+										</article>
+								<?php endwhile; endif; ?>
+					      <?php wp_reset_query(); ?>
+				      </div>
+			      </div>
+					</section>
+					<section class="large-2 left author-content columns">
+						<div class="row">
+							<?php $this_author = get_the_author_meta('ID'); ?>						
+					  	<?php $the_query = new WP_Query( array("post_type" => "people", "author"=> $this_author ) ); ?>
+							<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
-			<?php the_content(); // Dynamic Content ?>
+								<a href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
+								</a>
+								<b><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></b>
+								<?php if (function_exists('the_subheading')) { the_subheading('<p>', '</p>'); } ?>
+								<p><?php html5wp_excerpt('html5wp_index'); ?></p>
+							<?php endwhile; endif; ?>
+					    <?php wp_reset_query(); ?>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
 
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
-
-
-		</article>
-		<!-- /article -->
-
-	<?php endwhile; ?>
-
-	<?php else: ?>
-
-		<!-- article -->
-		<article>
-
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
-
-		</article>
-		<!-- /article -->
-
-	<?php endif; ?>
-
-	</section>
-	<!-- /section -->
-	</main>
+	<!-- Related Stories  -->
+	<?php get_template_part("loop","related-random"); ?>
+	<!-- /Related Stories  -->
 
 <?php get_footer(); ?>

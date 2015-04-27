@@ -21,7 +21,6 @@
 
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-
 						<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "people-post")); ?>>
 
 							<h1><?php the_title(); ?></h1>
@@ -29,7 +28,6 @@
 
 							<p><?php the_content(); ?></p>
 						</article>
-
 
 				<?php endwhile; endif; ?>
 	      <?php wp_reset_query(); ?>

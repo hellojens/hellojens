@@ -44,18 +44,22 @@
                 </nav>
 
                 <div class="row main-navigation">
-                  <div class="small-2 large-4 text-center columns">
-                    <a href="/">Reading</a>
+                  <div class="hide-for-small-only medium-4 text-center columns">
+                    <a class="start" href="/">Reading</a>
                   </div>
-                  <div class="small-8 large-4 logo text-center columns">
+                  <div class="small-12 medium-4 logo text-center columns">
                     <a  href="/">
                       <span style="visibility: hidden;">home</span>
                       <!-- <img  src="<?php echo get_template_directory_uri(); ?>"> -->
                     </a>
                   </div>
-                  <div class="small-2 large-4 text-center columns">
-                    <a href="/the-people">People</a>
+                  <div class="show-for-small-only small-6 medium-4 text-center columns">
+                    <a class="start" href="/">Reading</a>
                   </div>
+                  <div class="small-6 medium-4 text-center columns">
+                    <a class="list-people" href="/the-people">People</a>
+                  </div>
+
                 </div>
             	</header>
             </div>

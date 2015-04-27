@@ -1,6 +1,6 @@
 	<div class="related-section">
 		<div class="row"> 
-			<section class="small-11 small-centered text-center columns main-grid">
+			<section class="small-10 medium-11 small-centered text-center columns main-grid">
 				<div class="row">
 
 				<?php $this_author = get_the_author_meta('ID'); ?>

@@ -1,5 +1,30 @@
 
 
+
+
+@font-face {
+  font-family: 'DomaineRegular';
+  src: url('../fonts/DomaineDisp-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/DomaineDisp-Regular.otf')  format('opentype'),
+       url('../fonts/DomaineDisp-Regular.woff') format('woff'), url('../fonts/DomaineDisp-Regular.ttf')  format('truetype'), url('../fonts/DomaineDisp-Regular.svg#DomaineDisp-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'maisonBook';
+    src: url('../fonts/maisonneue-book-webfont.eot');
+    src: url('../fonts/maisonneue-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/maisonneue-book-webfont.woff2') format('woff2'),
+         url('../fonts/maisonneue-book-webfont.woff') format('woff'),
+         url('../fonts/maisonneue-book-webfont.ttf') format('truetype'),
+         url('../fonts/maisonneue-book-webfont.svg#maison_neuebook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -12,8 +37,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Montserrat", sans-serif;
-  color: #2A2A2A;
+  font-family: "maisonBook", sans-serif;
   background-color: #f2f2f2; 
 }
 
@@ -28,14 +52,17 @@ img {
   GreenHex: #143C37;
 -------------------------------- */
 
+
 h1, h2, h3, h4, h5 {
-  font-family: "Droid Serif", sans-serif;
+  font-family: "DomaineRegular", sans-serif;
+  color: #143C37;
 }
 
 
 p {
-  font-family: "muli", sans-serif;
+  font-family: "maisonBook", sans-serif;
   font-weight: normal; 
+  color: #143C37;
 }
 
 
@@ -62,7 +89,6 @@ a:hover {
 
 
 
-
 /* -------------------------------- 
   Header styles
 -------------------------------- */
@@ -70,28 +96,42 @@ a:hover {
 header {
   background-color: white;
   border-top: 10px solid #143C37;
-  height: 190px;
+  /*height: 190px;*/
   text-align: center;
   width: 100%;
 }
 
-.main-navigation a {
-  font-family: "Droid Serif", sans-serif;
-  font-size: 22px;
+.main-navigation {
+    padding: 30px;
+}
 
+.main-navigation a {
+  font-family: "DomaineRegular", sans-serif;
+  font-size: 32px;
   position: relative;
   display: inline-block;
-  width: 100%;
-  padding: 60px;
+  margin: 30px;
+  border: 0px solid black;
 }
+
+.home .main-navigation a.start {
+  border-bottom: 2px solid #143C37;
+}
+
+.the-people .main-navigation a.list-people {
+  border-bottom: 2px solid #143C37;
+}
+
 .main-navigation a {
-  border-bottom: 1px solid #eee;
+  /*border-bottom: 1px solid #eee;*/
 }
 
 .main-navigation .logo {
   display: inline-block;
   background-image: url('../img/logo.svg');
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
 
 }
 
@@ -160,7 +200,7 @@ header {
 
 .home-hero a.readmore {
   font-size: 22px;
-  font-family: "Droid Serif", sans-serif;
+  font-family: "DomaineRegular", sans-serif;
 }
 .home-hero a.readmore:hover {
   border-bottom: 1px solid #fff;
@@ -189,17 +229,56 @@ header {
 }
 
 .home-post h2 {
-  font-family: "muli", helvetica;
+  font-family: "maisonBook", helvetica;
   font-size: 26px;
   line-height: 1.2;
   padding: 15px 0px 5px 0px;
+  max-height: 80px;
+  overflow: hidden;
 }
 
 .home-post p {
   font-size: 13px;
 }
 
+.single-post .post-content {
 
+}
+
+.single-post .post-content img, .single-post .post-content iframe {
+  padding: 24px 0px; 
+}
+
+.single-post .single-post-content .signatur img {
+  padding: 0px 0px 15px 0px;
+  width: 95%;
+}
+
+.single-post .single-post-content h1 {
+  font-size: 62px;
+  line-height: 1.2;
+  margin-bottom: 0px;
+}
+
+.single-post .single-post-content p {
+  font-size: 15px;
+  font-weight: 100;
+  padding-bottom: 12px;
+}
+
+.single-post .author-content img {
+  padding-bottom: 20px;
+}
+
+.single-post .author-content p {
+  font-size: 12px;
+}
+
+.single-post .author-content b {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 500;
+}
 
 
 
@@ -216,6 +295,7 @@ header {
 .footer p {
   padding: 35px 0px;
   font-size: 12px;
+  color: white;
 }
 
 .footer a {
