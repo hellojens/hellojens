@@ -54,7 +54,7 @@
                     </a>
                   </div>
                   <div class="small-2 large-4 text-center columns">
-                    <a href="/people">People</a>
+                    <a href="/the-people">People</a>
                   </div>
                 </div>
             	</header>

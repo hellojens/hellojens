@@ -497,7 +497,8 @@ function create_post_type_html5()
             'title',
             'editor',
             'excerpt',
-            'thumbnail'
+            'thumbnail',
+            'author'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         // 'taxonomies' => array(
@@ -508,14 +509,14 @@ function create_post_type_html5()
 }
 
 
-function my_connection_types() {
-    p2p_register_connection_type( array(
-        'name' => 'multiple_authors',
-        'from' => 'people',
-        'to' => 'user',
-    ) );
-}
-add_action( 'p2p_init', 'my_connection_types' );
+// function my_connection_types() {
+//     p2p_register_connection_type( array(
+//         'name' => 'multiple_authors',
+//         'from' => 'people',
+//         'to' => 'user',
+//     ) );
+// }
+// add_action( 'p2p_init', 'my_connection_types' );
 
 
 

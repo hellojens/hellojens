@@ -3,13 +3,12 @@
 			<section class="small-11 small-centered text-center columns main-grid">
 				<div class="row">
 
-				<h3><?php echo the_author_meta("first_name",$this_user->ID); ?> </h3>
+				<?php $this_author = get_the_author_meta('ID'); ?>
+
+				<h3><?php the_author_meta("first_name"); ?>'s stories</h3>
 
 	    	<?php 
-            $user_query = new WP_Query( array("posts_per_page" => "4", "post_type"=>"post", 'connected_type' => 'multiple_authors', 'connected_items' => $this_user->ID, 'suppress_filters' => false ) );  
-	    	?>
-	    	<?php 
-            $the_query = new WP_Query( array("posts_per_page" => "4", "post_type"=>"post", "author"=>$this_user->ID ) ); 
+          $the_query = new WP_Query( array("posts_per_page" => "4", "post_type"=>"post", "author"=>$this_author ) ); 
 	    	?>
 
 				<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
