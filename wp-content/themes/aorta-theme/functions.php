@@ -105,26 +105,23 @@ function html5blank_header_scripts()
         wp_register_script('foundationjs', get_template_directory_uri() . '/js/foundation.min.js', array(), '1.0.0', true); // Conditionizr
         wp_enqueue_script('foundationjs'); // Enqueue it!
 
-        wp_register_script('text-jam', get_template_directory_uri() . '/js/text-jam.js', array(), '1.0.0', true); // Conditionizr
-        wp_enqueue_script('text-jam'); // Enqueue it!
+        wp_register_script('isotope', get_template_directory_uri() . '/js/isotope.min.js', array('jquery'), '1.0.0' , true); // Custom scripts
+        wp_enqueue_script('isotope'); // Enqueue it!
 
-        wp_register_script('particles-source', 'http://vincentgarreau.com/particles.js/particles.js', array(), '1.0.0', true); // Conditionizr
-        wp_enqueue_script('particles-source'); // Enqueue it!
+        wp_register_script('fluidboxjs', get_template_directory_uri() . '/js/fluidbox.min.js', array('jquery'), '1.0.0' , true); // Custom scripts
+        wp_enqueue_script('fluidboxjs'); // Enqueue it!
 
-    	wp_register_script('particles', get_template_directory_uri() . '/js/particles.js', array(), '1.0.0', true); // Conditionizr
-        wp_enqueue_script('particles'); // Enqueue it!
-
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0' , true); // Custom scripts
-        wp_enqueue_script('html5blankscripts'); // Enqueue it!
+        wp_register_script('main-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0' , true); // Custom scripts
+        wp_enqueue_script('main-script'); // Enqueue it!
     }
+
 }
 
 // Load HTML5 Blank conditional scripts
 function html5blank_conditional_scripts()
 {
-    if (is_page('pagenamehere')) {
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
-        wp_enqueue_script('scriptname'); // Enqueue it!
+    if (is_page('home')) {
+
     }
 }
 
@@ -140,8 +137,8 @@ function html5blank_styles()
     wp_register_style('mainstyle', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all');
     wp_enqueue_style('mainstyle'); // Enqueue it!
 
-    wp_register_style('text-jam-style', get_template_directory_uri() . '/css/text-jam-style.css', array(), '1.0', 'all');
-    wp_enqueue_style('text-jam-style'); // Enqueue it!
+    wp_register_style('fluidbox', get_template_directory_uri() . '/css/fluidbox.css', array(), '1.0', 'all');
+    wp_enqueue_style('fluidbox'); // Enqueue it!
 
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
@@ -253,6 +250,14 @@ function html5wp_index($length) // Create 20 Word Callback for Index page Excerp
 function html5wp_custom_post($length)
 {
     return 40;
+}
+
+function string_limit_words($string, $word_limit)
+{
+  $words = explode(' ', $string, ($word_limit + 1));
+  if(count($words) > $word_limit)
+  array_pop($words);
+  return implode(' ', $words);
 }
 
 // Create the Custom Excerpts callback

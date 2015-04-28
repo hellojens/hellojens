@@ -31,10 +31,10 @@
     <!-- wrapper -->
     <div class="all">
 
-      <div class="row">
+      <div class="row small-collapse">
         <div class="small-12 small-centered columns">
 
-          <div class="row">
+          <div class="row small-collapse">
             <div class="small-12 small-centered columns">
 
             	<header class="header clear" role="banner">

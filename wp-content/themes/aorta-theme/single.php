@@ -22,6 +22,7 @@
 						<div class="row">
 							<div class="large-9 columns">
 								<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+										<?php $preventdouble = array(get_the_ID()) // Prevent post duplicate  ?>
 										<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "single-post-content")); ?>>
 											<div class="small-7 columns signatur"> 
 												<?php echo get_avatar( get_the_author_meta( 'ID' ), 512 ); ?>
@@ -36,18 +37,28 @@
 				      </div>
 			      </div>
 					</section>
-					<section class="large-2 left author-content columns">
+					<section class="large-3 left author-content columns">
 						<div class="row">
 							<?php $this_author = get_the_author_meta('ID'); ?>						
 					  	<?php $the_query = new WP_Query( array("post_type" => "people", "author"=> $this_author ) ); ?>
 							<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
-								<a href="<?php the_permalink(); ?>">
+								<a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>">
 									<?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 								</a>
 								<b><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></b>
 								<?php if (function_exists('the_subheading')) { the_subheading('<p>', '</p>'); } ?>
-								<p><?php html5wp_excerpt('html5wp_index'); ?></p>
+								
+								<p><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,52); ?>...</p>
+
+					    	<div class="author-moreby"><b>More stories by <?php the_title(); ?></b></div>
+
+							<?php endwhile; endif; ?>	
+					    <?php wp_reset_query(); ?>
+
+					  	<?php $the_query = new WP_Query( array("posts_per_page" => "4", 'post__not_in' => $preventdouble, "post_type" => "post", "author"=> $this_author, ) ); ?>
+							<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
+									<h2><a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
 							<?php endwhile; endif; ?>
 					    <?php wp_reset_query(); ?>
 						</div>

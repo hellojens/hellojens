@@ -39,6 +39,7 @@ body {
   font-size: 1.6rem;
   font-family: "maisonBook", sans-serif;
   background-color: #f2f2f2; 
+  color: #143C37;
 }
 
 img {
@@ -56,6 +57,7 @@ img {
 h1, h2, h3, h4, h5 {
   font-family: "DomaineRegular", sans-serif;
   color: #143C37;
+  line-height: 1.2;
 }
 
 
@@ -65,6 +67,9 @@ p {
   color: #143C37;
 }
 
+b {
+  color: #143C37;
+}
 
 a {
   color: #143C37;
@@ -158,7 +163,7 @@ header {
 
 .content-section {
   background: white;
-  padding-top: 35px;
+  padding: 35px 0px;
 }
 
 .related-section {
@@ -206,6 +211,15 @@ header {
   border-bottom: 1px solid #fff;
 }
 
+.page-nav {
+  margin: 25px 0px 65px 0px;
+}
+.page-nav a {
+  font-size: 5rem;
+  font-family: 'DomaineRegular';
+  border-bottom: 1px solid #eaeaea;
+}
+
 /* -------------------------------- 
   People  
 -------------------------------- */
@@ -215,8 +229,24 @@ header {
 }
 
 .top-section.people h1 {
-   font-size: 3rem;
-   padding: 35px 0px;
+  font-size: 3rem;
+  padding: 35px 0px;
+}
+
+.people-post img {
+  width: 50%;
+  padding-bottom: 15px;
+}
+
+.people-post h1 {
+  font-size: 6rem;
+  line-height: 1.2;
+}
+
+.people-post p {
+  font-size: 15px;
+  font-weight: 100;
+  padding-bottom: 12px;
 }
 
 
@@ -233,8 +263,7 @@ header {
   font-size: 26px;
   line-height: 1.2;
   padding: 15px 0px 5px 0px;
-  max-height: 80px;
-  overflow: hidden;
+
 }
 
 .home-post p {
@@ -246,7 +275,7 @@ header {
 }
 
 .single-post .post-content img, .single-post .post-content iframe {
-  padding: 24px 0px; 
+  position: relative;
 }
 
 .single-post .single-post-content .signatur img {
@@ -266,6 +295,12 @@ header {
   padding-bottom: 12px;
 }
 
+/* Author sidebar content */
+
+.single-post .author-content  {
+  padding-right: 50px;
+}
+
 .single-post .author-content img {
   padding-bottom: 20px;
 }
@@ -276,8 +311,21 @@ header {
 
 .single-post .author-content b {
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.4;
   font-weight: 500;
+}
+
+.single-post .author-content .author-moreby {
+  padding: 20px 0px;
+  font-weight: 500;
+}
+
+.single-post .author-content h2 {
+  font-size: 22px;
+  border-top: 1px solid #EAEAEA;
+  padding: 20px 0px;
+  margin: 0px;
+  line-height: 1.3;
 }
 
 

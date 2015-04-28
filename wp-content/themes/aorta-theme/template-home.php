@@ -26,31 +26,37 @@
 
 	<div class="content-section">
 		<div class="row"> 
-			<section class="small-10 medium-11 small-centered columns main-grid">
-				<div class="row">
+			<section class="small-10 medium-11 small-centered columns">
+				<div class="row grid">
+		    	<?php 
+				    $offset = htmlspecialchars(trim($_GET['offset']));
+				    if ($offset == '') { $offset = 1; }
+		    		$the_query = new WP_Query( array("offset" => $offset) ); 
+		    	?>
+					<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
-	    	<?php $the_query = new WP_Query( array("offset" => 1) ); ?>
-				<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
+						<div class="isotope-align small-12 medium-4 large-3 left columns loadMore">
+							<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "home-post")); ?>>
+								<a href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
+								</a>
+								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></h2>
+								<p class="show-for-medium-up"><?php html5wp_excerpt('html5wp_index'); ?></p>
+							</article>
+						</div>
 
-					<div class="small-12 medium-4 large-3 left columns">
-						<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "home-post")); ?>>
-							<a href="<?php the_permalink(); ?>">
-								<?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
-							</a>
-							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></h2>
-							<p class="show-for-medium-up"><?php html5wp_excerpt('html5wp_index'); ?></p>
-						</article>
-					</div>
-
-				<?php endwhile; endif; ?>
-	      <?php wp_reset_query(); ?>
-
+					<?php endwhile; endif; ?>
+		      <?php wp_reset_query(); ?>
+	      </div>
 			</section>
+			<div class="page-nav small-10 small-centered text-center columns">
+				<a rel="<?php echo site_url(), $_SERVER['REQUEST_URI']; ?>" class="load-more">Load more</a>
+			</div>
 		</div>
 	</div>
 
 	<!-- Related Stories  -->
-	<?php get_template_part("loop","related-random"); ?>
+	<?php // get_template_part("loop","related-random"); ?>
 	<!-- /Related Stories  -->
 
 <?php get_footer(); ?>
