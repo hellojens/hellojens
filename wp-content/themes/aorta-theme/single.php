@@ -18,6 +18,7 @@
 						<div class="row">
 							<div class="large-9 columns">
 								<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+										<?php $this_author = get_the_author_meta('ID'); ?>						
 										<?php $preventdouble = array(get_the_ID()) // Prevent post duplicate  ?>
 										<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "single-post-content")); ?>>
 											<div class="small-7 columns signatur"> 
@@ -35,8 +36,7 @@
 					</section>
 					<section class="large-3 left author-content columns">
 						<div class="row">
-							<?php $this_author = get_the_author_meta('ID'); ?>						
-					  	<?php $the_query = new WP_Query( array("post_type" => "people", "author"=> $this_author ) ); ?>
+					  	<?php $the_query = new WP_Query( array("posts_per_page" => "1", "post_type" => "people", "author"=> $this_author ) ); ?>
 							<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
 								<a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>">
