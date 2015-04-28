@@ -8,12 +8,12 @@ jQuery(document).ready(function($){
   
   var isotopeAndLoadmore = function() {
 
-    var $container = $('.grid');
-
-    $container.isotope({
-      itemSelector: '.isotope-align',
-      layoutMode: 'fitRows',
-    })
+    var $container = $('.grid').imagesLoaded( function() {
+      $container.isotope({
+        itemSelector: '.isotope-align',
+        layoutMode: 'fitRows',
+      });
+    });
 
     var loadMore = function() {
       $(".page-nav").click(loadMoreFunction); 
