@@ -12,7 +12,7 @@
 								</div>
 								<div class="hero-content small-12 medium-10 medium-only-text-center medium-centered large-uncentered large-5 columns">
 									<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-									<p class="show-for-medium-up"><?php html5wp_excerpt('html5wp_index'); ?></p>
+									<p class="show-for-medium-up"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,42); ?></p>
 									<a class="readmore" href="<?php the_permalink(); ?>"> Read More > </a>
 								</div>
 							</article>
@@ -41,7 +41,7 @@
 									<?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 								</a>
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></h2>
-								<p class="show-for-medium-up"><?php html5wp_excerpt('html5wp_index'); ?></p>
+								<p class="show-for-medium-up"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,28); ?> </p>
 							</article>
 						</div>
 

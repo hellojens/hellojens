@@ -2,15 +2,11 @@
 
 	<div class="top-section single-post">
 		<div class="row"> 
- 			<section class="small-6 text-center small-centered columns">
-
-				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-					<?php //the_post_thumbnail(full, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
-
-      	<?php endwhile; endif;?>    
-
-			</section>
+			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+				<?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), full ); ?>
+	 			<section class="single-header small-12 text-center small-centered small-collapse columns" style="background-image: url('<?php echo $featuredimage[0]; ?>');">
+				</section>
+    	<?php endwhile; endif;?>    
 		</div>			
 	</div>
 
@@ -49,8 +45,8 @@
 								<b><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></b>
 								<?php if (function_exists('the_subheading')) { the_subheading('<p>', '</p>'); } ?>
 								
-								<p><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,52); ?>...</p>
-
+								<p><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,52); ?></p>
+								<p><a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>">Read more</a></p>
 					    	<div class="author-moreby"><b>More stories by <?php the_title(); ?></b></div>
 
 							<?php endwhile; endif; ?>	

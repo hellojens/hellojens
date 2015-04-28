@@ -15,7 +15,7 @@
 							</a>
 							<div class="">
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></h2>
-								<p class="show-for-medium-up"><?php html5wp_excerpt('html5wp_index'); ?></p>
+								<p class="show-for-medium-up"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,28); ?> <p>
 							</div>
 						</article>
 					</div>

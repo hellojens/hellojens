@@ -23,14 +23,14 @@
 		<div class="row"> 
 			<section class="small-11 small-centered columns main-grid">
 				<div class="row">
-					<div class="small-3 text-center columns">
+					<div class="small-3 text-center columns" style="padding-right: 50px;">
 						<?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 					</div>
 					<div class="small-6 left columns">
 						<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "people-post")); ?>>
-									
+
 									<?php echo get_avatar( get_the_author_meta( 'ID' ), 512); ?>
 
 									<h1><?php the_title(); ?></h1>
