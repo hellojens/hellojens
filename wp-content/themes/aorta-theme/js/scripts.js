@@ -22,7 +22,7 @@ jQuery(document).ready(function($){
           $(".page-nav a").text("loading..");
 
           var offset = $(".loadMore").length;
-          $.get($(".page-nav a").attr("rel"), {offset: offset}, function(data){
+          $.get($(".page-nav a").attr("rel"), {offset: offset +1}, function(data){
               var posts = $(data).find(".loadMore");
               if(posts.length > 0 ) { 
 
