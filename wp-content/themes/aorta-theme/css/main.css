@@ -146,10 +146,14 @@ header {
 
 .logo-color {
   width: 100%;
+  -webkit-transition: .3s -webkit-transform cubic-bezier(.165,.84,.44,1),.3s background-position steps(3);
+  transition: .3s transform cubic-bezier(.165,.84,.44,1),.3s background-position steps(3);
 }
 
 .logo-color:hover {
   fill: red;
+
+background-position: bottom;
 }
 
 .main-navigation .logo a {
@@ -254,15 +258,34 @@ header {
 .page-nav {
   margin: 25px 0px 65px 0px;
 }
+
 .page-nav a {
   font-size: 5rem;
   font-family: 'maisonBook' !important;
   border-bottom: 1px solid #eaeaea;
 }
 
+.puff {
+  display: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.puff.puffit {
+  display: inline-block;
+
+}
+
+
 .isotope-align {
-  transition-property: left, top, opacity;
-  transition-delay: 0s, 0.3s, 0s;
+/*  transition-property: left, top, opacity;
+  transition-delay: 0s, 0.3s, 0s;*/
+
+ -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
 }
 
 .post-thumbnail {
@@ -316,6 +339,7 @@ header {
 
 .home-post {
   padding-bottom: 35px;
+  text-align: center;
 }
 
 .home-post h2 {
@@ -424,6 +448,48 @@ header {
 /* -------------------------------- 
   CSS3 Effects  
 -------------------------------- */
+
+.grid {
+
+  list-style: none;
+}
+
+.grid li {
+  display: block;
+  float: left;
+  opacity: 0;
+}
+
+.grid li.shown,
+.no-js .grid li,
+.no-cssanimations .grid li {
+  opacity: 1;
+}
+
+.grid li a,
+.grid li img {
+  outline: none;
+  border: none;
+  display: block;
+}
+
+/* Effect 2: Move Up */
+.grid.effect-2 li.animate {
+  -webkit-transform: translateY(200px);
+  transform: translateY(200px);
+  -webkit-animation: moveUp 0.55s ease forwards;
+  animation: moveUp 0.55s ease forwards;
+}
+
+@-webkit-keyframes moveUp {
+  0% { }
+  100% { -webkit-transform: translateY(0); opacity: 1; }
+}
+
+@keyframes moveUp {
+  0% { }
+  100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+}
 
 .spinner {
   margin: 100px auto;

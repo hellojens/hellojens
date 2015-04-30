@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
   
 
   
-  var isotopeAndLoadmore = function() {
+  var isotopeInit = function() {
 
     var $container = $('.grid').imagesLoaded( function() {
       $container.isotope({
@@ -16,64 +16,87 @@ jQuery(document).ready(function($){
       });
     });
 
-    var loadMore = function() {
-      $(".page-nav").click(loadMoreFunction); 
 
-      var pageCount = 0 
+    $(".page-nav").click(function(){
 
-      function loadMoreFunction() {
-          $(".page-nav a").text("loading..");
+      // EMULATE LOADING 
+      $(".page-nav a").text("");
+      $(".page-nav .puff").addClass("puffit");
 
-          var offset = $(".loadMore").length;
-          $.get($(".page-nav a").attr("rel"), {offset: offset +1}, function(data){
-              var posts = $(data).find(".loadMore");
-              if(posts.length > 0 ) { 
+      setTimeout(function(){
+        // Fire real load 
+        loadMoreFunction();
+      }, 1100);
 
-                  $(".grid").isotope().append(posts).isotope("appended", posts, true).isotope('layout');
+    }); 
 
-                  pageCount++;
-                  // Loop each new element 
-                  $(posts).find('.post-thumbnail').each(function(i) {
+    var pageCount = 0 
 
-                    $(posts).find('.post-thumbnail').css("opacity","0");
-                    $(this).delay((i++) * 200).fadeTo(1000, 1); 
-                    $(posts).addClass("page" +pageCount);
-                    // setTimeout(function(){
-                    //   $('html, body').animate({
-                    //       scrollTop: ($('.page'+pageCount).first().offset().top - 35)
-                    //   },400);
-                    // },500);
-                  });
+    function loadMoreFunction() {
+      var offset = $(".loadMore").length;
+      $.get($(".page-nav a").attr("rel"), {offset: offset +1}, function(data){
+        var posts = $(data).find(".loadMore");
+        if(posts.length > 0 ) { 
 
-                  $(".page-nav a").text("Load more");
-              } else {
-                  $(".page-nav a").text("That's it – for now! ");
-              };
-            });
+          $(".grid").isotope().append(posts).isotope("appended", posts, true).isotope('layout');
 
-          };
-      };
-    loadMore();
+          pageCount++;
+          $(posts).css("opacity","0");
+
+
+          // Loop each new element and animate 
+          setTimeout(function(){                    
+            $(posts).each(function(i) {
+              var $li = $(this);
+              setTimeout(function() {
+                // add page count to each row of post loads
+                $(posts).addClass("page" +pageCount);
+                // Animate 
+                $li.addClass('animate');
+              }, i*150); // delay 100 ms
+            });
+          },540); // Set timeout to prevent isotope interference 
+
+          $(".page-nav a").text("Load more");
+          $(".page-nav .puff").removeClass("puffit");
+
+        } else {
+          $(".page-nav a").text("That's it – for now! ");
+          $(".page-nav .puff").removeClass("puffit");
+
+        };
+      }); // End ajax $.get 
+    }; // End loadMoreFunction 
+
+    // Inifit scroll viewport detector 
+    new AnimOnScroll( document.getElementById( 'grid' ), {
+      minDuration : 0.4,
+      maxDuration : 0.7,
+      viewportFactor : 0
+    });
+
+  }; // End isotope homepage post grid 
+
+  var fluidboxInit = function() {
+
+    $('.single-post-content a').fluidbox({
+        viewportFill: 0.9,
+        immediateOpen: true,
+        debounceResize: true,
+        closeTrigger: [{
+            selector: "#fluidbox-overlay",
+            event: "click"
+        }, {
+            selector: "window",
+            event: "scroll"
+        }]
+    });
 
   }
 
-
-  $('.single-post-content a').fluidbox({
-      viewportFill: 0.9,
-      immediateOpen: true,
-      debounceResize: true,
-      closeTrigger: [{
-          selector: "#fluidbox-overlay",
-          event: "click"
-      }, {
-          selector: "window",
-          event: "scroll"
-      }]
-  });
-
-
   ////////  INIT FUNCTIONS ///////////
 
-  isotopeAndLoadmore();
+  isotopeInit();
+  fluidboxInit();
 
 });

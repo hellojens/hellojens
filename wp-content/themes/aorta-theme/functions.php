@@ -107,12 +107,18 @@ function html5blank_header_scripts()
 
         wp_register_script('imagesloaded', get_template_directory_uri() . '/js/imagesloaded.min.js', array('jquery'), '1.0.0' , true); // Custom scripts
         wp_enqueue_script('imagesloaded'); // Enqueue it!
-        
+
         wp_register_script('isotope', get_template_directory_uri() . '/js/isotope.min.js', array('jquery'), '1.0.0' , true); // Custom scripts
         wp_enqueue_script('isotope'); // Enqueue it!
 
         wp_register_script('fluidboxjs', get_template_directory_uri() . '/js/fluidbox.min.js', array('jquery'), '1.0.0' , true); // Custom scripts
         wp_enqueue_script('fluidboxjs'); // Enqueue it!
+
+        wp_register_script('classie', get_template_directory_uri() . '/js/classie.js', array('jquery'), '1.0.0' , true); // Custom scripts
+        wp_enqueue_script('classie'); // Enqueue it!
+
+        wp_register_script('AnimOnScroll', get_template_directory_uri() . '/js/AnimOnScroll.js', array('jquery'), '1.0.0' , true); // Custom scripts
+        wp_enqueue_script('AnimOnScroll'); // Enqueue it!
 
         wp_register_script('main-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0' , true); // Custom scripts
         wp_enqueue_script('main-script'); // Enqueue it!
