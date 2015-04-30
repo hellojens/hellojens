@@ -12,11 +12,14 @@ jQuery(document).ready(function($){
       $container.isotope({
         itemSelector: '.isotope-align',
         layoutMode: 'fitRows',
+        transformsEnabled: false
       });
     });
 
     var loadMore = function() {
       $(".page-nav").click(loadMoreFunction); 
+
+      var pageCount = 0 
 
       function loadMoreFunction() {
           $(".page-nav a").text("loading..");
@@ -27,6 +30,20 @@ jQuery(document).ready(function($){
               if(posts.length > 0 ) { 
 
                   $(".grid").isotope().append(posts).isotope("appended", posts, true).isotope('layout');
+
+                  pageCount++;
+                  // Loop each new element 
+                  $(posts).find('.post-thumbnail').each(function(i) {
+
+                    $(posts).find('.post-thumbnail').css("opacity","0");
+                    $(this).delay((i++) * 200).fadeTo(1000, 1); 
+                    $(posts).addClass("page" +pageCount);
+                    // setTimeout(function(){
+                    //   $('html, body').animate({
+                    //       scrollTop: ($('.page'+pageCount).first().offset().top - 35)
+                    //   },400);
+                    // },500);
+                  });
 
                   $(".page-nav a").text("Load more");
               } else {

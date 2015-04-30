@@ -10,7 +10,7 @@
 								<div class="small-12 medium-11 text-center medium-centered large-uncentered large-6 columns">
 									<?php the_post_thumbnail(large, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 								</div>
-								<div class="hero-content small-12 medium-10 medium-only-text-center medium-centered large-uncentered large-5 columns">
+								<div class="hero-content small-12 medium-10 medium-only-text-center medium-centered large-uncentered large-6 columns">
 									<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 									<p class="show-for-medium-up"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,42); ?></p>
 									<a class="readmore" href="<?php the_permalink(); ?>"> Read More > </a>
@@ -37,7 +37,11 @@
 
 						<div class="isotope-align small-12 medium-4 large-3 left columns loadMore">
 							<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "home-post")); ?>>
-								<a href="<?php the_permalink(); ?>">
+<div class="spinner">
+  <div class="dot1"></div>
+  <div class="dot2"></div>
+</div>
+								<a class="post-thumbnail" href="<?php the_permalink(); ?>">
 									<?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 								</a>
 								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></h2>
@@ -49,8 +53,35 @@
 		      <?php wp_reset_query(); ?>
 	      </div>
 			</section>
+		</div>
+		<div class="row">
 			<div class="page-nav small-10 small-centered text-center columns">
-				<a rel="<?php echo site_url(), $_SERVER['REQUEST_URI']; ?>" class="load-more">Load more</a>
+
+				<a rel="<?php echo site_url(), $_SERVER['REQUEST_URI']; ?>" class="load-more">There's more</a>
+			<div class="loader" title="3">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+    <rect x="0" y="0" width="4" height="7" fill="#333">
+      <animateTransform  attributeType="xml"
+        attributeName="transform" type="scale"
+        values="1,1; 1,3; 1,1"
+        begin="0s" dur="0.6s" repeatCount="indefinite" />       
+    </rect>
+
+    <rect x="10" y="0" width="4" height="7" fill="#333">
+      <animateTransform  attributeType="xml"
+        attributeName="transform" type="scale"
+        values="1,1; 1,3; 1,1"
+        begin="0.2s" dur="0.6s" repeatCount="indefinite" />       
+    </rect>
+    <rect x="20" y="0" width="4" height="7" fill="#333">
+      <animateTransform  attributeType="xml"
+        attributeName="transform" type="scale"
+        values="1,1; 1,3; 1,1"
+        begin="0.4s" dur="0.6s" repeatCount="indefinite" />       
+    </rect>
+  </svg>
+</div>
 			</div>
 		</div>
 	</div>
