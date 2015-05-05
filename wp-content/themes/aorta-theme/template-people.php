@@ -3,11 +3,12 @@
 
 	<div class="top-section people">
 		<div class="row"> 
- 			<section class="small-6 text-center small-centered columns">
+ 			<section class="small-4 text-center small-centered columns">
 
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-					<h1><?php echo get_the_content(); ?></h1>
+					<h1><?php the_title(); ?></h1>
+					<h2><?php echo get_the_content(); ?></h2>
 
       	<?php endwhile; endif;?>    
 
@@ -24,7 +25,7 @@
 				<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
 					<div class="small-12 large-3 left columns">
-						<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "home-post")); ?>>
+						<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "people-post")); ?>>
 							<a href="<?php the_permalink(); ?>">
 								<?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 							</a>

@@ -42,12 +42,11 @@
 								<a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>">
 									<?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 								</a>
-								<b><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></b>
-								<?php if (function_exists('the_subheading')) { the_subheading('<p>', '</p>'); } ?>
+								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></h3>
+								<?php if (function_exists('the_subheading')) { the_subheading('<p class="author-title">', '</p>'); } ?>
 								
-								<p><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,52); ?></p>
-								<p><a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>">Read more</a></p>
-					    	<div class="author-moreby"><b>More stories by <?php the_title(); ?></b></div>
+								<p class="excerpt"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,48); ?></p>
+					    	<div class="author-moreby"><b><?php the_title(); ?>'s other stories</b></div>
 
 							<?php endwhile; endif; ?>	
 					    <?php wp_reset_query(); ?>

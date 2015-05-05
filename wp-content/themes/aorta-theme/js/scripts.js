@@ -8,19 +8,19 @@ jQuery(document).ready(function($){
   
   var isotopeInit = function() {
 
+    // Execute isotope 
     var $container = $('.grid').imagesLoaded( function() {
       $container.isotope({
         itemSelector: '.isotope-align',
         layoutMode: 'fitRows',
-        transformsEnabled: false
+        transformsEnabled: false, 
       });
     });
-
 
     $(".page-nav").click(function(){
 
       // EMULATE LOADING 
-      $(".page-nav a").text("");
+      $(".page-nav .loadMoreText").text("");
       $(".page-nav .puff").addClass("puffit");
 
       setTimeout(function(){
@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
 
     function loadMoreFunction() {
       var offset = $(".loadMore").length;
-      $.get($(".page-nav a").attr("rel"), {offset: offset +1}, function(data){
+      $.get($(".page-nav a").attr("rel"), {offset: offset +2}, function(data){
         var posts = $(data).find(".loadMore");
         if(posts.length > 0 ) { 
 
@@ -57,11 +57,11 @@ jQuery(document).ready(function($){
             });
           },540); // Set timeout to prevent isotope interference 
 
-          $(".page-nav a").text("Load more");
+          $(".page-nav .loadMoreText").text("Load more");
           $(".page-nav .puff").removeClass("puffit");
 
         } else {
-          $(".page-nav a").text("That's it – for now! ");
+          $(".page-nav .loadMoreText").text("That's it – for now! ");
           $(".page-nav .puff").removeClass("puffit");
 
         };
@@ -79,7 +79,7 @@ jQuery(document).ready(function($){
 
   var fluidboxInit = function() {
 
-    $('.single-post-content a').fluidbox({
+    $('.single-post .post-content a').fluidbox({
         viewportFill: 0.9,
         immediateOpen: true,
         debounceResize: true,
@@ -92,7 +92,7 @@ jQuery(document).ready(function($){
         }]
     });
 
-  }
+  };
 
   ////////  INIT FUNCTIONS ///////////
 

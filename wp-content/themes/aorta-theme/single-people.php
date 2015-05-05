@@ -21,10 +21,10 @@
 
 	<div class="content-section">
 		<div class="row"> 
-			<section class="small-11 small-centered columns main-grid">
+			<section class="small-11 small-centered columns">
 				<div class="row">
-					<div class="small-3 text-center columns" style="padding-right: 50px;">
-						<?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
+					<div class="small-6 text-center columns">
+						<?php the_post_thumbnail(post, array( 'class' => 'profile-picture', 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 					</div>
 					<div class="small-6 left columns">
 						<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -34,9 +34,16 @@
 									<?php echo get_avatar( get_the_author_meta( 'ID' ), 512); ?>
 
 									<h1><?php the_title(); ?></h1>
-									<?php if (function_exists('the_subheading')) { the_subheading('<h1>', '</h1>'); } ?></h1>
+									<?php if (function_exists('the_subheading')) { the_subheading('<h2>', '</h2>'); } ?></h1>
 
-									<p><?php the_content(); ?></p>
+									<p class=""><?php the_content(); ?></p>
+									<h3><?php the_field("place_of_assosiation"); ?></h3>
+									<p class="additional-info">
+										<?php the_field("associated_info"); ?><br>
+										<a target="_blank" href="<?php echo get_field("associated_directions"); ?>">Directions</a><br>
+										<a target="_blank" href="<?php echo get_field("associated_website"); ?>">Visit website</a>
+									</p>
+
 								</article>
 
 						<?php endwhile; endif; ?>

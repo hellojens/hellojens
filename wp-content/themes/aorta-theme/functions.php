@@ -27,11 +27,7 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 750, 650, true); // Large Thumbnail
-    add_image_size('post', 300, 300, true); // Post Thumbnail
-    add_image_size('medium', 250, '', true); // Medium Thumbnail
-    add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+  
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -58,6 +54,15 @@ if (function_exists('add_theme_support'))
     // Localisation Support
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');
 }
+
+function add_custom_sizes() {
+  add_image_size('large', 750, 750, true); // Large Thumbnail
+    add_image_size('post', 300, 300, true); // Post Thumbnail
+    add_image_size('medium', 250, '', true); // Medium Thumbnail
+    add_image_size('small', 120, '', true); // Small Thumbnail
+    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+}
+add_action('after_setup_theme','add_custom_sizes');
 
 /*------------------------------------*\
 	Functions
@@ -248,6 +253,8 @@ function html5wp_pagination()
         'total' => $wp_query->max_num_pages
     ));
 }
+
+
 
 // Custom Excerpts
 function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');

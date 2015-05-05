@@ -2,24 +2,29 @@
 
 	<div class="top-section home-hero">
 		<div class="row"> 
-	 			<section class="small-11 small-centered columns">
-
-		    	<?php $the_query = new WP_Query( array("posts_per_page" => "1") ); ?>
+ 			<section class="small-11 small-centered columns">
+					<article class="row">
+		    	<?php $the_query = new WP_Query( array("posts_per_page" => "2") ); ?>
 		     		<?php while($the_query->have_posts()): $the_query->the_post(); ?>
-							<article class="row">
-								<div class="small-12 medium-11 text-center medium-centered large-uncentered large-6 columns">
-									<?php the_post_thumbnail(large, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
-								</div>
-								<div class="hero-content small-12 medium-10 medium-only-text-center medium-centered large-uncentered large-6 columns">
-									<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-									<p class="show-for-medium-up"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,42); ?></p>
-									<a class="readmore" href="<?php the_permalink(); ?>"> Read More > </a>
-								</div>
-							</article>
-
+								<div class="small-12 medium-11 text-center large-6 columns">
+									<div class="post-thumbnail">	
+										<div class="spinner"><div class="dot1"></div><div class="dot2"></div></div> <!-- // Loading -->
+										<a href="<?php the_permalink(); ?>">
+											<div class="post-overlay">
+												<div class="author"><?php the_author(); ?></div>
+												<p class="columns medium-8 small-centered"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,10); ?></p>
+											</div>
+										</a>
+										<?php the_post_thumbnail(large, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
+									</div>
+									<div class="columns small-8 small-centered">
+										<div class="date"><?php the_time('d.m.Y'); ?></div>
+										<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+									</div>
+							</div>
 		      	<?php endwhile; ?>    
 	      	<?php wp_reset_query(); ?>
-
+					</article>
 			</section>
 		</div>			
 	</div>
@@ -30,23 +35,13 @@
 				<ul class="row grid effect-2" id="grid">
 		    	<?php 
 				    $offset = htmlspecialchars(trim($_GET['offset']));
-				    if ($offset == '') { $offset = 1; }
+				    if ($offset == '') { $offset = 2; }
 		    		$the_query = new WP_Query( array("offset" => $offset) ); 
 		    	?>
 					<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
 						<li class="isotope-align small-12 medium-4 large-3 left columns loadMore">
-							<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "home-post")); ?>>
-								<div class="spinner">
-								  <div class="dot1"></div>
-								  <div class="dot2"></div>
-								</div>
-								<a class="post-thumbnail" href="<?php the_permalink(); ?>">
-									<?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
-								</a>
-								<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></h2>
-								<p class="show-for-medium-up"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,12); ?> </p>
-							</article>
+							<?php get_template_part("content","standard-post"); ?>
 						</li>
 
 					<?php endwhile; endif; ?>
@@ -56,14 +51,16 @@
 		</div>
 		<div class="row">
 			<div  class="page-nav small-10 small-centered text-center columns">
-				<img class="puff"src="<?php echo get_template_directory_uri(); ?>/img/svg-loaders/puff.svg">
-				<a rel="<?php echo site_url(), $_SERVER['REQUEST_URI']; ?>" class="load-more">There's more</a>
+				<a rel="<?php echo site_url(), $_SERVER['REQUEST_URI']; ?>" class="load-more">				
+					<img class="puff"src="<?php echo get_template_directory_uri(); ?>/img/svg-loaders/puff.svg">
+					<span class="loadMoreText">Load more</span>
+				</a>
 			</div>
 		</div>
 	</div>
 
 	<!-- Related Stories  -->
-	<?php // get_template_part("loop","related-random"); ?>
+	<?php  get_template_part("loop","related-random"); ?>	
 	<!-- /Related Stories  -->
 
 <?php get_footer(); ?>
