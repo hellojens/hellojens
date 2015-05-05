@@ -128,12 +128,24 @@ header {
   border: 0px solid black;
 }
 
-.home .main-navigation a.start {
-  border-bottom: 2px solid #143C37;
+.home .main-navigation a.start:before {
+  position: absolute;
+  top: 50%;
+  content: '';
+  z-index: 10;
+  width: 100%;
+  height: 2px;
+  background-color: #FF00BD;
 }
 
-.the-people .main-navigation a.list-people {
-  border-bottom: 2px solid #143C37;
+.the-people .main-navigation a.list-people:before {
+  position: absolute;
+  top: 50%;
+  content: '';
+  z-index: 10;
+  width: 100%;
+  height: 2px;
+  background-color: #FF00BD;
 }
 
 .main-navigation a {
@@ -230,6 +242,7 @@ background-position: bottom;
 .top-section.home-hero {
   padding-top: 35px;
   padding-bottom: 35px;
+  background-color: white;
 }
 
 .home-hero .hero-content {
