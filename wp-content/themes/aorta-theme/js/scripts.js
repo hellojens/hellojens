@@ -86,7 +86,8 @@ jQuery(document).ready(function($){
 
   }; // End isotope homepage post grid 
 
-  // var fluidboxInit = function() {
+
+  // fluidbox
 
     $('.single-post .post-content a').fluidbox({
         viewportFill: 0.9,
@@ -101,7 +102,15 @@ jQuery(document).ready(function($){
         }]
     });
 
-  // };
+
+  // Search 
+
+  $(".searchlink").click(function(e){
+    e.preventDefault();
+    $(".search-wrapper").addClass("open");
+    // $("header, .top-section, .content-section").animate({"opacity": 0.1}, 200);
+  });
+
 
   ////////  INIT FUNCTIONS ///////////
 

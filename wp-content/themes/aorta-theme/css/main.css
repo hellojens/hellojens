@@ -722,6 +722,82 @@ header {
 
 }
 
+
+/* -------------------------------- 
+  Search 
+-------------------------------- */
+
+.search-wrapper {
+  background-color: #143C37;
+  position: relative;
+  top: 0px;
+  display: inline-block;
+  height: 0px;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+      transition: all 0.1s linear;
+}
+
+.search-wrapper.open {
+  height: 60px;
+}
+
+.search .search-wrapper {
+  height: 60px;
+}
+
+.search-wrapper .search-input {
+  text-align: center;
+  background: transparent;
+  border: none !important;
+  font-size: 22px;
+  margin-top: 20px;
+  display: inline-block;
+  height: 30px;
+  color: white;
+  box-shadow: none;
+  opacity: 0.8;
+  overflow: visible;
+  -webkit-transition: all 0.2s ease-out; 
+    -moz-transition: all 0.2s ease-out; 
+    -ms-transition: all 0.2s ease-out; 
+    -o-transition: all 0.2s ease-out; 
+      transition: all 0.2s ease-out; 
+}
+.search-wrapper .search-input:focus {
+  opacity: 1;
+  background: transparent;
+  border: none !important;
+  font-size: 22px;
+  margin-top: 20px;
+  display: inline-block;
+  height: 30px;
+  color: white;
+  box-shadow: none;
+  content: '';
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+    opacity: 0.9;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #fff;
+}
+
 /* -------------------------------- 
   Footer 
 -------------------------------- */
@@ -742,8 +818,6 @@ header {
 .footer a {
   color: white;
 }
-
-
 
 
 

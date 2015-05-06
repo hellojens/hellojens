@@ -29,6 +29,19 @@
       <div class="row small-collapse">
         <div class="small-12 small-centered columns">
 
+        <div class="search-wrapper">
+            <div class="row">
+              <div class="small-9 small-centered columns">
+
+                <form class="search" method="get" action="http://aorta.hellojens.dev" role="search">
+                  <input class="search-input" type="search" name="s" placeholder="To search, type and hit enter." onfocus="this.placeholder = ''" onblur="this.placeholder = 'To search, type and hit enter.'">
+                  <!-- <button class="search-submit" type="submit" role="button">Search</button> -->
+                </form>
+
+              </div>
+            </div>
+          </div>
+          
           <div class="row small-collapse">
             <div class="small-12 small-centered columns">
 

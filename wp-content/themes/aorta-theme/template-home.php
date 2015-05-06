@@ -41,7 +41,7 @@
 		    	<?php 
 				    $offset = htmlspecialchars(trim($_GET['offset']));
 				    if ($offset == '') { $offset = 2; }
-		    		$the_query = new WP_Query( array("offset" => $offset) ); 
+		    		$the_query = new WP_Query( array("posts_per_page" => 8, "offset" => $offset) ); 
 		    	?>
 					<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
