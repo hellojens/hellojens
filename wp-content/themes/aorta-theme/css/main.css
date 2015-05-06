@@ -97,7 +97,15 @@ a:hover {
 }
 
 .date {
-  font-size: 15px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgb(153, 149, 138);
+}
+
+.date a {
+  display: inline-block !important;
+  width: auto !important;
   color: rgb(153, 149, 138);
 }
 
@@ -116,7 +124,7 @@ header {
 }
 
 .main-navigation {
-    padding: 10px;
+    padding: 0px;
 }
 
 .main-navigation a {
@@ -148,17 +156,29 @@ header {
   background-color: #FF00BD;
 }
 
-.main-navigation a {
-  /*border-bottom: 1px solid #eee;*/
+.current-menu-item a{
+  position: relative;
+}
+.current-menu-item a:before {
+  position: absolute;
+  top: 49%;
+  left: -2px;
+  content: '';
+  z-index: 10;
+  width: 104%;
+  height: 1px;
+  background-color: #FF00BD;
+}
+
+.secondary-nav {
+  margin-left: -10px;
 }
 
 .main-navigation .logo {
   display: inline-block;
-  /*background-image: url('../img/svglogotest.svg');*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: 90%;
-
 }
 
 .aortasvglogo {
@@ -173,8 +193,7 @@ header {
 
 .logo-color:hover {
   fill: red;
-
-background-position: bottom;
+  background-position: bottom;
 }
 
 .main-navigation .logo a {
@@ -198,7 +217,7 @@ background-position: bottom;
   text-transform: uppercase;
   letter-spacing: 1px;
   display: inline-block;
-  margin: 15px 10px;
+  margin: 15px 15px;
   font-weight: 400;
 }
 
@@ -213,7 +232,10 @@ background-position: bottom;
 .top-section {
   background: rgb(232, 232, 230);
   color: rgb(153, 149, 138);
-  border-bottom: 1px solid eee;
+}
+
+.top-section.category{
+  padding: 20px 0px;
 }
 
 .content-section {
@@ -232,6 +254,21 @@ background-position: bottom;
   font-size: 3rem;
   color: #143C37;
   padding-bottom: 35px;
+}
+
+.home .related-section {
+  padding-bottom: 65px;
+}
+
+.related-section .top-section.people h1 {
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
+
+
+.related-section .top-section.people h2 {
+  color: #143C37;
+  padding-bottom: 50px;
 }
 
 /* -------------------------------- 
@@ -296,10 +333,13 @@ background-position: bottom;
   padding: 55px 0px;
   position: relative;
   bottom: -30px;
-  transition: all .2s ease-out; 
+  -webkit-transition: all 0.2s ease-out; 
+    -moz-transition: all 0.2s ease-out; 
+    -ms-transition: all 0.2s ease-out; 
+    -o-transition: all 0.2s ease-out; 
+      transition: all 0.2s ease-out; 
   background-image: url("../img/pinksplash.svg");
   background-position: center;
-
 }
 
 .page-nav a img {
@@ -309,6 +349,10 @@ background-position: bottom;
 .page-nav a:hover {
   /*bottom: -15px;*/
   opacity: 1;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -466,7 +510,9 @@ background-position: bottom;
 .people-post p {
   font-size: 15px;
   font-weight: 100;
-  padding-bottom: 12px;
+  padding-bottom: 25px;
+  color: rgb(153, 149, 138);
+
 }
 
 .single-people .people-post{
@@ -501,22 +547,36 @@ background-position: bottom;
 }
 
 
+/* -------------------------------- 
+  Category page
+-------------------------------- */
 
+.top-section.category {
+  background-color: white;
+  
+}
+
+.top-section.category h2 {
+  color: rgb(153, 149, 138);
+  line-height: 1.4;
+  padding-top: 5px;
+}
 
 /* -------------------------------- 
   Posts 
 -------------------------------- */
 
 .home-post {
-  padding-bottom: 35px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
 .home-post h2 {
   font-family: "DomaineRegular", helvetica;
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1.4;
-  padding: 10px 0px 5px 0px;
+  padding: 10px 5px 5px 5px;
+  display: inline-block;
 
 }
 
@@ -608,8 +668,31 @@ background-position: bottom;
   color: #FF00BD;
 }
 
+/* -------------------------------- 
+  About  
+-------------------------------- */
 
+.about header, .top-section.about-page {
+  background-color: #143C37;
+  border-color: #fff;
+}
 
+.about a {
+  color: white;
+}
+
+.about .logo-color {
+  fill: white;
+}
+
+.top-section.about-page h2 {
+  font-size: 6rem;
+  color: white;
+}
+
+.top-section.about-page a {
+  color: #FF00BD;
+}
 
 /* -------------------------------- 
   Footer 
@@ -618,6 +701,8 @@ background-position: bottom;
 .footer-wrapper {
   background: rgb(153, 149, 138);
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .footer p {
@@ -660,7 +745,7 @@ background-position: bottom;
   outline: none;
   border: none;
   display: block;
-width: 100%;
+  width: 100%;
   height: 100%;
 }
 

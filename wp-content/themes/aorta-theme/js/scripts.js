@@ -32,9 +32,19 @@ jQuery(document).ready(function($){
 
     var pageCount = 0 
 
+    // Hide load more button if there is less then 12 posts
+    if($(".loadMore").length < 12 && $(".home").length < 1) {
+      $(".page-nav").remove();
+    };
+
     function loadMoreFunction() {
-      var offset = $(".loadMore").length;
-      $.get($(".page-nav a").attr("rel"), {offset: offset +2}, function(data){
+      // Only offset of body has category "home"
+      if($(".home").length < 1) {
+        var offset = $(".loadMore").length;
+      }  else {
+        var offset = $(".loadMore").length + 2;
+      };
+      $.get($(".page-nav a").attr("rel"), {offset: offset}, function(data){
         var posts = $(data).find(".loadMore");
         if(posts.length > 0 ) { 
 
@@ -42,7 +52,6 @@ jQuery(document).ready(function($){
 
           pageCount++;
           $(posts).css("opacity","0");
-
 
           // Loop each new element and animate 
           setTimeout(function(){                    
@@ -72,12 +81,12 @@ jQuery(document).ready(function($){
     new AnimOnScroll( document.getElementById( 'grid' ), {
       minDuration : 0.4,
       maxDuration : 0.7,
-      viewportFactor : 0
+      viewportFactor : 0.2
     });
 
   }; // End isotope homepage post grid 
 
-  var fluidboxInit = function() {
+  // var fluidboxInit = function() {
 
     $('.single-post .post-content a').fluidbox({
         viewportFill: 0.9,
@@ -92,11 +101,11 @@ jQuery(document).ready(function($){
         }]
     });
 
-  };
+  // };
 
   ////////  INIT FUNCTIONS ///////////
 
   isotopeInit();
-  fluidboxInit();
+  // fluidboxInit();
 
 });

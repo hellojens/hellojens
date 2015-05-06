@@ -18,7 +18,12 @@
 										<?php the_post_thumbnail(large, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 									</div>
 									<div class="columns small-8 small-centered">
-										<div class="date"><?php the_time('d.m.Y'); ?></div>
+									  <?php
+									    $category = get_the_category();
+									    $category_id = $category[0]->cat_ID;
+									    $category_link = get_category_link( $category_id );
+									  ?>
+  									<div class="date"><?php the_time('d.m.Y'); ?> | <a href="<?php echo esc_url( $category_link ); ?>"><?php echo $category[0]->cat_name; ?></a> </div>
 										<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 									</div>
 							</div>
@@ -59,8 +64,22 @@
 		</div>
 	</div>
 
-	<!-- Related Stories  -->
-	<?php  get_template_part("loop","related-random"); ?>	
-	<!-- /Related Stories  -->
+	<div class="related-section">
+		<div class="top-section people">
+			<div class="row"> 
+	 			<section class="small-4 text-center small-centered columns">
+					<h1>PEOPLE</h1>
+					<h2><a href="/the-people">See all the people involved</a></h2>
+				</section>
+			</div>			
+		</div>
+		<div class="row"> 
+			<section class="small-10 medium-11 small-centered text-center columns main-grid">
+				<div class="row">
+					<?php include(locate_template('content-people-all.php')); ?>
+				</div>
+			</section>
+		</div>
+	</div>
 
 <?php get_footer(); ?>

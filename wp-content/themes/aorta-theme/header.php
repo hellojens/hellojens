@@ -12,11 +12,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300,600' rel='stylesheet' type='text/css'>
-
-
 		<?php wp_head(); ?>
 		<script>
         conditionizr.config({
@@ -41,7 +36,7 @@
 
                 <nav class="row top-nav" role="navigation">
                   <div class="small-12 text-center columns ">
-                    <?php html5blank_nav(); ?>
+                    <?php top_nav(); ?>
                   </div>
                 </nav>
 
@@ -79,6 +74,12 @@
                         <a class="list-people" href="/the-people">People</a>
                       </div>
                     </div>
+                  </div>
+                </nav>
+
+                <nav class="row secondary-nav top-nav" role="navigation">
+                  <div class="small-12 text-center columns">
+                    <?php category_nav(); ?>
                   </div>
                 </nav>
 
