@@ -53,12 +53,10 @@
         <ul>
           <li><a href="https://twitter.com/jensjkdk" target="_blank">Twitter</a></li>
           <li>hire@hellojens.com</li>
-
           <li><a href="http://dk.linkedin.com/in/hellojens" target="_blank">LinkedIn</a></li>
         </ul>
       </div>
     <!-- </div> -->
-
 
     <!-- wrapper -->
     <div class="row splash-template">
