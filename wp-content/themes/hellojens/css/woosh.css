@@ -1,0 +1,176 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+section {
+  font-family: 'Open Sans', sans-serif;
+  height: 350px;
+  position: relative; }
+
+section a {
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-size: 5rem; }
+
+section.p1 a {
+  width: 356px;
+  height: 94px;
+  line-height: 94px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -178px;
+  margin-top: -47px;
+  color: transparent; }
+
+section.p1 a:after,
+section.p1 a:before {
+  content: attr(data-cont);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -178px;
+  margin-top: -47px;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 1s all;
+  -moz-transition: 1s all;
+  -ms-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all; }
+
+section.p1 a:after {
+  -webkit-clip-path: polygon(100% 100%, 100% 0, -35% 0, 0 100%);
+  clip-path: polygon(100% 100%, 100% 0, -35% 0, 0 100%);
+  color: #000;
+  -webkit-animation: volta 0.5s;
+  -moz-animation: volta 0.5s;
+  -ms-animation: volta 0.5s;
+  animation: volta 0.5s; }
+
+@-moz-keyframes volta {
+  0% {
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4); }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+@-webkit-keyframes volta {
+  0% {
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4); }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+@keyframes volta {
+  0% {
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4); }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+section.p1 a:before {
+  -webkit-clip-path: polygon(0 100%, -35% 0, 0 0, 0 100%);
+  clip-path: polygon(0 100%, -35% 0, 0 0, 0 100%);
+  color: #000;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2); }
+
+section.p1 a:hover:after {
+  -webkit-animation: hideum 0.4s;
+  -moz-animation: hideum 0.4s;
+  -ms-animation: hideum 0.4s;
+  animation: hideum 0.4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+@-moz-keyframes hideum {
+  0% {
+    -webkit-clip-path: polygon(100% 100%, 100% 0, -35% 0, 0 100%);
+    clip-path: polygon(100% 100%, 100% 0, -35% 0, 0 100%); }
+  100% {
+    -webkit-clip-path: polygon(100% 100%, 100% 0, 100% 0, 135% 100%);
+    clip-path: polygon(100% 100%, 100% 0, 100% 0, 135% 100%); } }
+@-webkit-keyframes hideum {
+  0% {
+    -webkit-clip-path: polygon(100% 100%, 100% 0, -35% 0, 0 100%);
+    clip-path: polygon(100% 100%, 100% 0, -35% 0, 0 100%); }
+  100% {
+    -webkit-clip-path: polygon(100% 100%, 100% 0, 100% 0, 135% 100%);
+    clip-path: polygon(100% 100%, 100% 0, 100% 0, 135% 100%); } }
+@keyframes hideum {
+  0% {
+    -webkit-clip-path: polygon(100% 100%, 100% 0, -35% 0, 0 100%);
+    clip-path: polygon(100% 100%, 100% 0, -35% 0, 0 100%); }
+  100% {
+    -webkit-clip-path: polygon(100% 100%, 100% 0, 100% 0, 135% 100%);
+    clip-path: polygon(100% 100%, 100% 0, 100% 0, 135% 100%); } }
+section.p1 a:hover:before {
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  transform: scale(1.4);
+  -webkit-animation: showum 0.4s;
+  -moz-animation: showum 0.4s;
+  -ms-animation: showum 0.4s;
+  animation: showum 0.4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; }
+
+@-moz-keyframes showum {
+  0% {
+    -webkit-clip-path: polygon(0 100%, -35% 0, 0 0, 0 100%);
+    clip-path: polygon(0 100%, -35% 0, 0 0, 0 100%); }
+  100% {
+    -webkit-clip-path: polygon(135% 100%, 100% 0, 0 0, 0 100%);
+    clip-path: polygon(135% 100%, 100% 0, 0 0, 0 100%); } }
+@-webkit-keyframes showum {
+  0% {
+    -webkit-clip-path: polygon(0 100%, -35% 0, 0 0, 0 100%);
+    clip-path: polygon(0 100%, -35% 0, 0 0, 0 100%); }
+  100% {
+    -webkit-clip-path: polygon(135% 100%, 100% 0, 0 0, 0 100%);
+    clip-path: polygon(135% 100%, 100% 0, 0 0, 0 100%); } }
+@keyframes showum {
+  0% {
+    -webkit-clip-path: polygon(0 100%, -35% 0, 0 0, 0 100%);
+    clip-path: polygon(0 100%, -35% 0, 0 0, 0 100%); }
+  100% {
+    -webkit-clip-path: polygon(135% 100%, 100% 0, 0 0, 0 100%);
+    clip-path: polygon(135% 100%, 100% 0, 0 0, 0 100%); } }
+
+/*# sourceMappingURL=woosh.css.map */
