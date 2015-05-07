@@ -14,7 +14,7 @@
 		<div class="row"> 
 			<div class="small-11 small-centered columns">
 				<div class="row">
-					<section class="large-9 right post-content columns">
+					<section class="medium-9 right post-content columns">
 						<div class="row">
 							<div class="large-9 columns">
 								<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -34,7 +34,7 @@
 				      </div>
 			      </div>
 					</section>
-					<section class="small-12 large-3 left small-text-center author-content columns">
+					<section class="small-12 medium-3 large-3 left small-text-center medium-text-left author-content columns">
 						<div class="row">
 					  	<?php $the_query = new WP_Query( array("posts_per_page" => "1", "post_type" => "people", "author"=> $this_author ) ); ?>
 							<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
