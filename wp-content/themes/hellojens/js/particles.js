@@ -8,7 +8,7 @@ particlesJS('particles-js', {
       anim: {
         enable: false,
         speed: 2.5,
-        opacity_min: 0,
+        opacity_min: 0.3,
         sync: false
       }
     },
@@ -23,8 +23,8 @@ particlesJS('particles-js', {
       width: 1,
       condensed_mode: {
         enable: false,
-        rotateX: 1600,
-        rotateY: 1600
+        rotateX: 600,
+        rotateY: 600
       }
     },
     anim: {
@@ -35,18 +35,18 @@ particlesJS('particles-js', {
   interactivity: {
     enable: true,
     mouse: {
-      distance: 550
+      distance: 250
     },
     detect_on: 'window', // "canvas" or "window"
     mode: 'grab', // "grab" of false
     line_linked: {
-      opacity: .5
+      opacity: .7
     },
     events: {
       onclick: {
         enable: true,
         mode: 'push', // "push" or "remove"
-        nb: 1
+        nb: 3
       },
       onresize: {
         enable: true,

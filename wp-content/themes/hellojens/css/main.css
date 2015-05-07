@@ -55,9 +55,6 @@ canvas {
   position: absolute;
   z-index: 2;
   width: 100%;
-  margin-left: -20px;
-  border-left: 20px solid white;
-  border-right: 20px solid white;
   height: 660px;
   overflow: hidden;
   background-color: #E6E6E6; }
@@ -126,26 +123,53 @@ iframe {
 
 .connect {
   width: 100%;
-  text-align: center; }
-  .connect li {
-    display: inline-block;
-    margin: 0 25px;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s; }
-    .connect li {
-      border-bottom: 1px solid #E6E6E6; }
-    .connect li a {
-      font-size: 12px;
-      font-family: "Open Sans", sans-serif;
-      font-weight: 300;
-      color: #BBB; }
-    .connect li:hover {
-      border-bottom: 1px solid #D84B4B; }
-      .connect li:hover:first-child {
-        border-bottom: 1px solid #1dcaff; }
-      .connect li:hover:last-child {
-        border-bottom: 1px solid #007bb6; }
+  background: rgba(255,255,255,0.1);
+  position: fixed;
+  bottom: 0px;
+  z-index: 9999;
+  height: 60px;
+  text-align: center; 
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s; 
+  opacity: 0.5;
 
+}
+.connect:hover {
+  background: rgba(255,255,255,0.9);
+  opacity: 1;
 
-
+}
+.connect li {
+  padding-top: 20px;
+  display: inline-block;
+  margin: 0 15px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s; 
+}
+.connect li {
+  border-bottom: 1px solid #E6E6E6; 
+  font-size: 13px;
+}
+.connect li a {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #888; 
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s; 
+}
+.connect li a:hover {
+  color: #222; 
+}
+.connect li:hover {
+  border-bottom: 1px solid #D84B4B; 
+}
+.connect li:hover:first-child {
+  border-bottom: 1px solid #1dcaff; 
+}
+.connect li:hover:last-child {
+  border-bottom: 1px solid #007bb6; 
+}

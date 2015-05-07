@@ -52,7 +52,8 @@
       <div class="connect">
         <ul>
           <li><a href="https://twitter.com/jensjkdk" target="_blank">Twitter</a></li>
-          <li><a href="mailto:hire@hellojens.com">hire@hellojens.com</a></li>
+          <li>hire@hellojens.com</li>
+
           <li><a href="http://dk.linkedin.com/in/hellojens" target="_blank">LinkedIn</a></li>
         </ul>
       </div>
