@@ -2,7 +2,7 @@
 
   <div class="top-section category">
     <div class="row"> 
-      <section class="small-5 text-center small-centered columns">
+      <section class="small-11 medium-5 text-center small-centered columns">
 
           <?php 
             $currentCat = get_query_var('cat');

@@ -6,7 +6,7 @@
 					<article class="row">
 		    	<?php $the_query = new WP_Query( array("posts_per_page" => "2") ); ?>
 		     		<?php while($the_query->have_posts()): $the_query->the_post(); ?>
-								<div class="small-12 medium-11 text-center large-6 columns">
+								<div class="small-12 medium-6 text-center large-6 columns">
 									<div class="post-thumbnail">	
 										<div class="spinner"><div class="dot1"></div><div class="dot2"></div></div> <!-- // Loading -->
 										<a href="<?php the_permalink(); ?>">
@@ -17,7 +17,7 @@
 										</a>
 										<?php the_post_thumbnail(large, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 									</div>
-									<div class="columns small-8 small-centered">
+									<div class="columns small-12 medium-8 small-centered">
 									  <?php
 									    $category = get_the_category();
 									    $category_id = $category[0]->cat_ID;
@@ -67,7 +67,7 @@
 	<div class="related-section">
 		<div class="top-section people">
 			<div class="row"> 
-	 			<section class="small-4 text-center small-centered columns">
+	 			<section class="small-10 madium-4 text-center small-centered columns">
 					<h1>PEOPLE</h1>
 					<h2><a href="/the-people">See all the people involved</a></h2>
 				</section>

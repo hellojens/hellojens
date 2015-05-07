@@ -58,6 +58,9 @@ h1, h2, h3, h4, h5 {
   font-family: "DomaineRegular", sans-serif;
   color: #143C37;
   line-height: 1.2;
+  text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed;
+
 }
 
 
@@ -65,6 +68,8 @@ p {
   font-family: "maisonBook", sans-serif;
   font-weight: normal; 
   color: #143C37;
+  text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed;
 }
 
 b {
@@ -135,6 +140,14 @@ header {
   margin: 30px 0px;
   border: 0px solid black;
 }
+
+@media only screen and (max-width: 40.063em) {
+  .main-navigation a {
+    font-size: 26px;
+    margin: 10px 0px;
+  }
+}
+
 
 .home .main-navigation a.start:before {
   position: absolute;
@@ -278,8 +291,11 @@ header {
 
 .top-section.home-hero {
   padding-top: 35px;
-  padding-bottom: 35px;
   background-color: white;
+}
+
+.top-section.home-hero .columns:first-child {
+  padding-bottom: 25px;
 }
 
 .home-hero .hero-content {
@@ -414,6 +430,12 @@ header {
           transition: all 0.3s ease-out; 
 }
 
+@media only screen and (max-width: 40.063em) {
+  .post-overlay {
+    padding-top: 18%;
+  }
+}
+
 .post-overlay:hover {
   opacity: 1;
 }
@@ -519,8 +541,15 @@ header {
   text-align: left;
 }
 
+@media only screen and (max-width: 40.063em) {
+  .single-people .people-post{
+    text-align: center;
+  }
+}
+
 .single-people .profile-picture {
   border-radius: 200px;
+  margin-bottom: 35px;
 }
 
 .single-people .people-post h1 {
@@ -614,6 +643,12 @@ header {
   margin-bottom: 0px;
 }
 
+@media only screen and (max-width: 40.063em) {
+  .single-post .single-post-content h1 {
+    font-size: 4rem;
+  }
+}
+
 .single-post .single-post-content p {
   font-size: 15px;
   font-weight: 100;
@@ -668,6 +703,18 @@ header {
   color: #FF00BD;
 }
 
+@media only screen and (max-width: 40.063em) {
+  .single-post .author-content  {
+    padding-right: 0px;
+  }
+  .single-post .author-content h2 {
+    margin-right: 0px; 
+  }
+  .single-post .author-content img {
+    width: 60%;
+  }
+}
+
 /* -------------------------------- 
   About  
 -------------------------------- */
@@ -720,6 +767,12 @@ header {
 .about-social .social-block:nth-child(2) {
   background: rgb(232, 232, 230);
 
+}
+
+@media only screen and (max-width: 40.063em) {
+  .top-section.about-page h2, .about-social a.social-link {
+    font-size: 3rem;
+  }
 }
 
 

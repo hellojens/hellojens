@@ -34,7 +34,7 @@
 				      </div>
 			      </div>
 					</section>
-					<section class="large-3 left author-content columns">
+					<section class="small-12 large-3 left small-text-center author-content columns">
 						<div class="row">
 					  	<?php $the_query = new WP_Query( array("posts_per_page" => "1", "post_type" => "people", "author"=> $this_author ) ); ?>
 							<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>

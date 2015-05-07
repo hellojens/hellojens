@@ -23,10 +23,11 @@
 		<div class="row"> 
 			<section class="small-11 small-centered columns">
 				<div class="row">
-					<div class="small-6 text-center columns">
+					<div class="small-12 medium-6 text-center columns">
 						<?php the_post_thumbnail(post, array( 'class' => 'profile-picture', 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
+						<br><br>
 					</div>
-					<div class="small-6 left columns">
+					<div class="small-12 medium-6 small-text-center left columns">
 						<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 								<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "people-post")); ?>>

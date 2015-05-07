@@ -121,7 +121,7 @@ header {
       font-size: 6rem; 
     } 
     header h2 {
-    display: none;
+      display: block;
     }
   }
 
