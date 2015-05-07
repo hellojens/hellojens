@@ -13,7 +13,6 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
-  margin: 20px;
   color: #2A2A2A;
   background-color: #ffffff; 
 }
@@ -151,6 +150,7 @@ iframe {
 .connect li {
   border-bottom: 1px solid #E6E6E6; 
   font-size: 13px;
+  font-family: "Montserrat", sans-serif;
 }
 .connect li a {
   font-size: 14px;
