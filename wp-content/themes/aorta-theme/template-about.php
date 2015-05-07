@@ -35,7 +35,7 @@
 					<section class="small-12 small-centered columns social-block">
 						<div class="row">
 							<div class="small-10 small-centered columns">
-								<a class="social-link" target="_blank" href="<?php the_field("about_facebook"); ?>">Twitter ></a>
+								<a class="social-link" target="_blank" href="<?php the_field("about_twitter"); ?>">Twitter ></a>
 							</div>
 						</div>
 					</section>

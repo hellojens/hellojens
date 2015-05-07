@@ -41,8 +41,12 @@
 									<h3><?php the_field("place_of_assosiation"); ?></h3>
 									<p class="additional-info">
 										<?php the_field("associated_info"); ?><br>
-										<a target="_blank" href="<?php echo get_field("associated_directions"); ?>">Directions</a><br>
-										<a target="_blank" href="<?php echo get_field("associated_website"); ?>">Visit website</a>
+										<?php if( get_field('associated_directions') ): ?>
+											<a target="_blank" href="<?php echo get_field("associated_directions"); ?>">Directions</a><br>
+										<?php endif; ?>
+										<?php if( get_field('associated_website') ): ?>
+											<a target="_blank" href="<?php echo get_field("associated_website"); ?>">Visit website</a>
+										<?php endif; ?>
 									</p>
 
 								</article>

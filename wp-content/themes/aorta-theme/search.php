@@ -2,7 +2,7 @@
 
   <div class="top-section category">
     <div class="row"> 
-      <section class="small-5 text-center small-centered columns">
+      <section class="small-11 medium-5 text-center small-centered columns">
         <h2><?php echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); ?><span style="color: #143C37;"><?php echo get_search_query(); ?></span></h2>
       </section>
     </div>      
