@@ -641,6 +641,15 @@ header {
   height: 450px;
 }
 
+.single-post .content-section {
+  margin-top: -140px;
+}
+
+.single-post .content-section .content-slab {
+  background: white;
+  padding-top: 20px;
+}
+
 .single-post .post-content {
 
 }
@@ -652,8 +661,8 @@ header {
 }
 
 .single-post .single-post-content .signatur img {
-  padding: 0px 0px 15px 0px;
-  width: 95%;
+  padding: 15px 0px 15px 0px;
+  width: 60%;
 }
 
 .single-post .single-post-content h1 {

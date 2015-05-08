@@ -128,7 +128,7 @@ jQuery(document).ready(function($){
 
   $('a').click(function(event) {
     // Over-rides the link
-
+    if(! $(this).hasClass("start")) {
       event.preventDefault();
       // Sets the new destination to the href of the link
       newLocation = this.href;
@@ -140,6 +140,7 @@ jQuery(document).ready(function($){
           // Redirects to new destination
           window.location = newLocation;
       }, 250);
+    }
 
 
   });
