@@ -84,7 +84,7 @@
                         <a class="start" href="/">Reading</a>
                       </div>
                       <div class="small-6 medium-3 left text-center columns">
-                        <a class="list-people" href="/the-people">People</a>
+                        <a class="list-people looknice" href="/the-people">People</a>
                       </div>
                     </div>
                   </div>
@@ -100,4 +100,4 @@
             </div>
 
           </div>
-
+          <div class="transition-wrapper">

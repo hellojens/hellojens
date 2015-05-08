@@ -21,7 +21,9 @@
 			</div>
 			<!-- end of row -->
 		</div>
-		<!-- /wrapper -->
+		<!-- /transition wrapper -->
+		</div>
+		<!-- /all wrapper -->
 
 		<?php wp_footer(); ?>
 

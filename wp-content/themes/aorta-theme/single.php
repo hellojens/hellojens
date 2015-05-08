@@ -16,7 +16,7 @@
 				<div class="row">
 					<section class="medium-9 right post-content columns">
 						<div class="row">
-							<div class="large-9 columns">
+							<div class="large-12 columns">
 								<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 										<?php $this_author = get_the_author_meta('ID'); ?>						
 										<?php $preventdouble = array(get_the_ID()) // Prevent post duplicate  ?>
@@ -46,7 +46,7 @@
 								<?php if (function_exists('the_subheading')) { the_subheading('<p class="author-title">', '</p>'); } ?>
 								
 								<p class="excerpt"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,48); ?></p>
-					    	<div class="author-moreby"><b><?php the_title(); ?>'s other stories</b></div>
+					    	<div class="author-moreby"><?php the_title(); ?>'s other stories</div>
 
 							<?php endwhile; endif; ?>	
 					    <?php wp_reset_query(); ?>

@@ -3,9 +3,10 @@
 	<div class="top-section home-hero">
 		<div class="row"> 
  			<section class="small-11 small-centered columns">
-					<article class="row">
+					<div class="row">
 		    	<?php $the_query = new WP_Query( array("posts_per_page" => "2") ); ?>
 		     		<?php while($the_query->have_posts()): $the_query->the_post(); ?>
+							<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "top-post")); ?>>
 								<div class="small-12 medium-6 text-center large-6 columns">
 									<div class="post-thumbnail">	
 										<div class="spinner"><div class="dot1"></div><div class="dot2"></div></div> <!-- // Loading -->
@@ -27,9 +28,10 @@
 										<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 									</div>
 							</div>
+						</article>
 		      	<?php endwhile; ?>    
 	      	<?php wp_reset_query(); ?>
-					</article>
+				</div>
 			</section>
 		</div>			
 	</div>

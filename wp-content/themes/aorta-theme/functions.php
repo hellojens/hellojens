@@ -29,8 +29,8 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 750, 750, true); // Large Thumbnail
-    add_image_size('post', 300, 300, true); // Post Thumbnail
+    add_image_size('large', 600, 450, true); // Large Thumbnail
+    add_image_size('post', 350, 350, true); // Post Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
@@ -66,6 +66,15 @@ if (function_exists('add_theme_support'))
 /*------------------------------------*\
 	Functions
 \*------------------------------------*/
+
+
+// Remove p taga from image  
+function filter_ptags_on_images($content){
+   return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+
+add_filter('the_content', 'filter_ptags_on_images');
+
 
 // HTML5 Blank navigation
 function top_nav()

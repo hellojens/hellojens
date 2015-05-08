@@ -14,8 +14,12 @@ jQuery(document).ready(function($){
         itemSelector: '.isotope-align',
         layoutMode: 'fitRows',
         transformsEnabled: false, 
+        percentPosition: false,
       });
+      $container.isotope('unbindResize');
     });
+
+
 
     $(".page-nav").click(function(){
 
@@ -39,6 +43,7 @@ jQuery(document).ready(function($){
 
     function loadMoreFunction() {
       // Only offset of body has category "home"
+
       if($(".home").length < 1) {
         var offset = $(".loadMore").length;
       }  else {
@@ -47,6 +52,8 @@ jQuery(document).ready(function($){
       $.get($(".page-nav a").attr("rel"), {offset: offset}, function(data){
         var posts = $(data).find(".loadMore");
         if(posts.length > 0 ) { 
+
+          $(".grid").isotope('bindResize');
 
           $(".grid").isotope().append(posts).isotope("appended", posts, true).isotope('layout');
 
@@ -66,6 +73,11 @@ jQuery(document).ready(function($){
             });
           },540); // Set timeout to prevent isotope interference 
 
+          $
+          setTimeout(function(){ 
+
+            (".grid").isotope('layout');
+          }, 2000);
           $(".page-nav .loadMoreText").text("Load more");
           $(".page-nav .puff").removeClass("puffit");
 
@@ -81,7 +93,7 @@ jQuery(document).ready(function($){
     new AnimOnScroll( document.getElementById( 'grid' ), {
       minDuration : 0.4,
       maxDuration : 0.7,
-      viewportFactor : 0.2
+      viewportFactor : 0
     });
 
   }; // End isotope homepage post grid 
@@ -89,18 +101,18 @@ jQuery(document).ready(function($){
 
   // fluidbox
 
-    $('.single-post .post-content a').fluidbox({
-        viewportFill: 0.9,
-        immediateOpen: true,
-        debounceResize: true,
-        closeTrigger: [{
-            selector: "#fluidbox-overlay",
-            event: "click"
-        }, {
-            selector: "window",
-            event: "scroll"
-        }]
-    });
+    // $('.single-post .post-content a').fluidbox({
+    //     viewportFill: 0.9,
+    //     immediateOpen: true,
+    //     debounceResize: true,
+    //     closeTrigger: [{
+    //         selector: "#fluidbox-overlay",
+    //         event: "click"
+    //     }, {
+    //         selector: "window",
+    //         event: "scroll"
+    //     }]
+    // });
 
 
   // Search 
@@ -109,6 +121,31 @@ jQuery(document).ready(function($){
     e.preventDefault();
     $(".search-wrapper").addClass("open");
     // $("header, .top-section, .content-section").animate({"opacity": 0.1}, 200);
+  });
+
+
+  $('.transition-wrapper').toggleClass("visible");
+
+  $('a').click(function(event) {
+    // Over-rides the link
+
+      event.preventDefault();
+      // Sets the new destination to the href of the link
+      newLocation = this.href;
+      // color = $(this).data("color");
+      // $('body').css('background-color', color );
+      $('.transition-wrapper').css('opacity','0' );
+      // Delays action
+      window.setTimeout(function() {
+          // Redirects to new destination
+          window.location = newLocation;
+      }, 250);
+
+
+  });
+
+  $('h1').click(function(event) {
+    $('.transition-wrapper').toggleClass("visible");
   });
 
 

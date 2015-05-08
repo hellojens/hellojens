@@ -3,7 +3,7 @@
 
 	<div class="top-section people">
 		<div class="row"> 
- 			<section class="small-11 medium-6 large-4 text-center small-centered columns">
+ 			<section class="small-11 medium-6 large-5 text-center small-centered columns">
 
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
