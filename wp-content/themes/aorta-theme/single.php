@@ -12,7 +12,7 @@
 
 	<div class="content-section">
 		<div class="row"> 
-			<div class="small-11 small-centered columns content-slab">
+			<div class="small-12 medium-11 small-centered columns content-slab">
 				<div class="row">
 					<section class="medium-9 right post-content columns">
 						<div class="row">
@@ -21,7 +21,7 @@
 										<?php $this_author = get_the_author_meta('ID'); ?>						
 										<?php $preventdouble = array(get_the_ID()) // Prevent post duplicate  ?>
 										<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "single-post-content")); ?>>
-											<div class="small-7 columns signatur"> 
+											<div class="small-10 medium-7 columns signatur"> 
 												<?php echo get_avatar( get_the_author_meta( 'ID' ), 512 ); ?>
 											</div>
 											<div class="small-12 columns"> 
@@ -34,7 +34,7 @@
 				      </div>
 			      </div>
 					</section>
-					<section class="small-12 medium-3 large-3 left small-text-center medium-text-left author-content columns">
+					<section class="small-10 small-centered medium-3 large-3 medium-left small-text-center medium-text-left author-content columns">
 						<div class="row">
 					  	<?php $the_query = new WP_Query( array("posts_per_page" => "1", "post_type" => "people", "author"=> $this_author ) ); ?>
 							<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>

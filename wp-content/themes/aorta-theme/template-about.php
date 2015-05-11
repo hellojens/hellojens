@@ -3,7 +3,7 @@
 
 	<div class="top-section about-page">
 		<div class="row"> 
- 			<section class="small-10 small-centered columns">
+ 			<section class="small-10 meidum-11 small-centered columns">
 
 				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 					<div class="small-12 columns">
@@ -25,7 +25,7 @@
 				<?php if( get_field('about_facebook') ): ?>
 					<section class="small-12 small-centered columns social-block">
 						<div class="row">
-							<div class="small-10 small-centered columns">
+							<div class="small-11 medium-10 small-centered columns">
 								<a class="social-link" target="_blank" href="<?php the_field("about_facebook"); ?>">Facebook ></a>
 							</div>
 						</div>
@@ -34,7 +34,7 @@
 				<?php if( get_field('about_twitter') ): ?>
 					<section class="small-12 small-centered columns social-block">
 						<div class="row">
-							<div class="small-10 small-centered columns">
+							<div class="small-11 medium-10 small-centered columns">
 								<a class="social-link" target="_blank" href="<?php the_field("about_twitter"); ?>">Twitter ></a>
 							</div>
 						</div>
@@ -43,7 +43,7 @@
 				<?php if( get_field('about_instagram') ): ?>
 					<section class="small-12 small-centered columns social-block">
 						<div class="row">
-							<div class="small-10 small-centered columns">
+							<div class="small-11 medium-10 small-centered columns">
 								<a class="social-link" target="_blank" href="<?php the_field("about_instagram"); ?>">Instagram ></a>
 							</div>
 						</div>

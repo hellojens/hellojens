@@ -217,6 +217,18 @@ header {
   margin: 0px;
 }
 
+@media only screen and (max-width: 40.063em) {
+  .main-navigation .logo a {
+    padding: 0px;
+  }
+  .aortasvglogo {
+    width: 70%;
+  }
+  .top-section.home-hero {
+    padding-top: 20px !important;
+  }
+}
+
 .top-nav ul {
   list-style: none;
   margin: 0 auto;
@@ -358,7 +370,19 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   height: 400px;
-  width: 100%;
+  width: 99%;
+  margin: 0 auto;
+
+}
+
+@media only screen and (max-width: 40.063em) {
+  .home-hero .top-post .background-fit {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 99%;
+  }
 }
 
 .home-hero .page-overlay img {
@@ -661,6 +685,12 @@ header {
   height: 450px;
 }
 
+@media only screen and (max-width: 40.063em) {
+  .single-header {
+    height: 250px;
+  }
+}
+
 .single-post .content-section {
   margin-top: -140px;
 }
@@ -707,7 +737,7 @@ header {
 
 @media only screen and (max-width: 40.063em) {
   .single-post .single-post-content h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -770,7 +800,7 @@ header {
 
 @media only screen and (max-width: 40.063em) {
   .single-post .author-content  {
-    padding-right: 0px;
+    padding: 0px;
   }
   .single-post .author-content h2 {
     margin-right: 0px; 
@@ -795,6 +825,12 @@ header {
 
 .about-page {
   padding-top: 40px;
+}
+
+@media only screen and (max-width: 40.063em) {
+  .about-page {
+    padding-top: 20px;
+  }
 }
 
 .about-page p {

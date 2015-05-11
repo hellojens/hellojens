@@ -5,6 +5,13 @@
 jQuery(document).ready(function($){
   
 
+
+  // Align posts after reload if .grid is visible
+  if($(".grid").length > 0) {
+    $(window).load(function(){
+      $(".grid").isotope('layout');
+    });
+  }
   
   var isotopeInit = function() {
 
@@ -18,8 +25,6 @@ jQuery(document).ready(function($){
       });
       $container.isotope('unbindResize');
     });
-
-
 
     $(".page-nav").click(function(){
 
@@ -127,14 +132,12 @@ jQuery(document).ready(function($){
   $('.transition-wrapper').toggleClass("visible");
 
   $('a').click(function(event) {
-    // Over-rides the link
+    // dont fade the link
     if($(this).hasClass("donot")) {
 
       event.preventDefault();
       // Sets the new destination to the href of the link
       newLocation = this.href;
-      // color = $(this).data("color");
-      // $('body').css('background-color', color );
       $('.transition-wrapper').css('opacity','0' );
       // Delays action
       window.setTimeout(function() {
@@ -144,10 +147,6 @@ jQuery(document).ready(function($){
     }
 
 
-  });
-
-  $('h1').click(function(event) {
-    $('.transition-wrapper').toggleClass("visible");
   });
 
 

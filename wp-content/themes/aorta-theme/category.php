@@ -22,7 +22,7 @@
 
   <div class="content-section">
     <div class="row"> 
-      <section class="small-10 medium-11 small-centered columns">
+      <section class="small-12 medium-11 small-centered columns">
         <ul class="row grid effect-2" id="grid">
           <?php 
             $offset = htmlspecialchars(trim($_GET['offset']));

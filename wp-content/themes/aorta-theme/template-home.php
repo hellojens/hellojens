@@ -2,7 +2,7 @@
 
 	<div class="top-section home-hero">
 		<div class="row"> 
- 			<section class="small-11 small-centered columns">
+ 			<section class="small-12 medium-11 small-centered columns">
 					<div class="row">
 		    	<?php $the_query = new WP_Query( array("posts_per_page" => "2") ); ?>
 		     		<?php while($the_query->have_posts()): $the_query->the_post(); ?>
@@ -16,7 +16,6 @@
 												<p class="columns medium-8 small-centered"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,10); ?></p>
 											</div>
 										</a>
-										<?php // the_post_thumbnail(large, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 									</div>
 									<div class="columns small-12 medium-8 small-centered">
 									  <?php
@@ -38,7 +37,7 @@
 
 	<div class="content-section">
 		<div class="row"> 
-			<section class="small-10 medium-11 small-centered columns">
+			<section class="small-12 medium-11 small-centered columns">
 				<ul class="row grid effect-2" id="grid">
 		    	<?php 
 				    $offset = htmlspecialchars(trim($_GET['offset']));
@@ -76,7 +75,7 @@
 			</div>			
 		</div>
 		<div class="row"> 
-			<section class="small-10 medium-11 small-centered text-center columns main-grid">
+			<section class="small-12 medium-11 small-centered text-center columns main-grid">
 				<div class="row">
 					<?php include(locate_template('content-people-all.php')); ?>
 				</div>
