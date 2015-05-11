@@ -128,7 +128,8 @@ jQuery(document).ready(function($){
 
   $('a').click(function(event) {
     // Over-rides the link
-    if(! $(this).hasClass("start")) {
+    if($(this).hasClass("donot")) {
+
       event.preventDefault();
       // Sets the new destination to the href of the link
       newLocation = this.href;

@@ -7,8 +7,7 @@
 
 							<!-- copyright -->
 							<p class="copyright">
-								&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Developed by ', 'hellojens.com'); ?>
-								<a href="//hellojens.com" title="hellojens.com">hellojens</a>.
+								&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>
 							</p>
 							<!-- /copyright -->
 

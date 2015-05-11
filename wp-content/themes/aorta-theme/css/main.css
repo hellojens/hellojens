@@ -280,6 +280,19 @@ header {
   z-index: 2;
 }
 
+.related-section:before {
+  width: 100%;
+  height: 40px;
+  display: inline-block;
+  background-image: url("../img/related-top.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0px;
+}
+
 .related-section h3 {
   font-size: 3rem;
   color: #143C37;
@@ -340,6 +353,14 @@ header {
 
 }
 
+.home-hero .top-post .background-fit {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100%;
+}
+
 .home-hero .page-overlay img {
 
 }
@@ -348,7 +369,6 @@ header {
   font-size: 16px;
   line-height: 1.6;
   padding: 20px 0px;
-
 }
 
 .page-nav {
@@ -647,7 +667,20 @@ header {
 
 .single-post .content-section .content-slab {
   background: white;
-  padding-top: 20px;
+  padding-top: 0px;
+}
+
+.single-post .content-section .content-slab:before {
+  width: 100%;
+  height: 20px;
+  display: inline-block;
+  background-image: url("../img/single-post-top.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0px;
 }
 
 .single-post .post-content {
@@ -661,7 +694,7 @@ header {
 }
 
 .single-post .single-post-content .signatur img {
-  padding: 15px 0px 15px 0px;
+  padding: 35px 0px 15px 0px;
   width: 60%;
 }
 

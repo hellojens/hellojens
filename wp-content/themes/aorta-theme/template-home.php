@@ -6,17 +6,17 @@
 					<div class="row">
 		    	<?php $the_query = new WP_Query( array("posts_per_page" => "2") ); ?>
 		     		<?php while($the_query->have_posts()): $the_query->the_post(); ?>
+							<?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), full ); ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "top-post")); ?>>
-								<div class="small-12 medium-6 text-center large-6 columns">
-									<div class="post-thumbnail">	
-										<div class="spinner"><div class="dot1"></div><div class="dot2"></div></div> <!-- // Loading -->
+								<div class="small-12 medium-6 text-center  large-6 columns">
+									<div class="post-thumbnail background-fit" style="background-image: url('<?php echo $featuredimage[0]; ?>');">	
 										<a href="<?php the_permalink(); ?>">
 											<div class="post-overlay">
 												<div class="author"><?php the_author(); ?></div>
 												<p class="columns medium-8 small-centered"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,10); ?></p>
 											</div>
 										</a>
-										<?php the_post_thumbnail(large, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
+										<?php // the_post_thumbnail(large, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
 									</div>
 									<div class="columns small-12 medium-8 small-centered">
 									  <?php
@@ -27,8 +27,8 @@
   									<div class="date"><?php the_time('d.m.Y'); ?> | <a href="<?php echo esc_url( $category_link ); ?>"><?php echo $category[0]->cat_name; ?></a> </div>
 										<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 									</div>
-							</div>
-						</article>
+								</div>
+							</article>
 		      	<?php endwhile; ?>    
 	      	<?php wp_reset_query(); ?>
 				</div>
