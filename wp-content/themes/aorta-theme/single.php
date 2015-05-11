@@ -13,6 +13,7 @@
 	<div class="content-section">
 		<div class="row"> 
 			<div class="small-12 medium-11 small-centered columns content-slab">
+				<div class="background-fit"></div>
 				<div class="row">
 					<section class="medium-9 right post-content columns">
 						<div class="row">
