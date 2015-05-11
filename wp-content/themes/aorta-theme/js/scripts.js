@@ -74,7 +74,7 @@ jQuery(document).ready(function($){
                 $(posts).addClass("page" +pageCount);
                 // Animate 
                 $li.addClass('animate');
-              }, i*150); // delay 100 ms
+              }, i*100); // delay 100 ms
             });
           },540); // Set timeout to prevent isotope interference 
 
@@ -97,7 +97,7 @@ jQuery(document).ready(function($){
     // Inifit scroll viewport detector 
     new AnimOnScroll( document.getElementById( 'grid' ), {
       minDuration : 0.4,
-      maxDuration : 0.7,
+      maxDuration : 0.6,
       viewportFactor : 0
     });
 

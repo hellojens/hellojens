@@ -18,7 +18,7 @@
 
 	<div class="content-section">
 		<div class="row"> 
-			<section class="small-12 medium-11 small-centered columns main-grid">
+			<section class="small-12 large-11 small-centered columns main-grid">
 				<div class="row">
 					<?php include(locate_template('content-people-all.php')); ?>
 				</div>

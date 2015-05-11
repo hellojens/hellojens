@@ -2,7 +2,7 @@
 
 	<div class="top-section home-hero">
 		<div class="row"> 
- 			<section class="small-12 medium-11 small-centered columns">
+ 			<section class="small-12 large-11 small-centered columns">
 					<div class="row">
 		    	<?php $the_query = new WP_Query( array("posts_per_page" => "2") ); ?>
 		     		<?php while($the_query->have_posts()): $the_query->the_post(); ?>
@@ -12,12 +12,14 @@
 									<div class="post-thumbnail background-fit" style="background-image: url('<?php echo $featuredimage[0]; ?>');">	
 										<a href="<?php the_permalink(); ?>">
 											<div class="post-overlay">
-												<div class="author"><?php the_author(); ?></div>
-												<p class="columns medium-8 small-centered"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,10); ?></p>
+												<div class="post-overlay-content">
+													<div class="author"><?php the_author(); ?></div>
+													<p class="columns medium-8 small-centered"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,10); ?></p>
+												</div>
 											</div>
 										</a>
 									</div>
-									<div class="columns small-12 medium-8 small-centered">
+									<div class="columns small-12 medium-10 small-centered">
 									  <?php
 									    $category = get_the_category();
 									    $category_id = $category[0]->cat_ID;
@@ -37,7 +39,7 @@
 
 	<div class="content-section">
 		<div class="row"> 
-			<section class="small-12 medium-11 small-centered columns">
+			<section class="small-12 large-11 small-centered columns">
 				<ul class="row grid effect-2" id="grid">
 		    	<?php 
 				    $offset = htmlspecialchars(trim($_GET['offset']));
@@ -75,7 +77,7 @@
 			</div>			
 		</div>
 		<div class="row"> 
-			<section class="small-12 medium-11 small-centered text-center columns main-grid">
+			<section class="small-12 large-11 small-centered text-center columns main-grid">
 				<div class="row">
 					<?php include(locate_template('content-people-all.php')); ?>
 				</div>

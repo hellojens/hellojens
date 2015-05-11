@@ -54,12 +54,12 @@
                 </nav>
 
                 <nav class="row main-navigation">
-                  <div class="small-10 small-centered columns">
+                  <div class="small-12 medium-10 small-centered columns">
                     <div class="row">
-                      <div class="hide-for-small-only medium-3 text-center columns">
+                      <div class="small-3 medium-3 text-center columns">
                         <a class="start" href="/">Reading</a>
                       </div>
-                      <div class="small-12 medium-6 logo text-center columns">
+                      <div class="small-6 medium-6 logo text-center columns">
                         <a href="/">
                         <svg class="aortasvglogo" width="250px" height="60px" viewBox="0 0 250 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
                             <title>Aorta logo</title>
@@ -80,10 +80,7 @@
                         </svg>
                         </a>
                       </div>
-                      <div class="show-for-small-only small-6 medium-4 text-center columns">
-                        <a class="start" href="/">Reading</a>
-                      </div>
-                      <div class="small-6 medium-3 left text-center columns">
+                      <div class="small-3 medium-3 left text-center columns">
                         <a class="list-people looknice" href="/the-people">People</a>
                       </div>
                     </div>

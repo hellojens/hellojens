@@ -1,6 +1,6 @@
 	<div class="related-section">
 		<div class="row"> 
-			<section class="small-10 medium-11 small-centered text-center columns">
+			<section class="small-11 small-centered text-center columns">
 				<div class="row">
 
 				<h3>Other stories </h3>
