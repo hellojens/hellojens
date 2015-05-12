@@ -107,7 +107,7 @@ function html5blank_header_scripts()
         wp_register_script('text-jam', get_template_directory_uri() . '/js/text-jam.js', array(), '1.0.0', true); // Conditionizr
         wp_enqueue_script('text-jam'); // Enqueue it!
 
-        wp_register_script('particles-source', 'http://vincentgarreau.com/particles.js/particles.js', array(), '1.0.0', true); // Conditionizr
+        wp_register_script('particles-source', 'http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js', array(), '1.0.0', true); // Conditionizr
         wp_enqueue_script('particles-source'); // Enqueue it!
 
     	wp_register_script('particles', get_template_directory_uri() . '/js/particles.js', array(), '1.0.0', true); // Conditionizr

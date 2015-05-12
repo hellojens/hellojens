@@ -101,6 +101,7 @@ a:hover {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: rgb(153, 149, 138);
+  display: inline-block;
 }
 
 .date a {
@@ -921,10 +922,60 @@ header {
 
 }
 
+/* -------------------------------- 
+  List view mobile 
+-------------------------------- */
 @media only screen and (max-width: 40.063em) {
   .top-section.about-page h2, .about-social a.social-link {
     font-size: 3rem;
   }
+
+  .post-thumbnail {
+    float: left;
+    width: 35%;
+    display: inline-block;
+  }
+
+  .post-content {
+    float: left;
+    width: 65%;
+    height: 100%;
+    text-align: left !important;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .home-post {
+    position: relative;
+    margin: 5px 0px;
+    overflow: hidden;
+    display: inline-block;
+    height: 110px;
+  }
+
+  .home-post .date {
+    padding: 0 0px 0px 15px;
+  }
+
+  .home-post h2 {
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 5px 0px 5px 15px;
+    display: inline-block;
+  }
+
+  .post-overlay {
+    display: none;
+  }
+
+  .list-people {
+    margin-left: -10px !important;
+  }
+
 }
 
 

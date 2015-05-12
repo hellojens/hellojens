@@ -11,11 +11,13 @@
     </a>
     <?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
   </div>
-  <?php
-    $category = get_the_category();
-    $category_id = $category[0]->cat_ID;
-    $category_link = get_category_link( $category_id );
-  ?>
-  <div class="date"><?php the_time('d.m.Y'); ?> | <a href="<?php echo esc_url( $category_link ); ?>"><?php echo $category[0]->cat_name; ?></a> </div>
-  <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></h2>
+  <div class="post-content">
+    <?php
+      $category = get_the_category();
+      $category_id = $category[0]->cat_ID;
+      $category_link = get_category_link( $category_id );
+    ?>
+    <div class="date"><?php the_time('d.m.Y'); ?> | <a href="<?php echo esc_url( $category_link ); ?>"><?php echo $category[0]->cat_name; ?></a> </div>
+    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></h2>
+  </div>
 </article>
