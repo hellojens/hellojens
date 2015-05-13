@@ -574,6 +574,39 @@ function create_post_type_html5()
         //     'category'
         // ) // Add Category and Post Tags support
     ));
+    register_post_type('calender', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Calender', 'calender'), // Rename these to suit
+            'singular_name' => __('Calender', 'calender'),
+            'add_new' => __('Add New', 'Editor'),
+            'add_new_item' => __('Add New Editor', 'editor'),
+            'edit' => __('Edit', 'edit'),
+            'edit_item' => __('Edit', 'edit'),
+            'new_item' => __('New Editor', 'editor'),
+            'view' => __('View Calender', 'viewcalender'),
+            'view_item' => __('View Calender', 'viewcalender'),
+            'search_items' => __('Search Calender', 'searchcalender'),
+            'not_found' => __('No editors found', 'notfound'),
+            'not_found_in_trash' => __('No editors found in Trash', 'notfound')
+        ),
+        'supports' => array('thumbnail'),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'author'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        // 'taxonomies' => array(
+        //     'post_tag',
+        //     'category'
+        // ) // Add Category and Post Tags support
+    ));
 }
 
 

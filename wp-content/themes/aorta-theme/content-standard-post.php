@@ -20,6 +20,6 @@
       $category_link = get_category_link( $category_id );
     ?>
     <div class="date"><?php the_time('d.m.Y'); ?> | <a href="<?php echo esc_url( $category_link ); ?>"><?php echo $category[0]->cat_name; ?></a> </div>
-    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?>.</a></h2>
+    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
   </div>
 </article>
