@@ -84,7 +84,7 @@
                         <a class="list-people looknice" href="/the-people">People</a>
                       </div>
                     </div>
-                    <a href="#" class="search-loop searchlink">
+                    <a href="#" class="search-loop searchlink hide-for-small-only">
                       <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
                           <g id="Page-1" stroke="none" stroke-width="1"  fill-rule="evenodd" sketch:type="MSPage">
                               <g class="searchsvg" id="Fill-254-+-Fill-256" sketch:type="MSLayerGroup" transform="translate(1.000000, 1.000000)" fill="#133C37">

@@ -45,7 +45,7 @@
     <div class="row">
       <div  class="page-nav small-10 small-centered text-center columns">
         <a rel="<?php echo site_url(), $_SERVER['REQUEST_URI']; ?>" class="load-more">        
-          <img class="puff"src="<?php echo get_template_directory_uri(); ?>/img/svg-loaders/puff.svg">
+          <img class="puff"src="<?php echo get_template_directory_uri(); ?>/img/svg-loaders/oval.svg">
           <span class="loadMoreText">View more</span>
         </a>
       </div>
