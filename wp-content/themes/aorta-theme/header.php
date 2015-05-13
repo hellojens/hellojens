@@ -34,7 +34,7 @@
               <div class="small-9 small-centered columns">
 
                 <form class="search" method="get" action="<?php echo home_url(); ?>" role="search">
-                  <input class="search-input" type="search" name="s" placeholder="To search, type and hit enter." onfocus="this.placeholder = ''" onblur="this.placeholder = 'To search, type and hit enter.'">
+                  <input class="search-input" type="search" name="s" placeholder="Type here..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type here...'">
                   <!-- <button class="search-submit" type="submit" role="button">Search</button> -->
                 </form>
 
@@ -81,7 +81,7 @@
                         </a>
                       </div>
                       <div class="small-3 medium-3 left medium-text-left columns">
-                        <a class="list-people looknice" href="/the-people">People</a>
+                        <a class="list-people looknice" href="/the-people">Contributors</a>
                       </div>
                     </div>
                     <a href="#" class="search-loop searchlink"><img src="<?php echo get_template_directory_uri(); ?>/img/search.svg"></div>

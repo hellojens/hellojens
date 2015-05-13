@@ -61,7 +61,7 @@
 			<div  class="page-nav small-10 small-centered text-center columns">
 				<a rel="<?php echo site_url(), $_SERVER['REQUEST_URI']; ?>" class="load-more">				
 					<img class="puff"src="<?php echo get_template_directory_uri(); ?>/img/svg-loaders/oval.svg">
-					<span class="loadMoreText">Read more</span>
+					<span class="loadMoreText">View more</span>
 				</a>
 			</div>
 		</div>
@@ -72,7 +72,7 @@
 			<div class="row"> 
 	 			<section class="small-10 madium-4 text-center small-centered columns">
 					<h1>PEOPLE</h1>
-					<h2><a href="/the-people">See all the people involved</a></h2>
+					<h2><a href="/the-people">Meet the contributors</a></h2>
 				</section>
 			</div>			
 		</div>
@@ -80,6 +80,20 @@
 			<section class="small-12 large-11 small-centered text-center columns main-grid">
 				<div class="row">
 					<?php include(locate_template('content-people-all.php')); ?>
+					
+				  <div class="small-6 medium-4 large-3 left columns">
+				    <article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "people-post")); ?>>
+				      <div class="round-wrapper">
+				      <?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), post ); ?>
+				        <a href="<?php the_permalink(); ?>">
+				          <img src="<?php echo $featuredimage[0]; ?>">
+				        </a>
+				      </span>
+				      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				      <?php if (function_exists('the_subheading')) { the_subheading('<p>', '</p>'); } ?>
+				    </article>
+				  </div>
+
 				</div>
 			</section>
 		</div>
