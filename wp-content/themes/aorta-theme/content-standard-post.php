@@ -9,7 +9,9 @@
         </div>
       </div>
     </a>
-    <?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
+    <a href="<?php the_permalink(); ?>">
+      <?php the_post_thumbnail(post, array( 'alt' => get_the_title(), 'title' => get_the_title()) ); ?>
+    </a>
   </div>
   <div class="post-content">
     <?php

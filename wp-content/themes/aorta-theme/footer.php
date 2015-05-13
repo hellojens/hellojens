@@ -3,12 +3,19 @@
 						<!-- end small-12 col -->
 					<div class="footer-wrapper">
 						<!-- footer -->
-						<footer class="footer small-11 small-centered columns" role="contentinfo">
+						<footer class="footer small-12 medium-11 small-centered columns" role="contentinfo">
 
 							<!-- copyright -->
-							<p class="copyright">
-								&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>
-							</p>
+							<div class="row">
+								<div class="small-12 medium-2 right small-text-center medium-text-right columns">
+									<a href="#" class="scrollup">Back to top</a>
+								</div>
+								<div class="small-12 medium-10 small-text-center medium-text-left columns">
+									<!-- &copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?> -->
+									<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('footer-area')) ?>
+								</div>
+
+							</div>
 							<!-- /copyright -->
 
 						</footer>

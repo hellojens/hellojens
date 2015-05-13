@@ -10,7 +10,7 @@
 
   <div class="content-section">
     <div class="row"> 
-      <section class="small-10 medium-11 small-centered columns">
+      <section class="small-12 medium-11 small-centered columns">
         <ul class="row grid effect-2" id="grid">
           <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -22,14 +22,6 @@
           <?php wp_reset_query(); ?>
         </ul>
       </section>
-    </div>
-    <div class="row">
-      <div  class="page-nav small-10 small-centered text-center columns">
-        <a rel="<?php echo site_url(), $_SERVER['REQUEST_URI']; ?>" class="load-more">        
-          <img class="puff"src="<?php echo get_template_directory_uri(); ?>/img/svg-loaders/puff.svg">
-          <span class="loadMoreText">Load more</span>
-        </a>
-      </div>
     </div>
   </div>
 

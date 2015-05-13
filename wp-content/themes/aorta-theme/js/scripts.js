@@ -80,17 +80,18 @@ jQuery(document).ready(function($){
 
           $
           setTimeout(function(){ 
-
-            (".grid").isotope('layout');
+            $(".grid").isotope('layout');
           }, 2000);
-          $(".page-nav .loadMoreText").text("Load more");
+
+          $(".page-nav .loadMoreText").text("Read more");
           $(".page-nav .puff").removeClass("puffit");
 
-        } else {
-          $(".page-nav .loadMoreText").text("That's it – for now! ");
-          $(".page-nav .puff").removeClass("puffit");
+          if(posts.length < 8 ) { 
+            $(".page-nav").css("visibility","hidden");
+          };
+        } 
 
-        };
+
       }); // End ajax $.get 
     }; // End loadMoreFunction 
 
@@ -104,21 +105,17 @@ jQuery(document).ready(function($){
   }; // End isotope homepage post grid 
 
 
-  // fluidbox
 
-    // $('.single-post .post-content a').fluidbox({
-    //     viewportFill: 0.9,
-    //     immediateOpen: true,
-    //     debounceResize: true,
-    //     closeTrigger: [{
-    //         selector: "#fluidbox-overlay",
-    //         event: "click"
-    //     }, {
-    //         selector: "window",
-    //         event: "scroll"
-    //     }]
-    // });
 
+  // sticky Header 
+  // $(window).scroll(function(){
+  //   if ($(window).scrollTop() >= 40) {
+  //     $("header").addClass("stick");
+  //   }
+  //   else {
+  //     $("header").removeClass("stick");
+  //   }
+  // });
 
   // Search 
 
@@ -147,6 +144,15 @@ jQuery(document).ready(function($){
     }
 
 
+  });
+
+
+  // Footer scroll up
+  $('.scrollup').click(function () {
+      $("html, body").animate({
+          scrollTop: 0
+      }, 600);
+      return false;
   });
 
 

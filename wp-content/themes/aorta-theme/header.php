@@ -45,9 +45,9 @@
           <div class="row small-collapse">
             <div class="small-12 small-centered columns">
 
-            	<header class="header clear" role="banner">
+            	<header class="header clear" role="banner" >
 
-                <nav class="row top-nav" role="navigation">
+                <nav class="row top-nav first" role="navigation">
                   <div class="small-12 text-center columns ">
                     <?php top_nav(); ?>
                   </div>
@@ -56,7 +56,7 @@
                 <nav class="row main-navigation">
                   <div class="small-12 medium-10 small-centered columns">
                     <div class="row">
-                      <div class="small-3 medium-3 text-center columns">
+                      <div class="small-3 medium-3 medium-text-right columns">
                         <a class="start" href="/">Reading</a>
                       </div>
                       <div class="small-6 medium-6 logo text-center columns">
@@ -80,10 +80,11 @@
                         </svg>
                         </a>
                       </div>
-                      <div class="small-3 medium-3 left text-center columns">
+                      <div class="small-3 medium-3 left medium-text-left columns">
                         <a class="list-people looknice" href="/the-people">People</a>
                       </div>
                     </div>
+                    <a href="#" class="search-loop searchlink"><img src="<?php echo get_template_directory_uri(); ?>/img/search.svg"></div>
                   </div>
                 </nav>
 

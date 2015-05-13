@@ -46,7 +46,7 @@
       <div  class="page-nav small-10 small-centered text-center columns">
         <a rel="<?php echo site_url(), $_SERVER['REQUEST_URI']; ?>" class="load-more">        
           <img class="puff"src="<?php echo get_template_directory_uri(); ?>/img/svg-loaders/puff.svg">
-          <span class="loadMoreText">Load more</span>
+          <span class="loadMoreText">Read more</span>
         </a>
       </div>
     </div>
