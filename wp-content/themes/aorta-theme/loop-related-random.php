@@ -9,7 +9,7 @@
 				<?php if (have_posts()): while($random_query->have_posts()): $random_query->the_post(); ?>
 
 					<div class="small-12 medium-3 large-3 text-left left columns">
-							<?php get_template_part("content","standard-post"); ?>
+							<?php include(locate_template('content-standard-post.php')); ?>
 					</div>
 
 				<?php endwhile; endif; ?>

@@ -27,7 +27,7 @@
           <?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
             <li class="isotope-align small-12 medium-11 left columns loadMore">
-              <?php get_template_part("content","calender-post"); ?>
+              <?php include(locate_template('content-calender-post.php')); ?>
             </li>
 
           <?php endwhile; endif; ?>

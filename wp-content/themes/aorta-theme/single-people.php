@@ -38,7 +38,9 @@
 									<?php if (function_exists('the_subheading')) { the_subheading('<h2>', '</h2>'); } ?></h1>
 
 									<p class=""><?php the_content(); ?></p>
-									<h3><?php the_field("place_of_assosiation"); ?></h3>
+									<?php if( get_field('place_of_assosiation') ): ?>
+										<h3><?php the_field("place_of_assosiation"); ?></h3>
+									<?php endif; ?>
 									<p class="additional-info">
 										<?php the_field("associated_info"); ?><br>
 										<?php if( get_field('associated_directions') ): ?>
@@ -60,7 +62,7 @@
 	</div>
 
 	<!-- Related Stories  -->
-	<?php get_template_part("loop","related-people"); ?>
+	<?php include(locate_template('loop-related-people.php')); ?>
 	<!-- /Related Stories  -->
 
 <?php get_footer(); ?>

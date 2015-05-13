@@ -1040,10 +1040,26 @@ header.stick {
 .search-loop {
   position: absolute !important;
   right: -29px;
-  top: 20px;
+  top: 30px;
+  display: inline-block;
+  width: 23px;
+  height: 23px;
   margin: 0px !important;
 }
 
+.searchsvg {
+  -webkit-transition: all 0.1s ease-out; 
+  -moz-transition: all 0.1s ease-out; 
+  transition: all 0.1s ease-out; 
+}
+
+.about .searchsvg {
+  fill: white;
+}
+
+.search-loop:hover .searchsvg {
+  fill: #FF00BD;
+}
 
 .search-wrapper {
   background-color: #143C37;

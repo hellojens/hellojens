@@ -597,9 +597,7 @@ function create_post_type_html5()
         'supports' => array(
             'title',
             'editor',
-            'excerpt',
             'thumbnail',
-            'author'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         // 'taxonomies' => array(

@@ -14,6 +14,9 @@
       <h2><?php the_title(); ?></h2>
       <div class="date">Date of event: <?php the_time('d.m.Y'); ?> </div>
       <p><?php the_content(); ?></p>
+      <?php if( get_field('event_link') ): ?>
+        <a target="_blank" href="<?php echo get_field("event_link"); ?>">Link to event</a><br>
+      <?php endif; ?>
     </div>
   </div>
 </article>
