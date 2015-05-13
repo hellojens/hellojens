@@ -81,7 +81,7 @@
                         </a>
                       </div>
                       <div class="small-3 medium-3 left medium-text-left columns">
-                        <a class="list-people looknice" href="/the-people">Contributors</a>
+                        <a class="list-people looknice" href="/the-people">People</a>
                       </div>
                     </div>
                     <a href="#" class="search-loop searchlink"><img src="<?php echo get_template_directory_uri(); ?>/img/search.svg"></div>
