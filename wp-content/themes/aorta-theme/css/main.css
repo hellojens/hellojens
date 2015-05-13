@@ -1070,11 +1070,11 @@ header.stick {
   width: 100%;
   float: left;
   overflow: hidden;
-  -webkit-transition: all 0.1s linear;
-    -moz-transition: all 0.1s linear;
-    -ms-transition: all 0.1s linear;
-    -o-transition: all 0.1s linear;
-      transition: all 0.1s linear;
+  -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.05s ease;
+    -ms-transition: all 0.05s ease;
+    -o-transition: all 0.05s ease;
+      transition: all 0.05s ease;
 }
 
 .search-wrapper.open {
