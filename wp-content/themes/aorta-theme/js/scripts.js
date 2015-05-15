@@ -29,8 +29,7 @@ jQuery(document).ready(function($){
     $(".page-nav").click(function(){
 
       // EMULATE LOADING 
-      $(".page-nav .loadMoreText").text("");
-      $(".page-nav .puff").addClass("puffit");
+      $(".page-nav .load-more").addClass("pulse");
 
       setTimeout(function(){
         // Fire real load 
@@ -83,8 +82,7 @@ jQuery(document).ready(function($){
             $(".grid").isotope('layout');
           }, 2000);
 
-          $(".page-nav .loadMoreText").text("View more");
-          $(".page-nav .puff").removeClass("puffit");
+          $(".page-nav .load-more").removeClass("pulse");
 
           if(posts.length < 8 ) { 
             $(".page-nav").css("visibility","hidden");

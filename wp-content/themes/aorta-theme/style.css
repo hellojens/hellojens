@@ -177,7 +177,7 @@ input:focus {
 \*------------------------------------*/
 
 .alignnone {
-	margin:5px 20px 20px 0;
+	margin:0px;
 }
 .aligncenter,
 div.aligncenter {
@@ -186,22 +186,22 @@ div.aligncenter {
 }
 .alignright {
 	float:right;
-	margin:5px 0 20px 20px;
+	margin:0px;
 }
 .alignleft {
 	float:left;
-	margin:5px 20px 20px 0;
+	margin:0px;
 }
 a img.alignright {
 	float:right;
-	margin:5px 0 20px 20px;
+	margin:0px;
 }
 a img.alignnone {
-	margin:5px 20px 20px 0;
+	margin:0px;
 }
 a img.alignleft {
 	float:left;
-	margin:5px 20px 20px 0;
+	margin:0px;
 }
 a img.aligncenter {
 	display:block;
@@ -209,20 +209,16 @@ a img.aligncenter {
 	margin-right:auto;
 }
 .wp-caption {
-	background:#FFF;
-	border:1px solid #F0F0F0;
 	max-width:96%;
-	padding:5px 3px 10px;
-	text-align:center;
 }
 .wp-caption.alignnone {
-	margin:5px 20px 20px 0;
+	margin:0px;
 }
 .wp-caption.alignleft {
-	margin:5px 20px 20px 0;
+	margin:0px;
 }
 .wp-caption.alignright {
-	margin:5px 0 20px 20px;
+	margin:0px;
 }
 .wp-caption img {
 	border:0 none;
@@ -234,10 +230,11 @@ a img.aligncenter {
 }
 .wp-caption .wp-caption-text,
 .gallery-caption {
-	font-size:11px;
+	font-size:12px !important;
+	font-weight: 400 !important;
 	line-height:17px;
 	margin:0;
-	padding:0 4px 5px;
+	padding:0 0px 5px;
 }
 .sticky {
 

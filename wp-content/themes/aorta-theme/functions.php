@@ -83,9 +83,18 @@ add_filter('pre_get_posts','SearchFilter');
 function filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
-
 add_filter('the_content', 'filter_ptags_on_images');
 
+
+// Remove image links from posts
+function wpb_imagelink_setup() {
+    $image_set = get_option( 'image_default_link_type' );
+    
+    if ($image_set !== 'none') {
+        update_option('image_default_link_type', 'none');
+    }
+}
+add_action('admin_init', 'wpb_imagelink_setup', 10);
 
 // HTML5 Blank navigation
 function top_nav()
@@ -574,38 +583,8 @@ function create_post_type_html5()
         //     'category'
         // ) // Add Category and Post Tags support
     ));
-    register_post_type('Calendar', // Register Custom Post Type
-        array(
-        'labels' => array(
-            'name' => __('Calendar', 'calendar'), // Rename these to suit
-            'singular_name' => __('Calendar', 'calendar'),
-            'add_new' => __('Add New', 'Editor'),
-            'add_new_item' => __('Add New Editor', 'editor'),
-            'edit' => __('Edit', 'edit'),
-            'edit_item' => __('Edit', 'edit'),
-            'new_item' => __('New Editor', 'editor'),
-            'view' => __('View Calendar', 'viewcalendar'),
-            'view_item' => __('View Calendar', 'viewcalendar'),
-            'search_items' => __('Search Calendar', 'searchcalendar'),
-            'not_found' => __('No editors found', 'notfound'),
-            'not_found_in_trash' => __('No editors found in Trash', 'notfound')
-        ),
-        'supports' => array('thumbnail'),
-        'public' => true,
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'editor',
-            'thumbnail',
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        // 'taxonomies' => array(
-        //     'post_tag',
-        //     'category'
-        // ) // Add Category and Post Tags support
-    ));
 }
+
 
 
 // function my_connection_types() {
