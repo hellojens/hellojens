@@ -83,7 +83,7 @@ jQuery(document).ready(function($){
             $(".grid").isotope('layout');
           }, 2000);
 
-          $(".page-nav .loadMoreText").text("Read more");
+          $(".page-nav .loadMoreText").text("View more");
           $(".page-nav .puff").removeClass("puffit");
 
           if(posts.length < 8 ) { 
