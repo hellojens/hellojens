@@ -9,6 +9,8 @@
 							<?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), full ); ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "top-post")); ?>>
 								<div class="small-12 medium-6 text-center  large-6 columns">
+									<a href="<?php the_permalink(); ?>" class="show-for-small-only" style="display: inline-block; width: 100%; height: 100%;">
+
 									<div class="post-thumbnail background-fit" style="background-image: url('<?php echo $featuredimage[0]; ?>');">	
 										<a href="<?php the_permalink(); ?>">
 											<div class="post-overlay">
@@ -19,6 +21,7 @@
 											</div>
 										</a>
 									</div>
+									</a>
 									<div class="columns small-12 medium-10 small-centered">
 									  <?php
 									    $category = get_the_category();

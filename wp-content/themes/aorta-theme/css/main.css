@@ -356,6 +356,12 @@ header.stick {
   background-size: 120%;
 }
 
+@media only screen and (max-width: 40.063em) {
+  .related-section:before {
+    background-size: auto;
+  }
+}
+
 .related-section h3 {
   font-size: 3rem;
   color: #143C37;
@@ -448,7 +454,6 @@ header.stick {
   height: 350px;
   width: 99%;
   margin: 0 auto;
-
 }
 
 @media only screen and (max-width: 40.063em) {
@@ -458,6 +463,7 @@ header.stick {
     background-repeat: no-repeat;
     height: 250px;
     width: 99%;
+    display: inline-block;
   }
 }
 
@@ -559,6 +565,7 @@ header.stick {
 .post-thumbnail img {
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .post-thumbnail a {
@@ -765,6 +772,7 @@ header.stick {
 
 .home-post .date {
   padding: 15px 0px 0px 0px;
+  display: block;
 }
 
 .home-post p {
@@ -817,6 +825,13 @@ header.stick {
   -webkit-border-radius: 5px 3px 0px 0px;
   border-radius: 5px 5px 0px 0px; 
 }
+
+@media only screen and (max-width: 40.063em) {
+  .single-post .content-section .content-slab .background-fit {
+    background-size: auto;
+  }
+}
+
 
 .single-post .post-content {
 
