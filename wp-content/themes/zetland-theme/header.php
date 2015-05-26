@@ -67,7 +67,7 @@
         <div class="small-9 columns">
 
             <?php remove_filter ("the_content", "wpautop"); ?>
-            <h1><?php the_content(); ?></h1>
+            <h1>Det nye <span class="white-text">Zetland</span>. <br><?php the_content(); ?></h1>
 
         </div>
       </div>
