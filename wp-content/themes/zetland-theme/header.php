@@ -51,7 +51,7 @@
 
   <?php 
   // INTRO VIDEO
-  $args = array( 'post_type' => 'page', 'post__in' => array(2)); 
+  $args = array( 'post_type' => 'page', "posts_per_page" => "1", "offset" => "0"); 
   $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
   while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 

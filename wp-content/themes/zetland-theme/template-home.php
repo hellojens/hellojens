@@ -7,7 +7,7 @@ get_header(); ?>
 
   <?php 
   // INTRO VIDEO
-  $args = array( 'post_type' => 'page', 'post__in' => array(7)); 
+  $args = array( 'post_type' => 'page', "posts_per_page" => "1", "offset" => "1"); 
   $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
   while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
@@ -45,7 +45,7 @@ get_header(); ?>
 
   <?php 
   // KICKSTART & STATS 
-  $args = array( 'post_type' => 'page', 'post__in' => array(20)); 
+  $args = array( 'post_type' => 'page', "posts_per_page" => "1", "offset" => "2"); 
   $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
   while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
@@ -75,7 +75,7 @@ get_header(); ?>
 
   <?php 
   // MINIFEST INTRO
-  $args = array( 'post_type' => 'page', 'post__in' => array(22)); 
+  $args = array( 'post_type' => 'page', "posts_per_page" => "1", "offset" => "3"); 
   $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
   while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
@@ -182,7 +182,7 @@ get_header(); ?>
     <div class="small-11 small-centered columns">
       <?php 
       // PEOPLE INTRO
-      $args = array( 'post_type' => 'page', 'post__in' => array(38)); 
+      $args = array( 'post_type' => 'page', "posts_per_page" => "1", "offset" => "4"); 
       $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
       while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <div class="row people-intro">

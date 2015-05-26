@@ -5,7 +5,7 @@
     <div class="small-11 small-centered columns">
       <?php 
       // PEOPLE INTRO
-      $args = array( 'post_type' => 'page', 'post__in' => array(53)); 
+      $args = array( 'post_type' => 'page', "posts_per_page" => "1", "offset" => "5"); 
       $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
       while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <div class="row">
