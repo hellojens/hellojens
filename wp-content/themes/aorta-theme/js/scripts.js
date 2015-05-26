@@ -4,6 +4,7 @@
 
 jQuery(document).ready(function($){
   
+  $('p:empty').remove();
 
 
   // Align posts after reload if .grid is visible

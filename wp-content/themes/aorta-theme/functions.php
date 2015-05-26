@@ -15,7 +15,12 @@
 	Theme Support
 \*------------------------------------*/
 
+show_admin_bar(false);
 
+add_editor_style();
+
+
+$GLOBALS['content_width'] = 1200;
 
 if (!isset($content_width))
 {
@@ -29,11 +34,11 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 600, 450, true); // Large Thumbnail
+    add_image_size('large', 1200, '', true); // Large Thumbnail
     add_image_size('post', 350, 350, true); // Post Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
-    add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
+    add_image_size('bigSquare', 600, 600, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     /*add_theme_support('custom-background', array(
@@ -587,20 +592,28 @@ function create_post_type_html5()
 
 
 
-// function my_connection_types() {
-//     p2p_register_connection_type( array(
-//         'name' => 'multiple_authors',
-//         'from' => 'people',
-//         'to' => 'user',
-//     ) );
-// }
-// add_action( 'p2p_init', 'my_connection_types' );
+function my_connection_types() {
+    p2p_register_connection_type( array(
+        'name' => 'multiple_authors',
+        'from' => 'people',
+        'to' => 'user',
+    ) );
+}
+add_action( 'p2p_init', 'my_connection_types' );
 
 
 
 /*------------------------------------*\
 	ShortCode Functions
 \*------------------------------------*/
+
+
+add_filter( 'avatar_defaults', 'newgravatar' );
+function newgravatar ($avatar_defaults) {
+    $myavatar = get_bloginfo('template_directory') . '/img/logo-white.png';
+    $avatar_defaults[$myavatar] = "Own";
+    return $avatar_defaults;
+}
 
 // Shortcode Demo with Nested Capability
 function html5_shortcode_demo($atts, $content = null)

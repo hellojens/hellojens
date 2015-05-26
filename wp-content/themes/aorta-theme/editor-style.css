@@ -1,0 +1,12 @@
+/* example styling the WordPress visual editor */
+body#tinymce.wp-editor { 
+    max-width:650px; 
+    margin:10px; 
+}
+body#tinymce.wp-editor h1 { 
+    font-size:24px; 
+}
+
+.mce-content-body img {
+  max-width: 100%;
+}

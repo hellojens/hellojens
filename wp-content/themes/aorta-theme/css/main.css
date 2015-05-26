@@ -684,8 +684,18 @@ header.stick {
   opacity: 1;
 } 
 
+.people-title {
+  width: 100%;
+  min-height: 100px;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .people-post h2 {
   margin: 0px;
+  line-height: 1.3;
 }
 
 .people-post p {
@@ -693,7 +703,8 @@ header.stick {
   font-weight: 100;
   padding-bottom: 25px;
   color: rgb(153, 149, 138);
-
+  line-height: 18px;
+  padding-top: 3px;
 }
 
 .single-people .people-post{
@@ -839,8 +850,8 @@ header.stick {
 
 .single-post .post-content img, .single-post .post-content iframe {
   position: relative;
-  float: left;
   padding-bottom: 20px;
+  max-width: 140%;
 }
 
 .single-post .single-post-content .signatur img {
@@ -860,6 +871,12 @@ header.stick {
   font-weight: 100;
   padding-bottom: 20px;
   width: 70%;
+}
+
+.single-post .single-post-content  {
+  font-size: 16px;
+  padding-bottom: 20px;
+  color: #143C37;
 }
 
 @media only screen and (max-width: 40.063em) {
@@ -1156,6 +1173,12 @@ header.stick {
   color: white;
   position: relative;
   z-index: 2;
+}
+
+.search-no-results .footer-wrapper {
+position: fixed;
+bottom: 0px;
+width: 100%;
 }
 
 ul#menu-footer-links {

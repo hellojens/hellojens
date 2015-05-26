@@ -186,22 +186,22 @@ div.aligncenter {
 }
 .alignright {
 	float:right;
-	margin:0px;
+	margin-left: 25px;
 }
 .alignleft {
 	float:left;
-	margin:0px;
+	margin-right: 25px;
 }
 a img.alignright {
 	float:right;
-	margin:0px;
+	margin-left: 25px;
 }
 a img.alignnone {
 	margin:0px;
 }
 a img.alignleft {
 	float:left;
-	margin:0px;
+	margin-right: 25px;
 }
 a img.aligncenter {
 	display:block;
@@ -215,10 +215,10 @@ a img.aligncenter {
 	margin:0px;
 }
 .wp-caption.alignleft {
-	margin:0px;
+	margin-right: 25px;
 }
 .wp-caption.alignright {
-	margin:0px;
+	margin-left: 25px;
 }
 .wp-caption img {
 	border:0 none;
@@ -234,7 +234,7 @@ a img.aligncenter {
 	font-weight: 400 !important;
 	line-height:17px;
 	margin:0;
-	padding:0 0px 5px;
+	padding:0 0px 5px
 }
 .sticky {
 

@@ -25,7 +25,7 @@ get_header(); ?>
   <div class="content-section">
     <div class="row"> 
       <section class="small-11 large-10 small-centered columns">
-        <?php echo do_shortcode( '[gcal id="160"]' ); ?>
+        <?php echo do_shortcode( '[gcal id="281"]' ); ?>
       </section>
 
 <!--       <section class="small-12 large-11 small-centered columns">

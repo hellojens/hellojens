@@ -3,7 +3,7 @@
 	<div class="top-section single-post">
 		<div class="row"> 
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-				<?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), full ); ?>
+				<?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), large ); ?>
 	 			<section class="single-header small-12 text-center small-centered small-collapse columns" style="background-image: url('<?php echo $featuredimage[0]; ?>');">
 				</section>
     	<?php endwhile; endif;?>    
@@ -23,6 +23,7 @@
 										<?php $preventdouble = array(get_the_ID()) // Prevent post duplicate  ?>
 										<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "single-post-content")); ?>>
 											<div class="small-10 medium-7 columns signatur"> 
+												<br>
 												<?php echo get_avatar( get_the_author_meta( 'ID' ), 512 ); ?>
 											</div>
 											<div class="small-12 columns"> 

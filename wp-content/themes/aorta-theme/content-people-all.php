@@ -9,8 +9,10 @@
           <img src="<?php echo $featuredimage[0]; ?>">
         </a>
       </span>
-      <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-      <?php if (function_exists('the_subheading')) { the_subheading('<p>', '</p>'); } ?>
+      <div class="people-title">
+        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <p><?php if (function_exists('the_subheading')) { the_subheading('', ''); } ?></p>
+      </div>
     </article>
   </div>
 
