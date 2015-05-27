@@ -35,6 +35,7 @@ if (function_exists('add_theme_support'))
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
     add_image_size('large', 1200, '', true); // Large Thumbnail
+    add_image_size('custom-large', 1000, '', true); // Large Thumbnail
     add_image_size('post', 350, 350, true); // Post Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
@@ -66,7 +67,13 @@ if (function_exists('add_theme_support'))
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');
 }
 
-
+add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );  
+function custom_image_sizes_choose( $sizes ) {  
+    $custom_sizes = array(  
+        'custom-large' => 'Large',
+    );
+    return array_merge( $sizes, $custom_sizes );  
+}
 
 /*------------------------------------*\
 	Functions
@@ -181,6 +188,9 @@ function html5blank_header_scripts()
 
         wp_register_script('AnimOnScroll', get_template_directory_uri() . '/js/AnimOnScroll.js', array('jquery'), '1.0.0' , true); // Custom scripts
         wp_enqueue_script('AnimOnScroll'); // Enqueue it!
+
+        wp_register_script('fitVids', get_template_directory_uri() . '/js/fitvids.js', array('jquery'), '1.0.0' , true); // Custom scripts
+        wp_enqueue_script('fitVids'); // Enqueue it!
 
         wp_register_script('main-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0' , true); // Custom scripts
         wp_enqueue_script('main-script'); // Enqueue it!

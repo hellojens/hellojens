@@ -178,6 +178,8 @@ input:focus {
 
 .alignnone {
 	margin:0px;
+	width: 100%;
+
 }
 .aligncenter,
 div.aligncenter {
@@ -187,10 +189,12 @@ div.aligncenter {
 .alignright {
 	float:right;
 	margin-left: 25px;
+	width: 100% !important;
+
 }
 .alignleft {
-	float:left;
 	margin-right: 25px;
+	max-width: 70% !important;
 }
 a img.alignright {
 	float:right;
@@ -198,15 +202,18 @@ a img.alignright {
 }
 a img.alignnone {
 	margin:0px;
+	width: 100%;
 }
 a img.alignleft {
-	float:left;
 	margin-right: 25px;
+	width: 70%;
 }
 a img.aligncenter {
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
+	width: 100%;
+
 }
 .wp-caption {
 	max-width:96%;
@@ -217,6 +224,12 @@ a img.aligncenter {
 .wp-caption.alignleft {
 	margin-right: 25px;
 }
+
+.wp-caption.alignleft img {
+	width: 100%;
+	float: none;
+}
+
 .wp-caption.alignright {
 	margin-left: 25px;
 }

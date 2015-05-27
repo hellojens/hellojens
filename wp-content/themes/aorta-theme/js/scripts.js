@@ -2,8 +2,13 @@
 //// Main Scripts ////
 //////// ///////////
 
+
+
 jQuery(document).ready(function($){
   
+
+
+
   $('p:empty').remove();
 
 
@@ -153,6 +158,7 @@ jQuery(document).ready(function($){
       }, 600);
       return false;
   });
+
 
 
   ////////  INIT FUNCTIONS ///////////

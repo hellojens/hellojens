@@ -21,9 +21,9 @@
     src: url('../assets/webfont/proximanova-bold-webfont.eot');
     src: url('../assets/webfont/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('../assets/webfont/proximanova-bold-webfont.woff2') format('woff2'),
-         url('../assets/webfontproximanova-bold-webfont.woff') format('woff'),
-         url('../assets/webfontproximanova-bold-webfont.ttf') format('truetype'),
-         url('../assets/webfontproximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+         url('../assets/webfont/proximanova-bold-webfont.woff') format('woff'),
+         url('../assets/webfont/proximanova-bold-webfont.ttf') format('truetype'),
+         url('../assets/webfont/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -31,12 +31,12 @@
 
 @font-face {
     font-family: 'proxima_light';
-    src: url('../assets/webfontproximanova-light-webfont.eot');
-    src: url('../assets/webfontproximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../assets/webfontproximanova-light-webfont.woff2') format('woff2'),
-         url('../assets/webfontproximanova-light-webfont.woff') format('woff'),
-         url('../assets/webfontproximanova-light-webfont.ttf') format('truetype'),
-         url('../assets/webfontproximanova-light-webfont.svg#proxima_novalight') format('svg');
+    src: url('../assets/webfont/proximanova-light-webfont.eot');
+    src: url('../assets/webfont/proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/webfont/proximanova-light-webfont.woff2') format('woff2'),
+         url('../assets/webfont/proximanova-light-webfont.woff') format('woff'),
+         url('../assets/webfont/proximanova-light-webfont.ttf') format('truetype'),
+         url('../assets/webfont/proximanova-light-webfont.svg#proxima_novalight') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -44,8 +44,8 @@
 
 @font-face {
   font-family: 'Austin';
-  src: url('../assets/webfontAustin-Medium.eot?#iefix') format('embedded-opentype'),  url('../assets/webfontAustin-Medium.otf')  format('opentype'),
-	     url('../assets/webfontAustin-Medium.woff') format('woff'), url('../assets/webfontAustin-Medium.ttf')  format('truetype'), url('../assets/webfontAustin-Medium.svg#Austin-Medium') format('svg');
+  src: url('../assets/webfont/Austin-Medium.eot?#iefix') format('embedded-opentype'),  url('../assets/webfont/Austin-Medium.otf')  format('opentype'),
+	     url('../assets/webfont/Austin-Medium.woff') format('woff'), url('../assets/webfont/Austin-Medium.ttf')  format('truetype'), url('../assets/webfont/Austin-Medium.svg#Austin-Medium') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -72,8 +72,11 @@ figcaption {
 	color: #6f6f6f; 
 }
 
+.row {
+	max-width: 68.5rem;
+}
 
-.row, .top-bar {
+.top-bar {
 	max-width: 100% !important;
 }
 // Add the alignment classes used by the WordPress media library
@@ -136,7 +139,7 @@ p {
 }
 
 .strike-top {
-	border-top: 4px solid $white;
+	border-top: 3px solid $white;
 }
 
 
@@ -180,6 +183,7 @@ p {
 .start {
 	background-color: $orange;
 	position: relative;
+	height: 600px;
 
 	h1 {
 		font-size: 6rem;
@@ -200,6 +204,7 @@ p {
 	  -ms-transform: translateY(-50%);
 	  transform: translateY(-50%);
 	}
+
 }
 
 /* -------------------------------- 
@@ -208,8 +213,9 @@ p {
 
 .intro {
 	position: relative;
-	background-color: $oil;
+	background-color: $black;
 	color: $orange;
+	height: 1000px;
 
 	.background-image {
 		position: absolute;
@@ -219,6 +225,31 @@ p {
 		background-size: cover;
 		background-repeat: no-repeat;
 		opacity: 0.2;
+		z-index: 2;
+	}
+
+	.video-wrapper {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+	  display: inline-block;
+	  top: 50%;
+	  -webkit-transform: translateY(-50%);
+	  -ms-transform: translateY(-50%);
+	  transform: translateY(-50%);
+		opacity: 0;
+	}
+
+	.video-wrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 
 	.row {
@@ -228,12 +259,26 @@ p {
 	  -webkit-transform: translateY(-50%);
 	  -ms-transform: translateY(-50%);
 	  transform: translateY(-50%);
+	  z-index: 3;
 	}
 
 	h1, p {
 		font-size: 6rem;
 		line-height: 1.2;
 		color: $orange;
+	}
+	h1 a {
+		color: $white;
+		font-style: italic;
+  -webkit-transition: all 0.2s ease-out; 
+          transition: all 0.2s ease-out; 
+		img {
+			width: 90px;
+			margin-top: -20px;
+		}
+		&:hover {
+			color: $orange;
+		}
 	}
 }
 
@@ -245,12 +290,17 @@ p {
 	background-color: $sand;
 	color: $oil;
 
-	.stats {
-		padding-top: 30px;
-	}
-
 	.orange-text {
 		color: $orange;
+	}
+
+	.progress {
+
+		padding: 0px;
+
+		.meter {
+			background: $orange;
+		}
 	}
 
 	h1, h2, p {
@@ -260,9 +310,42 @@ p {
 		color: $oil;
 	  font-size: 3.5rem;
 	  line-height: 1.2;
+	  margin: 15px 0px;
 	}
 	p {
 		font-family: 'proxima_bold', sans-serif;
+		padding-right: 5%;
+	  padding-bottom: 60px;
+	  margin: 0px;
+	}
+
+	.kickstarter {
+	  font-size: 1.4rem;
+	  font-weight: normal;
+	  line-height: 1.6;
+	  margin-bottom: 1.25rem;
+	  padding-top: 30px;
+	}
+
+	.kickstarter-num {
+	  font-family: 'proxima_bold', sans-serif;
+	  display: inline-block;
+	  float: left;
+	  height: 45px;
+	  margin-top: 25px;
+	}
+
+	.kickstarter-tag {
+	  font-family: 'proxima_regular', sans-serif;
+	  color: #514D4D;
+	  padding-left: 8px;
+	  display: inline-block;
+	  height: 45px;
+	  margin-top: 25px;
+	}
+
+	.kickstarter-button {
+	display: none;
 	}
 
 }
@@ -342,7 +425,7 @@ p {
 	img.person {
 		max-width: 45%;
 		border-radius: 100%;
-		margin-top: -30px;
+		margin-top: -40px;
 	}
 
 	.quote-details {
@@ -481,7 +564,8 @@ p {
 
 .inner-wrap {
 	z-index: 2;
-	margin-bottom: 600px;
+	margin-bottom: 100%;
+	box-shadow: 0px 5px 7px -5px rgba(0,0,0,0.26);
 }
 
 .the-end  {
@@ -497,6 +581,7 @@ p {
 		font-size: 6rem;
 		line-height: 1.2;
 		color: $oil;
+		margin-bottom: 25%;
 
 		a {
 			color: $white;

@@ -12,6 +12,9 @@ get_header(); ?>
   while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
     <div class="section-wrapper full-page intro">
+      <div class="video-wrapper">
+        <iframe src="https://player.vimeo.com/video/127694736" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
       <?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), full ); ?>
       <div class="background-image" style="background-image: url('<?php echo $featuredimage[0]; ?>');"></div>
 
@@ -20,6 +23,13 @@ get_header(); ?>
 
             <?php remove_filter ("the_content", "wpautop"); ?>
             <h1><?php the_content(); ?></h1>
+            <h1>
+              <a class="play-video" href="#">
+                <img width="100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/play-button.png">
+                 Se filmen
+              </a>
+            </h1>
+
 
         </div>
       </div>
@@ -61,9 +71,10 @@ get_header(); ?>
           </div>
         </div>
 
-        <div class="row stats strike-top">
+        <div class="row stats">
           <div class="small-12 columns">
-            <h2><span class="orange-text">200</span> nye medlemmer, <span class="orange-text">384.031</span> nye kroner</h2>
+            <div class=" strike-top"></div>
+            <?php dynamic_sidebar( 'kickstart-widgets' ); ?>
           </div>
         </div>
 

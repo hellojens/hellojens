@@ -626,6 +626,10 @@ header.stick {
   padding-bottom: 0px;
 }
 
+.home-hero .post-overlay p  {
+  width: 100%;
+}
+
 
 /* -------------------------------- 
   People  
@@ -667,13 +671,28 @@ header.stick {
   width: 100%;
   -webkit-clip-path: circle(40% at center);
   clip-path: circle(100px at center);
+  -moz-clip-path: circle(100px at center);
   transition: all .15s ease;
+  border-radius: 100%;
 }
 
 .people-post .round-wrapper img:hover { 
   width: 100%;
   -webkit-clip-path: circle(43% at center);
+  -moz-clip-path: circle(43% at center);
   clip-path: circle(100px at center);
+}
+
+@-moz-document url-prefix() {
+  .people-post .round-wrapper img { 
+    width: 80%;
+    transition: all .15s ease;
+    border-radius: 100%;
+    margin-bottom: 15px;
+  }
+  .people-post .round-wrapper img:hover { 
+    width: 80%;
+  }
 }
 
 .the-people .people-post {
@@ -848,11 +867,14 @@ header.stick {
 
 }
 
-.single-post .post-content img, .single-post .post-content iframe {
+.single-post .post-content img {
   position: relative;
   padding-bottom: 20px;
-  max-width: 140%;
+  max-width: 100%;
 }
+
+iframe, object, embed, oembed { max-width: 100%; }
+
 
 .single-post .single-post-content .signatur img {
   padding: 35px 0px 15px 0px;
@@ -863,7 +885,12 @@ header.stick {
   width: 75%;
   font-size: 6rem;
   line-height: 1.15;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
+}
+
+.single-post .single-post-content h3 {
+  font-size: 2rem;
+  padding-bottom: 15px;
 }
 
 .single-post .single-post-content p {
@@ -871,6 +898,8 @@ header.stick {
   font-weight: 100;
   padding-bottom: 20px;
   width: 70%;
+  margin: 0px;
+  /*color: #989489;*/
 }
 
 .single-post .single-post-content  {
@@ -910,7 +939,7 @@ header.stick {
 
 .single-post .author-content h3 {
   font-size: 26px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .single-post .author-content .author-title {

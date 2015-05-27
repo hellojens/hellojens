@@ -21,6 +21,50 @@
   }
 }
 
+ul.menu {
+  li {
+    a {
+      padding: 8px 30px !important;
+      font-size: 16px;
+      font-family: 'proxima_regular', sans-serif;   
+      color: $oilfade;
+      -webkit-transition: all 0.1s ease-out; 
+      transition: all 0.1s ease-out; 
+    }
+    &:last-child {
+      margin-right: 60px;
+    }
+  }
+}
+
+ul.kickstarter-stats {
+
+  li {
+    background: black;
+    color: white;
+    padding: 13px 40px 0px 0px;
+
+
+    .kickstarter-num {
+      font-size: 18px;
+      color: $oilfade;
+      font-family: 'proxima_bold', sans-serif;
+      line-height: 1;
+
+    }
+
+    .orange-text {
+      color: $orange;
+    }
+
+    .kickstarter-tag {
+      font-size: 12px;
+    }
+
+  }
+
+}
+
 // A more subtle background color for the active menu item
 .top-bar-section li.active:not(.has-form) a:not(.button)  {
 	background: #272727;

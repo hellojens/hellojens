@@ -1,4 +1,4 @@
-<?php $the_query = new WP_Query( array("post_type" => "people" ) ); ?>
+<?php $the_query = new WP_Query( array("post_type" => "people", "orderby" => "rand" ) ); ?>
 <?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
   <div class="small-6 medium-4 large-3 left columns">

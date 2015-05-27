@@ -10,3 +10,7 @@ body#tinymce.wp-editor h1 {
 .mce-content-body img {
   max-width: 100%;
 }
+
+.alignleft {
+  float: none !important;
+}

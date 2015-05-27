@@ -11,5 +11,14 @@
           <li class="action-button active"><a href="#">Bliv medlem</a></li>
         </ul>
 
+        <ul class="right menu"> 
+            <li><a href="#">Menifest</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+
+        <ul class="right kickstarter-stats">
+            <?php dynamic_sidebar( 'menu-widgets' ); ?>
+        </ul>
+
     </nav>
 </div>
