@@ -195,12 +195,12 @@ class Kickstarter_Widget extends WP_Widget {
 			echo '<span class="orange-text">'.$results['data-pledged'].'</span> nye kroner</h2>';
 
 		if ( $results['data-percent-raised'])
-			echo '<div class="kickstarter-num">'.$results['data-percent-raised'].'%</div>';
+			echo '<div class="kickstarter-num"><span id="countKick1">'.$results['data-percent-raised'].'</span>%</div>';
 			echo '<div class="kickstarter-tag">finansieret</div><br />';
 			echo '<div class="progress"><span class="meter" style="max-width: 100%; width: '.$results['data-percent-raised'].'%"></span></div>';
 
 		if (($results['data-hours-remaining']) && ($results['data-backers-count']))
-			echo '<div class="kickstarter-num">'.$results['data-hours-remaining'].'</div>';
+			echo '<div class="kickstarter-num" id="countKick2">'.$results['data-hours-remaining'].'</div>';
 			echo '<div class="kickstarter-tag">'.$results['time-unit'].'</div>';
 			$timeleft = $results['data-hours-remaining'] * 0.3;
 			echo '<div class="progress"><span class="meter" style="max-width: 100%; width: '.$timeleft.'%"></span></div><br>';
@@ -306,18 +306,18 @@ class Kickstarter_Widget2 extends WP_Widget {
 			echo $before_title . $title . $after_title;
 
 		if ( $results['data-backers-count'])
-			echo '<li><div class="kickstarter-num"><span class="orange-text">'.$results['data-backers-count'].'</span> / 2000 </div>';
+			echo '<li><div class="kickstarter-num"><span id="count1" class="orange-text">'.$results['data-backers-count'].'</span> / 2000 </div>';
 			echo '<div class="kickstarter-tag"> nye medlemmer</div> </li>';
 
 		// if ( $results['data-pledged'])
 		// 	echo '<li><div class="kickstarter-num"><span class="orange-text">'.$results['data-pledged'].'</span> </div> nye kroner</li>';
 
 		if ( $results['data-percent-raised'])
-			echo '<li><div class="kickstarter-num"><span class="orange-text">'.$results['data-percent-raised'].'%</span></div>';
+			echo '<li><div class="kickstarter-num"><span id="count2" class="orange-text">'.$results['data-percent-raised'].'</span> %</div>';
 			echo '<div class="kickstarter-tag">finansieret</div></li>';
 
 		if (($results['data-hours-remaining']) && ($results['data-backers-count']))
-			echo '<li><div class="kickstarter-num"><span class="orange-text">'.$results['data-hours-remaining'].'</span> / 30</div>';
+			echo '<li><div class="kickstarter-num"><span id="count3" class="orange-text">'.$results['data-hours-remaining'].'</span> / 30</div>';
 			echo '<div class="kickstarter-tag">'.$results['time-unit'].'</div></li>';
 			$timeleft = $results['data-hours-remaining'] * 0.3;
 		

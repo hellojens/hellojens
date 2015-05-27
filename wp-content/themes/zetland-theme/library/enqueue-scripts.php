@@ -26,6 +26,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	wp_register_script( 'foundation', get_template_directory_uri() . '/js/foundation.js', array('jquery'), '5.5.2', true );
 
 	wp_register_script( 'fitText', get_template_directory_uri() . '/js/fittext.js', array(), '1.0.0', false );
+	wp_register_script( 'letterCounter', get_template_directory_uri() . '/js/lettercounter.js', array(), '1.0.0', false );
 
 
 	// Enqueue all registered scripts
@@ -34,6 +35,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'foundation' );
 	wp_enqueue_script( 'fitText' );
+	wp_enqueue_script( 'letterCounter' );
 
 	}
 

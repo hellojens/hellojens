@@ -84,6 +84,53 @@ jQuery(document).ready(function($){
 
 
 
+  ///// COUNT NUMBERS /////
+
+  var options = {
+    useEasing : true, 
+    useGrouping : true, 
+    separator : ',', 
+    decimal : '.', 
+    prefix : '', 
+    suffix : '' 
+  };
+
+  var currentvalue1 = $("#count1").html();
+  var currentvalue2 = $("#count2").html();
+  var currentvalue3 = $("#count3").html();
+  var menuCountNumbers1 = new CountUp("count1", 0, currentvalue1, 0, 2.5, options);
+  var menuCountNumbers2 = new CountUp("count2", 0, currentvalue2, 0, 3.5, options);
+  var menuCountNumbers3 = new CountUp("count3", 0, currentvalue3, 0, 4.5, options);
+
+  $(window).load(function(){
+    setTimeout(function(){
+      menuCountNumbers1.start();
+    }, 1000)
+    setTimeout(function(){
+      menuCountNumbers2.start();
+    }, 2000)
+    setTimeout(function(){
+      menuCountNumbers3.start();
+    }, 3000)
+  });
+
+  var currentvalueKick1 = $("#countKick1").html();
+  var currentvalueKick2 = $("#countKick2").html();
+
+  var menuCountNumbersKick1 = new CountUp("countKick1", 0, currentvalueKick1, 0, 2.5, options);
+  var menuCountNumbersKick2 = new CountUp("countKick2", 0, currentvalueKick2, 0, 3.5, options);
+
+
+  $(window).load(function(){
+    setTimeout(function(){
+      menuCountNumbersKick1.start();
+    }, 1000)
+    setTimeout(function(){
+      menuCountNumbersKick2.start();
+    }, 2000)
+  });
+
+
 });
 
 
