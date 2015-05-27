@@ -24,6 +24,7 @@ if (!function_exists('kickstarter_css')) {
 	}
 }
 
+			require 'lib/simple_html_dom.php';
 
 /**
 * get Kickstarter Stats
@@ -33,7 +34,6 @@ if (!function_exists('kickstarter_getStats')) {
 
 	function kickstarter_getStats($url) {
 
-			require 'lib/simple_html_dom.php';
 
     		// create array to store stats
     		$results = array();
