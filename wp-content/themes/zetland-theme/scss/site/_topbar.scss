@@ -1,7 +1,35 @@
 // Add some whitespace between top bar and content
-.top-bar-container, .tab-bar {
-	// margin-bottom: rem-calc(32);
+
+.top-bar-container, .top-bar {
+  // margin-bottom: rem-calc(32);
   height: 60px;
+
+  &.bg-white {
+    background-color: $white;
+
+    ul.menu li {
+      a {
+        background-color: $white;
+
+        &:hover {
+          color: $black;
+          background-color: $sand;
+        }
+      }
+    }
+
+    ul.kickstarter-stats li {
+      background: $white;
+
+      .kickstarter-num {
+        color: #D3D2D2;
+      }
+      .kickstarter-tag {
+        color: $oilfade;
+      }
+    }
+
+  }
 }
 
 .top-bar .name {
@@ -24,12 +52,10 @@
 ul.menu {
   li {
     a {
-      padding: 8px 30px !important;
+      padding: 8px 30px 7px 30px!important;
       font-size: 16px;
       font-family: 'proxima_regular', sans-serif;   
       color: $oilfade;
-      -webkit-transition: all 0.1s ease-out; 
-      transition: all 0.1s ease-out; 
     }
     &:last-child {
       margin-right: 60px;

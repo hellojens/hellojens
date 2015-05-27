@@ -41,7 +41,7 @@ get_header(); ?>
 
   <!-- // BERTEL QUOTE -->
 
-  <div class="section-wrapper quote">
+  <div id="change-header" class="section-wrapper quote">
     <div class="small-11 small-centered columns">
 
     <?php 
@@ -73,7 +73,7 @@ get_header(); ?>
 
         <div class="row stats">
           <div class="small-12 columns">
-            <div class=" strike-top"></div>
+            <div class="strike-top"></div>
             <?php dynamic_sidebar( 'kickstart-widgets' ); ?>
           </div>
         </div>
@@ -90,7 +90,7 @@ get_header(); ?>
   $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
   while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-    <div class="section-wrapper manifest-intro">
+    <div id="change-header-black" class="section-wrapper manifest-intro">
       <div class="small-11 small-centered columns">
 
         <div class="row menifest-intro-item">
@@ -131,7 +131,7 @@ get_header(); ?>
 
   <!-- MINIFEST LIST -->
 
-  <div class="section-wrapper manifest-list">
+  <div id="change-header-white" class="section-wrapper manifest-list">
     <div class="small-11 small-centered columns">
 
     <?php 

@@ -12,8 +12,8 @@
         </ul>
 
         <ul class="right menu"> 
-            <li><a href="#">Menifest</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a class="manifest" href="#manifest">Menifest</a></li>
+            <li><a class="faq" href="#faq">FAQ</a></li>
         </ul>
 
         <ul class="right kickstarter-stats">
