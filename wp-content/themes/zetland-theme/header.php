@@ -56,24 +56,18 @@
   while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
     <div class="section-wrapper full-page start">
-
       <div class="row">
-        <div class="small-3 columns">
-
+        <div class="small-11 small-centered medium-3 medium-uncentered columns">
     			<?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), full ); ?>
         	<img src="<?php echo $featuredimage[0]; ?>">
-
         </div>
-        <div class="small-9 columns">
-
-            <?php remove_filter ("the_content", "wpautop"); ?>
-            <h1>Det nye <span class="white-text">Zetland</span>. <br><?php the_content(); ?></h1>
-
+        <div class="small-11 medium-9 columns">
+          <?php remove_filter ("the_content", "wpautop"); ?>
+          <h1>Det nye <span class="white-text">Zetland</span>. <br><?php the_content(); ?></h1>
         </div>
       </div>
-
     </div>
-
+    
   <?php endwhile; endif; wp_reset_postdata(); ?>
 
 	<?php get_template_part( 'parts/off-canvas-menu' ); ?>

@@ -67,13 +67,13 @@ if (function_exists('add_theme_support'))
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');
 }
 
-add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );  
-function custom_image_sizes_choose( $sizes ) {  
-    $custom_sizes = array(  
-        'custom-large' => 'Large',
-    );
-    return array_merge( $sizes, $custom_sizes );  
-}
+// add_filter( 'image_size_names_choose', 'custom_image_sizes_choose' );  
+// function custom_image_sizes_choose( $sizes ) {  
+//     $custom_sizes = array(  
+//         'custom-large' => 'Large',
+//     );
+//     return array_merge( $sizes, $custom_sizes );  
+// }
 
 /*------------------------------------*\
 	Functions

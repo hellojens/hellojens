@@ -19,7 +19,7 @@ get_header(); ?>
       <div class="background-image" style="background-image: url('<?php echo $featuredimage[0]; ?>');"></div>
 
       <div class="row">
-        <div class="small-12 large-10 small-centered columns" role="main">
+        <div class="small-11 medium-10 small-centered columns" role="main">
 
             <?php remove_filter ("the_content", "wpautop"); ?>
             <h1><?php the_content(); ?></h1>
@@ -42,7 +42,7 @@ get_header(); ?>
   <!-- // BERTEL QUOTE -->
 
   <div id="change-header" class="section-wrapper quote">
-    <div class="small-11 small-centered columns">
+    <div class="small-12 medium-11 small-centered columns">
 
     <?php 
     $the_query = new WP_Query( array("post_type" => "quote", "posts_per_page" => "1" ) ); 
@@ -60,13 +60,13 @@ get_header(); ?>
   while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
     <div class="section-wrapper kickstart">
-      <div class="small-11 small-centered columns">
+      <div class="small-12 medium-11 small-centered columns">
 
         <div class="row">
-          <div class="small-5 columns">
+          <div class="small-12 medium-5 columns">
             <h2><?php the_title(); ?></h2>
           </div>
-          <div class="small-7 columns">
+          <div class="small-12 medium-7 columns">
             <p><?php the_content(); ?></p>
           </div>
         </div>
@@ -91,34 +91,40 @@ get_header(); ?>
   while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
     <div id="change-header-black" class="section-wrapper manifest-intro">
-      <div class="small-11 small-centered columns">
+      <div class="small-12 medium-11 small-centered columns">
 
         <div class="row menifest-intro-item">
-          <div class="small-7 columns">
+          <div class="small-12 medium-5 columns hide-for-medium-up">
+            <img src="http://zetland.hellojens.dev/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
+          </div>
+          <div class="small-12 medium-7 columns">
             <h1>Vi skærer gennem støjen.</h1>
             <p>Vi fokuserer på historier med perspektiv, og vi udgiver aldrig flere, end du kan nå at læse.</p>
           </div>
-          <div class="small-5 columns">
+          <div class="small-12 medium-5 columns text-center show-for-medium-up">
             <img src="http://zetland.hellojens.dev/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
           </div>
         </div>
 
         <div class="row menifest-intro-item">
-          <div class="small-5 columns">
+          <div class="medium-5 columns medium-text-center">
             <img src="http://zetland.hellojens.dev/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
           </div>
-          <div class="small-7 columns text-right">
+          <div class="small-12 medium-7 columns text-right small-text-left">
             <h1>Vi fortæller ikke at noget sker.</h1>
             <p>Vi fortæller, hvorfor det sker, og hvad det <i>betyder</i>.</p>
           </div>
         </div>
 
         <div class="row menifest-intro-item">
-          <div class="small-7 columns">
+          <div class="small-12 medium-5 columns hide-for-medium-up">
+            <img src="http://zetland.hellojens.dev/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
+          </div>
+          <div class="small-12 medium-7 columns">
             <h1>Hos os tilhører mediet læserne.</h1>
             <p>Vi vil udnytte vores medlemmers viden og bede dem gøre hinanden og os klogere.</p>
           </div>
-          <div class="small-5 columns">
+          <div class="small-12 medium-5 columns text-center show-for-medium-up">
             <img src="http://zetland.hellojens.dev/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
           </div>
         </div>
@@ -132,7 +138,7 @@ get_header(); ?>
   <!-- MINIFEST LIST -->
 
   <div id="change-header-white" class="section-wrapper manifest-list">
-    <div class="small-11 small-centered columns">
+    <div class="small-12 medium-11 small-centered columns">
 
     <?php 
     $counter = 0;
@@ -140,11 +146,11 @@ get_header(); ?>
     if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
       <div class="row list-item">
-        <div class="small-5 columns">
+        <div class="medium-5 columns">
           <?php $counter++; ?>
           <h1><?php echo $counter; ?></h1>
         </div>
-        <div class="small-7 columns">
+        <div class="medium-7 columns">
           <h2><?php the_title(); ?></h2>
           <p><?php the_content(); ?></p>
         </div>
@@ -158,13 +164,13 @@ get_header(); ?>
   <!-- CALL TO ACTION  -->
 
   <div class="section-wrapper default-sand-box strike-top">
-    <div class="small-11 small-centered columns">
+    <div class="small-12 medium-11 small-centered columns">
 
       <div class="row">
-        <div class="small-5 columns">
+        <div class="medium-5 columns">
           <h2>De støtter os allerede</h2>
         </div>
-        <div class="small-7 columns">
+        <div class="medium-7 columns">
           <h3>Hop med om bord</h3>
           <p>Bliv pionermedlem og vær med til at skabe Danmarks nye kvalitetsmedie.</p>
           <a class="button" href="">￼Bliv medlem</a>
@@ -177,7 +183,7 @@ get_header(); ?>
   <!-- BERTEL QUOTE -->
 
   <div class="section-wrapper quote">
-    <div class="small-11 small-centered columns">
+    <div class="small-12 medium-11 small-centered columns">
     <?php 
     $counter = 0;
     $the_query = new WP_Query( array("post_type" => "quote",  "posts_per_page" => "1", "offset" => "1" ) ); 
@@ -190,17 +196,17 @@ get_header(); ?>
   <!-- THE PEOPLE  -->
 
   <div class="section-wrapper people">
-    <div class="small-11 small-centered columns">
+    <div class="small-12 medium-11 small-centered columns">
       <?php 
       // PEOPLE INTRO
       $args = array( 'post_type' => 'page', "posts_per_page" => "1", "offset" => "4"); 
       $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
       while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <div class="row people-intro">
-          <div class="small-5 columns">
+          <div class="medium-5 columns">
             <h2><?php the_title(); ?></h2>
           </div>
-          <div class="small-7 columns">
+          <div class="medium-7 columns">
             <p><?php the_content(); ?></p>
           </div>
         </div>
@@ -213,7 +219,7 @@ get_header(); ?>
         $the_query = new WP_Query( array("post_type" => "people" ) ); 
         if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
-          <div class="small-3 left text-center columns">
+          <div class="small-6 medium-3 left text-center columns">
             <?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), peopleImage ); ?>
             <img class="person" src="<?php echo $featuredimage[0]; ?>">
             <h3><?php the_title(); ?></h3>
@@ -233,12 +239,12 @@ get_header(); ?>
   <!-- QUESTIONS  ACCORDION -->
 
   <div class="section-wrapper qanda strike-top">
-    <div class="small-11 small-centered columns">
+    <div class="small-12 medium-11 small-centered columns">
       <div class="row">
-        <div class="small-5 columns">
+        <div class="medium-5 columns">
           <h2>13 spørgsmål om det nye Zetland</h2>
         </div>
-        <div class="small-7 columns">
+        <div class="medium-7 columns">
           
           <div id="accordion">
 
@@ -263,7 +269,7 @@ get_header(); ?>
   <!-- PETER QUOTE -->
 
   <div class="section-wrapper quote">
-    <div class="small-11 small-centered columns">
+    <div class="small-12 medium-11 small-centered columns">
     <?php 
     $counter = 0;
     $the_query = new WP_Query( array("post_type" => "quote",  "posts_per_page" => "1", "offset" => "2" ) ); 
