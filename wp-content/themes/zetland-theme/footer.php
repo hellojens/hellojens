@@ -1,5 +1,6 @@
 </section>
 </div>
+</div>
 
   <div class="section-wrapper the-end">
     <div class="small-12 medium-11 small-centered columns">

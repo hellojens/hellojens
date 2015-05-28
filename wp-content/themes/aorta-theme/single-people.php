@@ -42,7 +42,7 @@
 										<h3><?php the_field("place_of_assosiation"); ?></h3>
 									<?php endif; ?>
 									<p class="additional-info">
-										<?php the_field("associated_info"); ?><br>
+										<?php the_field("associated_info"); ?>
 										<?php if( get_field('associated_directions') ): ?>
 											<a target="_blank" href="<?php echo get_field("associated_directions"); ?>">Directions</a><br>
 										<?php endif; ?>

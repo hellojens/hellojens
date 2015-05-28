@@ -48,11 +48,14 @@
 								<?php if (function_exists('the_subheading')) { the_subheading('<p class="author-title">', '</p>'); } ?>
 								
 								<p class="excerpt"><?php $excerpt = get_the_excerpt(); echo string_limit_words($excerpt,48); ?></p>
-					    	<div class="author-moreby"><?php the_title(); ?>'s other stories</div>
 
 							<?php endwhile; endif; ?>	
 					    <?php wp_reset_query(); ?>
-
+					  	<?php $the_query = new WP_Query( array("posts_per_page" => "1", 'post__not_in' => $preventdouble, "post_type" => "post", "author"=> $this_author, ) ); ?>
+							<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
+					    	<div class="author-moreby"><?php the_author_firstname(); ?>'s other stories</div>
+							<?php endwhile; endif; ?>
+					    <?php wp_reset_query(); ?>
 					  	<?php $the_query = new WP_Query( array("posts_per_page" => "4", 'post__not_in' => $preventdouble, "post_type" => "post", "author"=> $this_author, ) ); ?>
 							<?php if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 									<h2><a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>"><?php the_title(); ?></a></h2>

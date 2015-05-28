@@ -3,18 +3,20 @@
 //////// ///////////
 
 
-
 jQuery(document).ready(function($){
   
-
-
-
   $('p:empty').remove();
 
+  $('.top-section .single-post').imagesLoaded(function() {
+    $(".single-header").addClass('on');
+  });
 
   // Align posts after reload if .grid is visible
   if($(".grid").length > 0) {
     $(window).load(function(){
+      $(".grid").isotope('layout');
+    });
+    $(window).resize(function() {
       $(".grid").isotope('layout');
     });
   }
@@ -28,8 +30,8 @@ jQuery(document).ready(function($){
         layoutMode: 'fitRows',
         transformsEnabled: false, 
         percentPosition: false,
+        resizable: false,
       });
-      $container.isotope('unbindResize');
     });
 
     $(".page-nav").click(function(){
@@ -63,30 +65,31 @@ jQuery(document).ready(function($){
         var posts = $(data).find(".loadMore");
         if(posts.length > 0 ) { 
 
+          $(".grid").isotope().append(posts).isotope("appended", posts, true).isotope('layout');
+          
           $(".grid").isotope('bindResize');
 
-          $(".grid").isotope().append(posts).isotope("appended", posts, true).isotope('layout');
+          $(".grid").isotope('layout');
 
           pageCount++;
-          $(posts).css("opacity","0");
+          // $(posts).css("opacity","0");
 
-          // Loop each new element and animate 
-          setTimeout(function(){                    
-            $(posts).each(function(i) {
-              var $li = $(this);
-              setTimeout(function() {
-                // add page count to each row of post loads
-                $(posts).addClass("page" +pageCount);
-                // Animate 
-                $li.addClass('animate');
-              }, i*100); // delay 100 ms
-            });
-          },540); // Set timeout to prevent isotope interference 
+          // // Loop each new element and animate 
+          // setTimeout(function(){                    
+          //   $(posts).each(function(i) {
+          //     var $li = $(this);
+          //     setTimeout(function() {
+          //       // add page count to each row of post loads
+          //       $(posts).addClass("page" +pageCount);
+          //       // Animate 
+          //       $li.addClass('animate');
+          //     }, i*100); // delay 100 ms
+          //   });
+          // },540); // Set timeout to prevent isotope interference 
 
-          $
           setTimeout(function(){ 
             $(".grid").isotope('layout');
-          }, 2000);
+          }, 100);
 
           $(".page-nav .load-more").removeClass("pulse");
 
@@ -100,11 +103,11 @@ jQuery(document).ready(function($){
     }; // End loadMoreFunction 
 
     // Inifit scroll viewport detector 
-    new AnimOnScroll( document.getElementById( 'grid' ), {
-      minDuration : 0.4,
-      maxDuration : 0.6,
-      viewportFactor : 0
-    });
+    // new AnimOnScroll( document.getElementById( 'grid' ), {
+    //   minDuration : 0.4,
+    //   maxDuration : 0.6,
+    //   viewportFactor : 0
+    // });
 
   }; // End isotope homepage post grid 
 

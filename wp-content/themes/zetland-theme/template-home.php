@@ -95,22 +95,22 @@ get_header(); ?>
 
         <div class="row menifest-intro-item">
           <div class="small-12 medium-5 columns hide-for-medium-up">
-            <img src="http://zetland.hellojens.dev/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
+            <img src="http://zetland.hellojens.com/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
           </div>
           <div class="small-12 medium-7 columns">
             <h1>Vi skærer gennem støjen.</h1>
             <p>Vi fokuserer på historier med perspektiv, og vi udgiver aldrig flere, end du kan nå at læse.</p>
           </div>
           <div class="small-12 medium-5 columns text-center show-for-medium-up">
-            <img src="http://zetland.hellojens.dev/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
+            <img src="http://zetland.hellojens.com/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
           </div>
         </div>
 
         <div class="row menifest-intro-item">
           <div class="medium-5 columns medium-text-center">
-            <img src="http://zetland.hellojens.dev/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
+            <img src="http://zetland.hellojens.com/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
           </div>
-          <div class="small-12 medium-7 columns text-right small-text-left">
+          <div class="small-12 medium-7 columns medium-text-right small-text-left">
             <h1>Vi fortæller ikke at noget sker.</h1>
             <p>Vi fortæller, hvorfor det sker, og hvad det <i>betyder</i>.</p>
           </div>

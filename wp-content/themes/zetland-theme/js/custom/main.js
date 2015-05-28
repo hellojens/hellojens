@@ -43,7 +43,8 @@ jQuery(document).ready(function($){
 
 
   ///// FIT TEXT  /////
-  $(".start h1, .intro h1, .manifest-intro h1, .manifest-list h2, .the-end h1").fitText();
+  $(".start h1, .manifest-intro h1, .the-end h1").fitText(0.8, { minFontSize: '20px', maxFontSize: '200px' });
+  $(".intro h1").fitText(0.9, { minFontSize: '20px', maxFontSize: '200px' });
 
 
   ///// TOP BAR COLOR CHANGER  /////

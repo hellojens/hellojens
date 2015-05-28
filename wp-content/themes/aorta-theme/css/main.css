@@ -705,7 +705,7 @@ header.stick {
 
 .people-title {
   width: 100%;
-  min-height: 100px;
+  min-height: 145px;
   display: inline-block;
   float: left;
   text-align: center;
@@ -722,12 +722,15 @@ header.stick {
   font-weight: 100;
   padding-bottom: 25px;
   color: rgb(153, 149, 138);
-  line-height: 18px;
+  line-height: 22px;
   padding-top: 3px;
 }
 
 .single-people .people-post{
   text-align: left;
+  font-size: 15px;
+  color: rgb(153, 149, 138);
+
 }
 
 .single-people .profile-picture {
@@ -752,6 +755,7 @@ header.stick {
   line-height: 1.2;
   margin: 0px;
   padding: 0px;
+  padding-bottom: 20px;
   font-weight: 100;
 }
 
@@ -762,7 +766,7 @@ header.stick {
 
 .single-people .people-post p {
   color: rgb(153, 149, 138);
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 
 
@@ -814,6 +818,13 @@ header.stick {
   background-repeat: no-repeat;
   background-size: cover;
   height: 450px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.3s ease-in;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+
+.single-header.on {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 40.063em) {
@@ -824,6 +835,7 @@ header.stick {
 
 .single-post .content-section {
   margin-top: -140px;
+  margin-bottom: 50px;
 }
 
 .single-post .content-section .content-slab {
@@ -870,6 +882,7 @@ header.stick {
 .single-post .post-content img {
   position: relative;
   padding-bottom: 20px;
+  padding-top: 7px;
   max-width: 100%;
 }
 
@@ -896,16 +909,16 @@ iframe, object, embed, oembed { max-width: 100%; }
 .single-post .single-post-content p {
   font-size: 16px;
   font-weight: 100;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   width: 70%;
   margin: 0px;
-  /*color: #989489;*/
+  color: #989489;
 }
 
 .single-post .single-post-content  {
   font-size: 16px;
   padding-bottom: 20px;
-  color: #143C37;
+  color: #989489;
 }
 
 @media only screen and (max-width: 40.063em) {
@@ -1254,12 +1267,22 @@ ul#menu-footer-links li {
 .grid {
 
   list-style: none;
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -ms-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
 }
 
 .grid li {
   display: block;
   float: left;
-  opacity: 0;
+  /*opacity: 0;*/
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -ms-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
 }
 
 .grid li.shown,
@@ -1292,19 +1315,12 @@ ul#menu-footer-links li {
 .grid.effect-2 li.animate {
 /*  -webkit-transform: translateY(200px);
   transform: translateY(200px);
-*/  -webkit-animation: moveUp 0.55s ease forwards;
-  animation: moveUp 0.55s ease forwards;
+*/ 
+
+opacity: 1;
 }
 
-@-webkit-keyframes moveUp {
-  0% { }
-  100% { -webkit-transform: translateY(0); opacity: 1; }
-}
 
-@keyframes moveUp {
-  0% { }
-  100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
-}
 
 .pulse{
   animation-name: pulse;

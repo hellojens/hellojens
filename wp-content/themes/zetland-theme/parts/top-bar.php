@@ -6,19 +6,19 @@
             </li>
         </ul>
         <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class="action-button active"><a href="#">Bliv medlem</a></li>
-        </ul>
+            <!-- Right Nav Section -->
+            <ul class="right">
+              <li class="action-button active"><a href="#">Bliv medlem</a></li>
+            </ul>
 
-        <ul class="right menu"> 
-            <li><a class="manifest" href="#manifest">Menifest</a></li>
-            <li><a class="faq" href="#faq">FAQ</a></li>
-        </ul>
+            <ul class="right menu"> 
+                <li><a class="manifest" href="#manifest">Menifest</a></li>
+                <li><a class="faq" href="#faq">FAQ</a></li>
+            </ul>
 
-        <ul class="right kickstarter-stats">
-            <?php dynamic_sidebar( 'menu-widgets' ); ?>
-        </ul>
-
+            <ul class="right kickstarter-stats">
+                <?php dynamic_sidebar( 'menu-widgets' ); ?>
+            </ul>
+        </section>
     </nav>
 </div>

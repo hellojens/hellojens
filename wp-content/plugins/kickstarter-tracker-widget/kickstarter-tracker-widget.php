@@ -186,7 +186,7 @@ class Kickstarter_Widget extends WP_Widget {
 
 		// Display the widget title 
 		if ( $title )
-			echo $before_title . $title . $after_title;
+			echo $title;
 
 		if ( $results['data-backers-count'])
 			echo '<h2><span class="orange-text">'.$results['data-backers-count'].'</span> nye medlemmer, ';
@@ -197,16 +197,13 @@ class Kickstarter_Widget extends WP_Widget {
 		if ( $results['data-percent-raised'])
 			echo '<div class="kickstarter-num"><span id="countKick1">'.$results['data-percent-raised'].'</span>%</div>';
 			echo '<div class="kickstarter-tag">finansieret</div><br />';
-			echo '<div class="progress"><span class="meter" style="max-width: 100%; width: '.$results['data-percent-raised'].'%"></span></div>';
+			echo '<div class="progress"><span class="meter" style="max-width: 100%; width: '.$results['data-percent-raised'].'%;"></span></div>';
 
 		if (($results['data-hours-remaining']) && ($results['data-backers-count']))
 			echo '<div class="kickstarter-num" id="countKick2">'.$results['data-hours-remaining'].'</div>';
 			echo '<div class="kickstarter-tag">'.$results['time-unit'].'</div>';
 			$timeleft = $results['data-hours-remaining'] * 0.3;
-			echo '<div class="progress"><span class="meter" style="max-width: 100%; width: '.$timeleft.'%"></span></div><br>';
-
-		
-		// echo '<br /><a href="'.$url.'" class="kickstarter-button" title="Back this project" target="_blank">Back This Project</a><br />';
+			echo '<div class="progress"><span class="meter" style="max-width: 100%; width: '.$timeleft.'%;"></span></div><br>';
 
 	
 		if ($allow)
