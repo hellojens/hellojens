@@ -1,12 +1,20 @@
 jQuery(document).ready(function($){
 
 
-  // vpw = $(window).width();
-  // vph = $(window).height();
- 
-  // $('.start').height(vph + 60);
-  // $('.full-page').height(vph  - 60);
-  // $('.inner-wrap').css("margin-bottom", vph);
+  var fitHeight = function() {
+
+    vpw = $(window).width();
+    vph = $(window).height();
+   
+    $('.start').height(vph + 60);
+    $('.full-page').height(vph  - 60);
+    $('.inner-wrap').css("margin-bottom", vph);
+
+  }; fitHeight();
+
+  $(window).resize(function() {
+    fitHeight();
+  });
 
   ///// Questions Accordion /////
 
