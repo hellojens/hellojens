@@ -34,8 +34,8 @@ if (function_exists('add_theme_support'))
 
     // Add Thumbnail Theme Support
     add_theme_support('post-thumbnails');
-    add_image_size('large', 1200, 800, true); // Large Thumbnail
-    add_image_size('custom-large', 1000, '', true); // Large Thumbnail
+    add_image_size('large', 1000, '', true); // Large Thumbnail
+    add_image_size('largeheader', 1200, 600, true); // post header
     add_image_size('post', 350, 350, true); // Post Thumbnail
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
@@ -389,14 +389,14 @@ function html5blankgravatar ($avatar_defaults)
 }
 
 // Threaded Comments
-// function enable_threaded_comments()
-// {
-//     if (!is_admin()) {
-//         if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-//             wp_enqueue_script('comment-reply');
-//         }
-//     }
-// }
+function enable_threaded_comments()
+{
+    if (!is_admin()) {
+        if (is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
+            wp_enqueue_script('comment-reply');
+        }
+    }
+}
 
 // Custom Comments Callback
 function html5blankcomments($comment, $args, $depth)

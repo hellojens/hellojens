@@ -64,7 +64,8 @@
                       </div>
                       <div class="small-6 medium-6 logo text-center columns">
                         <a href="/">
-                          <img width="250px" src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Aorta logo">
+                          <img width="250px" class="logo-green" src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Aorta logo">
+                          <img width="250px" class="logo-white" src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg" alt="Aorta logo">
                         </a>
                       </div>
                       <div class="small-3 medium-3 left medium-text-left columns">
@@ -84,7 +85,7 @@
                   </div>
                 </nav>
 
-                <nav class="row secondary-nav top-nav" role="navigation">
+                <nav class="row secondary-nav top-nav hide-for-small-only" role="navigation">
                   <div class="small-12 text-center columns">
                     <?php category_nav(); ?>
                   </div>

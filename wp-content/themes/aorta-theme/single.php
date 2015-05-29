@@ -3,7 +3,7 @@
 	<div class="top-section single-post">
 		<div class="row"> 
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-				<?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), large ); ?>
+				<?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), largeheader ); ?>
 	 			<section class="single-header small-12 text-center small-centered small-collapse columns" style="background-image: url('<?php echo $featuredimage[0]; ?>');">
 				</section>
     	<?php endwhile; endif;?>    

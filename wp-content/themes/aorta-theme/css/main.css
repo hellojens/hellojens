@@ -144,8 +144,10 @@ header.stick {
         transition: all 0.3s ease-out; 
 }
 
+
+
 .main-navigation a {
-  font-family: "freight-display-pro", sans-serif;
+  font-family: "freight-display-pro", georgia, sans-serif;
   font-size: 32px;
   position: relative;
   display: inline-block;
@@ -218,6 +220,17 @@ header.stick {
   transition: .3s transform cubic-bezier(.165,.84,.44,1),.3s background-position steps(3);
 }
 
+.logo-white {
+  display: none;
+}
+
+.page-template-template-about .logo-green {
+  display: none;
+}
+.page-template-template-about .logo-white {
+  display: block;
+}
+
 .logo-color:hover {
 /*  fill: red;
   background-position: bottom;*/
@@ -231,8 +244,9 @@ header.stick {
 @media only screen and (max-width: 40.063em) {
   .main-navigation .logo a {
     padding: 0px;
-    margin-top: -6px;
-    margin-left: 15px;
+    margin-top: 7px;
+    margin-left: 10px;
+    margin-right: 2px;
   }
   .top-section.home-hero {
     padding-top: 20px !important;
@@ -723,6 +737,10 @@ header.stick {
 @media only screen and (max-width: 40.063em) {
   .single-people .profile-picture {
     width: 100%;
+  }
+  .people-post p {
+    font-size: 13px;
+    line-height: 18px;
   }
 }
 
