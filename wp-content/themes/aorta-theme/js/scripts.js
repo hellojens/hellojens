@@ -7,19 +7,16 @@ jQuery(document).ready(function($){
   
   $('p:empty').remove();
 
-  $('.top-section .single-post').imagesLoaded(function() {
-    $(".single-header").addClass('on');
-  });
+  // $('.top-section .single-post').imagesLoaded(function() {
+  //   $(".single-header").addClass('on');
+  // });
 
   // Align posts after reload if .grid is visible
-  if($(".grid").length > 0) {
-    $(window).load(function(){
-      $(".grid").isotope('layout');
-    });
-    $(window).resize(function() {
-      $(".grid").isotope('layout');
-    });
-  }
+
+
+  // $(window).on('resize', function(){
+  //     $('.grid').isotope('layout');
+  // });
   
   var isotopeInit = function() {
 
@@ -30,8 +27,9 @@ jQuery(document).ready(function($){
         layoutMode: 'fitRows',
         transformsEnabled: false, 
         percentPosition: false,
-        resizable: false,
       });
+      $container.isotope('bindResize');
+
     });
 
     $(".page-nav").click(function(){
@@ -65,31 +63,34 @@ jQuery(document).ready(function($){
         var posts = $(data).find(".loadMore");
         if(posts.length > 0 ) { 
 
-          $(".grid").isotope().append(posts).isotope("appended", posts, true).isotope('layout');
-          
-          $(".grid").isotope('bindResize');
+          $('.grid').imagesLoaded( function() {
 
-          $(".grid").isotope('layout');
+            $(".grid").isotope().append(posts).isotope("appended", posts, true);
+            $(posts).css("opacity","0");
 
-          pageCount++;
-          // $(posts).css("opacity","0");
+            pageCount++;
 
-          // // Loop each new element and animate 
-          // setTimeout(function(){                    
-          //   $(posts).each(function(i) {
-          //     var $li = $(this);
-          //     setTimeout(function() {
-          //       // add page count to each row of post loads
-          //       $(posts).addClass("page" +pageCount);
-          //       // Animate 
-          //       $li.addClass('animate');
-          //     }, i*100); // delay 100 ms
-          //   });
-          // },540); // Set timeout to prevent isotope interference 
+            // Loop each new element and animate 
+            setTimeout(function(){                    
+              $(posts).each(function(i) {
+                var $li = $(this);
+                setTimeout(function() {
+                  // add page count to each row of post loads
+                  $(posts).addClass("page" +pageCount);
+                  // Animate 
+                  $li.addClass('animate');
+                }, i*100); // delay 100 ms
+              });
+            },540); // Set timeout to prevent isotope interference 
 
-          setTimeout(function(){ 
-            $(".grid").isotope('layout');
-          }, 100);
+            setTimeout(function(){ 
+              $(posts).addClass('shown');
+              $(posts).removeClass("animate");
+              $(".grid").isotope('layout');
+            }, 2000);
+
+          });
+
 
           $(".page-nav .load-more").removeClass("pulse");
 
@@ -102,12 +103,20 @@ jQuery(document).ready(function($){
       }); // End ajax $.get 
     }; // End loadMoreFunction 
 
-    // Inifit scroll viewport detector 
-    // new AnimOnScroll( document.getElementById( 'grid' ), {
-    //   minDuration : 0.4,
-    //   maxDuration : 0.6,
-    //   viewportFactor : 0
-    // });
+    if($(".grid").length > 0) {
+
+      $(window).load(function(){
+        $(".grid").isotope('layout');
+      });
+
+      // Inifit scroll viewport detector 
+      new AnimOnScroll( document.getElementById( 'grid' ), {
+        minDuration : 0.4,
+        maxDuration : 0.6,
+        viewportFactor : 0
+      });
+
+    }
 
   }; // End isotope homepage post grid 
 
@@ -128,7 +137,9 @@ jQuery(document).ready(function($){
 
   $(".searchlink").click(function(e){
     e.preventDefault();
-    $(".search-wrapper").addClass("open");
+    $(".search-wrapper").toggleClass("open");
+    $(".search-loop").toggleClass("active");
+    $(".search-input").focus();
     // $("header, .top-section, .content-section").animate({"opacity": 0.1}, 200);
   });
 

@@ -10,21 +10,25 @@
       $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
       while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <div class="row">
-          <div class="medium-6 columns">
-            <h1><?php the_content(); ?></h1>
-          </div>
-          <div class="medium-6 columns">
-            <?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), full ); ?>
-            <img class="person" src="<?php echo $featuredimage[0]; ?>">
+          <div class="end-message">
+            <div class="medium-6 columns">
+              <h1><?php the_content(); ?></h1>
+            </div>
+            <div class="medium-6 columns">
+              <?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), full ); ?>
+              <img class="person" src="<?php echo $featuredimage[0]; ?>">
+            </div>
           </div>
         </div>
-        <div class="row social">
-          <div class="small-12 columns">
-            <a href="">Twitter</a>
-            <a href="">Facebook</a>
-          </div>
-          <div class="small-12 columns">
-            <p>© Copyright Zetland men del og lån alt hvad du vil.</p>
+        <div class="row">
+          <div class="social">
+            <div class="small-12 columns">
+              <a href="">Twitter</a>
+              <a href="">Facebook</a>
+            </div>
+            <div class="small-12 columns">
+              <p>© Copyright Zetland men del og lån alt hvad du vil.</p>
+            </div>
           </div>
         </div>
       <?php endwhile; endif; 

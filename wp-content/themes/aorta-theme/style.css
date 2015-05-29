@@ -29,10 +29,7 @@
 html {
 	font-size:62.5%;
 }
-body {
-	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#444;
-}
+
 /* clear */
 .clear:before,
 .clear:after {
@@ -245,7 +242,7 @@ a img.aligncenter {
 .gallery-caption {
 	font-size: 12px !important;
 	font-weight: 400 !important;
-	line-height: 17px;
+	line-height: 19px;
 	margin: 0;
 	padding-top: 5px;
   padding-bottom: 40px !important;

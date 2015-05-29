@@ -9,6 +9,7 @@ jQuery(document).ready(function($){
     $('.start').height(vph + 60);
     $('.full-page').height(vph  - 60);
     $('.inner-wrap').css("margin-bottom", vph);
+    $('.the-end').height(vph);
 
   }; fitHeight();
 
@@ -43,8 +44,10 @@ jQuery(document).ready(function($){
 
 
   ///// FIT TEXT  /////
-  $(".start h1, .manifest-intro h1, .the-end h1").fitText(0.8, { minFontSize: '20px', maxFontSize: '200px' });
-  $(".intro h1").fitText(0.9, { minFontSize: '20px', maxFontSize: '200px' });
+  $(".start h1").fitText(0.9, { minFontSize: '20px', maxFontSize: '200px' });
+  $(".intro h1").fitText(1.1);
+  $(".manifest-intro h1").fitText(0.8, { minFontSize: '20px', maxFontSize: '200px' });
+  $(".the-end h1").fitText(0.6, { minFontSize: '20px', maxFontSize: '200px' });
 
 
   ///// TOP BAR COLOR CHANGER  /////
@@ -124,19 +127,16 @@ jQuery(document).ready(function($){
   });
 
   var currentvalueKick1 = $("#countKick1").html();
-  var currentvalueKick2 = $("#countKick2").html();
+
 
   var menuCountNumbersKick1 = new CountUp("countKick1", 0, currentvalueKick1, 0, 2.5, options);
-  var menuCountNumbersKick2 = new CountUp("countKick2", 0, currentvalueKick2, 0, 3.5, options);
+
 
 
   $(window).load(function(){
     setTimeout(function(){
       menuCountNumbersKick1.start();
     }, 1000)
-    setTimeout(function(){
-      menuCountNumbersKick2.start();
-    }, 2000)
   });
 
 

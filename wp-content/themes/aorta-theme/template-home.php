@@ -8,7 +8,7 @@
 		     		<?php while($the_query->have_posts()): $the_query->the_post(); ?>
 							<?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), large ); ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class(array("class" => "top-post")); ?>>
-								<div class="small-12 medium-6 text-center  large-6 columns">
+								<div class="small-12 medium-6 text-center large-6 columns">
 									<a href="<?php the_permalink(); ?>" class="show-for-small-only" style="display: inline-block; width: 100%; height: 100%;">
 
 									<div class="post-thumbnail background-fit" style="background-image: url('<?php echo $featuredimage[0]; ?>');">	
@@ -43,7 +43,7 @@
 	<div class="content-section">
 		<div class="row"> 
 			<section class="small-12 large-11 small-centered columns">
-				<ul class="row grid" id="grid">
+				<ul class="row grid effect-2" id="grid">
 		    	<?php 
 				    $offset = htmlspecialchars(trim($_GET['offset']));
 				    if ($offset == '') { $offset = 2; }

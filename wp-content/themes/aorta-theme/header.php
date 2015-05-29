@@ -24,6 +24,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <script src="//use.typekit.net/kuk5mac.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
 		<?php wp_head(); ?>
 		<script>
         conditionizr.config({
@@ -41,19 +45,6 @@
       <div class="row small-collapse">
         <div class="small-12 small-centered columns">
 
-        <div class="search-wrapper">
-            <div class="row">
-              <div class="small-9 small-centered columns">
-
-                <form class="search" method="get" action="<?php echo home_url(); ?>" role="search">
-                  <input class="search-input" type="search" name="s" placeholder="Type here to search..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type here to search...'">
-                  <!-- <button class="search-submit" type="submit" role="button">Search</button> -->
-                </form>
-
-              </div>
-            </div>
-          </div>
-          
           <div class="row small-collapse">
             <div class="small-12 small-centered columns">
 
@@ -118,5 +109,18 @@
             	</header>
             </div>
 
+            <div class="search-wrapper">
+              <div class="row">
+                <div class="small-11 small-centered columns">
+
+                  <form class="search" method="get" action="<?php echo home_url(); ?>" role="search">
+                    <input class="search-input" type="search" name="s" placeholder="Type here to search..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type here to search...'">
+                    <!-- <button class="search-submit" type="submit" role="button">Search</button> -->
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          
           </div>
           <div class="transition-wrapper">

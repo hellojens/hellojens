@@ -73,7 +73,8 @@ figcaption {
 }
 
 .row {
-	max-width: 68.5rem;
+	// max-width: 68.5rem;
+	max-width: 80rem;
 }
 
 .top-bar {
@@ -215,7 +216,7 @@ p {
 	}
 
 	.row {
-	  display: inline-block;
+
 	  position: relative;
 	  top: 50%;
 	  -webkit-transform: translateY(-50%);
@@ -271,13 +272,13 @@ p {
 	}
 
 	.row {
-	  display: inline-block;
 	  position: relative;
 	  top: 50%;
 	  -webkit-transform: translateY(-50%);
 	  -ms-transform: translateY(-50%);
 	  transform: translateY(-50%);
 	  z-index: 3;
+	  margin: 0 auto;
 	}
 
 	h1, p {
@@ -611,7 +612,12 @@ p {
 	position: fixed;
 	bottom: 0px;
 	z-index: 0;
+	width: 100%;
 
+	.end-message {
+		position: absolute;
+		margin-top: 10%;
+	}
 
 	h1 {
 		font-size: 6rem;
@@ -626,6 +632,8 @@ p {
 
 	}
 	.social {
+		position: fixed;
+	  bottom: 0px;
 		a {
 			color: $oilfade;
 			background-color: $white;
