@@ -57,7 +57,7 @@ get_header(); ?>
   $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
   while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-    <div class="section-wrapper kickstart">
+    <div id="count-kickstart" class="section-wrapper kickstart">
       <div class="small-12 medium-11 small-centered columns">
 
         <div class="row">
@@ -71,7 +71,7 @@ get_header(); ?>
 
         <div class="row stats">
           <div class="small-12 columns">
-            <div id="count-kickstart" class="strike-top"></div>
+            <div class="strike-top"></div>
             <?php dynamic_sidebar( 'kickstart-widgets' ); ?>
           </div>
         </div>

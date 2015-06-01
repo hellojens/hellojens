@@ -161,14 +161,14 @@ jQuery(document).ready(function($){
   var menuCountNumbersKick1 = new CountUp("countKick1", 0, currentvalueKick1, 0, 2.5, options);
 
   var currentvalueKick2 = $("#countKick2").html();
-  var menuCountNumbersKick2 = new CountUp("countKick2", 0, currentvalueKick2, 0, 3.5, options);
+  var menuCountNumbersKick2 = new CountUp("countKick2", 0, currentvalueKick2, 0, 2, options);
 
   var currentvalueKick3 = $("#countKick3").attr('data').replace("$", '').replace(',','');
   console.log(currentvalueKick3);
-  var menuCountNumbersKick3 = new CountUp("countKick3", 0, currentvalueKick3, 0, 4.5, options);
+  var menuCountNumbersKick3 = new CountUp("countKick3", 0, currentvalueKick3, 0, 2, options);
 
   var currentvalueKick4 = $("#countKick4").html();
-  var menuCountNumbersKick4 = new CountUp("countKick4", 0, currentvalueKick4, 0, 10.5, options);
+  var menuCountNumbersKick4 = new CountUp("countKick4", 0, currentvalueKick4, 0, 3, options);
 
   $(window).scroll(function(e) {
 
@@ -193,7 +193,7 @@ jQuery(document).ready(function($){
       } else {
         progress = progress + "%"
       }
-      $(window).off('scroll');
+      // $(window).off('scroll');
 
       $(".meter").animate({width: progress}, 2000);
       // $(".meter").css("max-width", progress);
