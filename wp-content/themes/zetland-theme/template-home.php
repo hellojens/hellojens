@@ -11,7 +11,7 @@ get_header(); ?>
   $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
   while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-    <div class="section-wrapper full-page intro">
+    <div class="section-wrapper intro">
       <div class="video-wrapper">
         <iframe id="intro-video" src="https://player.vimeo.com/video/129290878?api=1&player_id=player1&?title=0&amp;byline=0&amp;portrait=0&amp;color=FA5700" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>      
@@ -71,16 +71,29 @@ get_header(); ?>
 
         <div class="row stats">
           <div class="small-12 columns">
-            <div class="strike-top"></div>
+            <div id="count-kickstart" class="strike-top"></div>
             <?php dynamic_sidebar( 'kickstart-widgets' ); ?>
+          </div>
+        </div>
+
+  <?php endwhile; endif; wp_reset_postdata(); ?>
+
+        <!-- CALL TO ACTION  -->
+
+        <div class="default-sand-box">
+          <div class="row">
+            <div class="medium-5 columns">
+              <h2>Hop med om bord</h2>
+            </div>
+            <div class="medium-7 columns">
+              <p>Bliv pionermedlem og vær med til at skabe Danmarks nye kvalitetsmedie.</p>
+              <a class="button" href="">￼Bliv medlem</a>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
-
-  <?php endwhile; endif; wp_reset_postdata(); ?>
-
 
   <?php 
   // MINIFEST INTRO
@@ -219,7 +232,7 @@ get_header(); ?>
 
   <!-- THE PEOPLE  -->
 
-  <div class="section-wrapper people">
+  <div class="section-wrapper people strike-top">
     <div class="small-12 medium-11 small-centered columns">
       <?php 
       // PEOPLE INTRO

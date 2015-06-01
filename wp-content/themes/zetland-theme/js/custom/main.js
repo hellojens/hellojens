@@ -6,8 +6,8 @@ jQuery(document).ready(function($){
     vpw = $(window).width();
     vph = $(window).height();
    
-    $('.start').height(vph + 60);
-    $('.full-page').height(vph  - 60);
+    $('.start').height(vph - 120);
+    $('.intro').height(vph);
     $('.inner-wrap').css("margin-bottom", vph);
     $('.the-end').height(vph);
     $('#intro-video').height(vph - 120);
@@ -160,11 +160,51 @@ jQuery(document).ready(function($){
   var currentvalueKick1 = $("#countKick1").html();
   var menuCountNumbersKick1 = new CountUp("countKick1", 0, currentvalueKick1, 0, 2.5, options);
 
-  $(window).load(function(){
-    setTimeout(function(){
-      menuCountNumbersKick1.start();
-    }, 1000)
+  var currentvalueKick2 = $("#countKick2").html();
+  var menuCountNumbersKick2 = new CountUp("countKick2", 0, currentvalueKick2, 0, 3.5, options);
+
+  var currentvalueKick3 = $("#countKick3").attr('data').replace("$", '').replace(',','');
+  console.log(currentvalueKick3);
+  var menuCountNumbersKick3 = new CountUp("countKick3", 0, currentvalueKick3, 0, 4.5, options);
+
+  var currentvalueKick4 = $("#countKick4").html();
+  var menuCountNumbersKick4 = new CountUp("countKick4", 0, currentvalueKick4, 0, 10.5, options);
+
+  $(window).scroll(function(e) {
+
+    var fired = 0;
+    var el = $('.kickstart'),
+        startCount = $('#count-kickstart').offset().top - $(window).scrollTop();
+              console.log(fired)
+
+    if (startCount < 60 && fired !== 1){
+
+      // Start number count
+      menuCountNumbersKick1.start(); 
+      menuCountNumbersKick2.start(); 
+      menuCountNumbersKick3.start(); 
+      menuCountNumbersKick4.start(); 
+
+      // Start progress par animation 
+      var progress = $(".meter").attr("data");
+
+      if(progress < "100") {
+        progress = "100%";
+      } else {
+        progress = progress + "%"
+      }
+      $(window).off('scroll');
+
+      $(".meter").animate({width: progress}, 2000);
+      // $(".meter").css("max-width", progress);
+      // $(".meter").addClass("start-count");
+      fired = 1;
+      console.log(fired)
+
+    }
+
   });
+
 
 
   ////////  RANDOMIZE TEXT SNIPPETS IN HEADER  ///////////
