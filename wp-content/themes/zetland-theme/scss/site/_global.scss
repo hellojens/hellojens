@@ -115,9 +115,22 @@ img.alignright {
   overflow: hidden;
 }
 
+a {
+  -webkit-transition: all 0.1s ease-out; 
+          transition: all 0.1s ease-out; 
+}
+
+a:hover {
+	color: $oil;
+}
+
 /* -------------------------------- 
   DEFAULTS   
 -------------------------------- */
+
+h1,h2,h3,h4,h5 {
+	font-weight: 400 !important;
+}
 
 h1 {
 	font-family: 'Austin', "austin", austin, sans-serif;
@@ -133,7 +146,6 @@ h3 {
 h5 {
 	font-family: 'proxima_regular', sans-serif;
 }
-
 p {
 	font-family: 'proxima_regular', sans-serif;
 	color: $oilfade;
@@ -288,8 +300,6 @@ p {
 		z-index: 2;
 	}
 
-
-
 	.row {
 	  position: relative;
 	  top: 50%;
@@ -371,10 +381,10 @@ p {
 	}
 
 	.default-sand-box {
+		padding-top: 20px;
 		p { 
 		 	font-family: 'proxima_regular', sans-serif; 
 		  padding-top: 20px;
-		  padding-bottom: 20px;
   		color: $oilfade;
 
 		}
@@ -474,7 +484,7 @@ p {
 		font-family: 'Austin', "austin", austin, sans-serif;
 	}
 	p {
-
+		line-height: 1.5;
 	}
 }
 
@@ -487,9 +497,9 @@ p {
 	background-color: $white;
 
 	img.person {
-		max-width: 45%;
+		max-width: 40%;
 		border-radius: 100%;
-		margin-top: -40px;
+		float: left;
 	}
 
 	.quote-details {
@@ -552,6 +562,7 @@ p {
 			margin-top: 12px;
 			margin-left: 20px;
 			float: left;
+		  max-width: 75%;
 
 			h3 {
 				font-size: 1.4rem;
@@ -589,9 +600,14 @@ p {
 			color: $oilfade;
 		}
 	}
-
 	.people-item {
 		text-align: center;
+
+		.content {
+			display: inline-block;
+			text-align: center;
+			min-height: 200px;
+		}
 
 		img.person {
 			border-radius: 100%;
@@ -694,7 +710,7 @@ p {
 
 	.end-message {
 		position: absolute;
-		margin-top: 10%;
+		margin-top: 15%;
 	}
 
 	h1 {
@@ -706,9 +722,13 @@ p {
 		a {
 			color: $white;
 			font-style: italic;
+			&:hover {
+				color: $oil;
+			}
 		}
 
 	}
+
 	.social {
 		position: fixed;
 	  bottom: 0px;
@@ -719,14 +739,17 @@ p {
 	  	border: 2px solid white;
 	  	color: white;
 		  border-radius: 100%;
-		  padding-top: 34px;
-		  font-size: 15px;
+		  padding-top: 36px;
+		  font-size: 14px;
+		  font-family: 'proxima_bold', sans-serif;
 		  height: 95px;
 		  width: 95px;
 		  display: inline-block;
 		  text-align: center;
 		  margin-right: 15px;
 		  margin-bottom: 60px;
+  -webkit-transition: all 0.2s ease-out; 
+          transition: all 0.2s ease-out; 
 
 		  &:hover {
 		  	background-color: $white;
@@ -742,6 +765,58 @@ p {
 
 }
 
+/* -------------------------------- 
+  SPECIAL EFFETCS 
+-------------------------------- */
 
+.cl-effect-10  {
+	position: relative;
+	z-index: 1;
+}
+
+.cl-effect-10 a {
+	overflow: hidden;
+
+}
+
+.cl-effect-10 a span {
+	display: block;
+
+	background: #0f7c67;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.cl-effect-10 a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	color: #0f7c67;
+	content: attr(data-hover);
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: translateX(-25%);
+}
+
+.cl-effect-10 a:hover span,
+.cl-effect-10 a:focus span {
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.cl-effect-10 a:hover::before,
+.cl-effect-10 a:focus::before {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	transform: translateX(0%);
+}
 
 

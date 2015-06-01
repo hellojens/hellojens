@@ -259,10 +259,12 @@ get_header(); ?>
           <div class="small-6 medium-3 left text-center columns">
             <?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), peopleImage ); ?>
             <img class="person" src="<?php echo $featuredimage[0]; ?>">
-            <h3><?php the_title(); ?></h3>
-            <p><?php the_content(); ?></p>
-            <?php $image = get_field('signatur'); $link = get_field('link', $image['ID']); ?>
-            <img class="signatur" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <div class="content">
+              <h3><?php the_title(); ?></h3>
+              <p><?php the_content(); ?></p>
+              <?php $image = get_field('signatur'); $link = get_field('link', $image['ID']); ?>
+              <img class="signatur" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            </div>
           </div>
 
          <?php endwhile; endif; 

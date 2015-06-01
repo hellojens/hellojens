@@ -170,12 +170,12 @@ jQuery(document).ready(function($){
   var currentvalueKick4 = $("#countKick4").html();
   var menuCountNumbersKick4 = new CountUp("countKick4", 0, currentvalueKick4, 0, 3, options);
 
+  var fired = 0;
+
   $(window).scroll(function(e) {
 
-    var fired = 0;
     var el = $('.kickstart'),
         startCount = $('#count-kickstart').offset().top - $(window).scrollTop();
-              console.log(fired)
 
     if (startCount < 60 && fired !== 1){
 
@@ -199,7 +199,6 @@ jQuery(document).ready(function($){
       // $(".meter").css("max-width", progress);
       // $(".meter").addClass("start-count");
       fired = 1;
-      console.log(fired)
 
     }
 
