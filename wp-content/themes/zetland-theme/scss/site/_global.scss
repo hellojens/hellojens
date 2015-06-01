@@ -110,6 +110,10 @@ img.alignright {
 	margin: rem-calc(7) 0 rem-calc(7) rem-calc(24);
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 
 /* -------------------------------- 
   DEFAULTS   
@@ -234,6 +238,24 @@ p {
   INTRO  
 -------------------------------- */
 
+.video-wrapper {
+	background-color: $orange;
+	position: absolute;
+	top: 60px;
+	z-index: 1;
+	width: 100%;
+	height: 0%;
+	opacity: 0;
+  display: none;
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
 .intro {
 	position: relative;
 	background-color: $black;
@@ -251,29 +273,7 @@ p {
 		z-index: 2;
 	}
 
-	.video-wrapper {
-		position: absolute;
-		z-index: 1;
-		width: 100%;
-		height: 100%;
-		padding-bottom: 56.25%; /* 16:9 */
-		padding-top: 25px;
-		height: 0;
-	  display: inline-block;
-	  top: 50%;
-	  -webkit-transform: translateY(-50%);
-	  -ms-transform: translateY(-50%);
-	  transform: translateY(-50%);
-		opacity: 0;
-	}
 
-	.video-wrapper iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
 
 	.row {
 	  position: relative;
@@ -498,6 +498,8 @@ p {
 /* -------------------------------- 
   BACKERS
 -------------------------------- */
+
+
 .backers  {
 	background-color: $sand;
 

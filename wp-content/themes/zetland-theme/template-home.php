@@ -13,23 +13,21 @@ get_header(); ?>
 
     <div class="section-wrapper full-page intro">
       <div class="video-wrapper">
-        <iframe src="https://player.vimeo.com/video/127694736" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
+        <iframe id="intro-video" src="https://player.vimeo.com/video/129290878?api=1&player_id=player1&?title=0&amp;byline=0&amp;portrait=0&amp;color=FA5700" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>      
       <?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), full ); ?>
       <div class="background-image" style="background-image: url('<?php echo $featuredimage[0]; ?>');"></div>
-
       <div class="row">
         <div class="small-11 medium-10 small-centered columns" role="main">
 
-            <?php remove_filter ("the_content", "wpautop"); ?>
-            <h1><?php the_content(); ?></h1>
-            <h1>
-              <a class="play-video" href="#">
-                <img width="100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/play-button.png">
-                 Se filmen
-              </a>
-            </h1>
-
+          <?php remove_filter ("the_content", "wpautop"); ?>
+          <h1><?php the_content(); ?></h1>
+          <h1>
+            <a class="play-video" href="#">
+              <img width="100" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/play-button.png">
+               Se filmen
+            </a>
+          </h1>
 
         </div>
       </div>
