@@ -130,6 +130,9 @@ h2 {
 h3 {
 	font-family: 'proxima_bold', sans-serif;
 }
+h5 {
+	font-family: 'proxima_regular', sans-serif;
+}
 
 p {
 	font-family: 'proxima_regular', sans-serif;
@@ -196,10 +199,12 @@ p {
 		font-size: 20px;
 		background-color: transparent;
 		border: 2px solid $orange;
-		color: $oil;
+		color: $oilfade;
 		padding: 15px 50px;
   -webkit-transition: all 0.1s ease-out; 
           transition: all 0.1s ease-out; 
+    font-family: 'proxima_bold', sans-serif;
+
 		&:hover {
 			background-color: $orange;
 			color: white !important;
@@ -531,7 +536,7 @@ p {
 
 	.backers-item {
 		position: relative;
-	  margin-bottom: 20px;
+	  margin-bottom: 35px;
 	  	
 		img.person {
 			border-radius: 100%;
@@ -540,14 +545,15 @@ p {
 		}
 		.content {
 			margin-top: 12px;
-
 			margin-left: 20px;
 			float: left;
 
 			h3 {
-				line-height: 1;
+				font-size: 1.4rem;
+				line-height: 1.25;
 				margin: 0px;
 			}
+
 			h5 {
 				font-size: 16px;
 				margin: 0px;
@@ -701,18 +707,26 @@ p {
 	.social {
 		position: fixed;
 	  bottom: 0px;
+
 		a {
 			color: $oilfade;
-			background-color: $white;
+			background-color: $orange;
+	  	border: 2px solid white;
+	  	color: white;
 		  border-radius: 100%;
 		  padding-top: 34px;
 		  font-size: 15px;
-		  height: 90px;
-		  width: 90px;
+		  height: 95px;
+		  width: 95px;
 		  display: inline-block;
 		  text-align: center;
 		  margin-right: 15px;
 		  margin-bottom: 60px;
+
+		  &:hover {
+		  	background-color: $white;
+		  	color: $oil;
+		  }
 		}
 	}
 

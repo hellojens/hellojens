@@ -34,9 +34,9 @@
 
 .top-bar .name {
 	h1 a { 
-    font-weight: 600;
+    font-weight: bold !important;
     padding: 8px 20px;
-    font-size: 15px;
+    font-size: 16px;
     color: $orange;
     font-family: 'proxima_bold', sans-serif;
   }
