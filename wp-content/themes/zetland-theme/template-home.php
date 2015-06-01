@@ -163,7 +163,7 @@ get_header(); ?>
         </div>
         <div class="medium-7 columns">
           <h2><?php the_title(); ?></h2>
-          <p><?php the_content(); ?></p>
+          <?php the_content(); ?>
         </div>
       </div>
 
