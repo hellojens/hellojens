@@ -63,7 +63,14 @@
         </div>
         <div class="small-11 medium-9 columns">
           <?php remove_filter ("the_content", "wpautop"); ?>
-          <h1>Det nye <span class="white-text">Zetland</span>. <br><?php the_content(); ?></h1>
+          <h1>
+            Det nye <span class="white-text">Zetland</span>. <br>
+            <span class="top-taglines"><?php echo get_field("tagline_1"); ?></span>
+            <span class="top-taglines"><?php echo get_field("tagline_2"); ?></span>
+            <span class="top-taglines"><?php echo get_field("tagline_3"); ?></span>
+            <span class="top-taglines"><?php echo get_field("tagline_4"); ?></span>
+
+          </h1>
         </div>
       </div>
     </div>

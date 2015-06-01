@@ -14,7 +14,7 @@ function foundationpress_theme_support() {
 
   add_image_size('quoteImage', 350, 350, true); // Post Thumbnail
   add_image_size('peopleImage', 250, 250, true); // Post Thumbnail
-
+  add_image_size('peopleImageSmall', 150, 150, true); // Post Thumbnail
 
 	// rss thingy
 	add_theme_support( 'automatic-feed-links' );

@@ -39,7 +39,7 @@ get_header(); ?>
   <?php endwhile; endif; wp_reset_postdata(); ?>
 
 
-  <!-- // BERTEL QUOTE -->
+  <!-- // QUOTE 1 -->
 
   <div id="change-header" class="section-wrapper quote">
     <div class="small-12 medium-11 small-centered columns">
@@ -180,7 +180,7 @@ get_header(); ?>
     </div>
   </div>
 
-  <!-- BERTEL QUOTE -->
+  <!-- QUOTE 2 -->
 
   <div class="section-wrapper quote">
     <div class="small-12 medium-11 small-centered columns">
@@ -192,6 +192,32 @@ get_header(); ?>
      <?php endwhile; endif; wp_reset_postdata(); ?>
     </div>
   </div>
+
+
+
+  <!-- BACKERS  -->
+
+  <div class="section-wrapper backers">
+    <div class="small-12 medium-10 small-centered columns">
+      <div class="row">
+      <?php 
+      $the_query = new WP_Query( array("post_type" => "backers" ) ); 
+      if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
+
+        <div class="backers-item left small-12 medium-6 columns">
+          <?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), peopleImageSmall ); ?>
+          <img class="person" src="<?php echo $featuredimage[0]; ?>">
+          <div class="content">
+            <h3><?php the_title(); ?></h3>
+            <?php if (function_exists('the_subheading')) { the_subheading('<h5>', '</h5>'); } ?> 
+          </div>
+        </div>
+
+       <?php endwhile; endif; wp_reset_postdata(); ?>
+      </div>
+    </div>
+  </div>
+
 
   <!-- THE PEOPLE  -->
 

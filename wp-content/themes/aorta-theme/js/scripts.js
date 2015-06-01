@@ -7,9 +7,7 @@ jQuery(document).ready(function($){
   
   $('p:empty').remove();
 
-  // $('.top-section .single-post').imagesLoaded(function() {
-  //   $(".single-header").addClass('on');
-  // });
+  ////////  ISOTOPE  ///////////
 
   // Align posts after reload if .grid is visible
 
@@ -120,20 +118,11 @@ jQuery(document).ready(function($){
 
   }; // End isotope homepage post grid 
 
+  isotopeInit();
 
 
 
-  // sticky Header 
-  // $(window).scroll(function(){
-  //   if ($(window).scrollTop() >= 40) {
-  //     $("header").addClass("stick");
-  //   }
-  //   else {
-  //     $("header").removeClass("stick");
-  //   }
-  // });
-
-  // Search 
+  ////////  SEARCH  ///////////
 
   $(".searchlink").click(function(e){
     e.preventDefault();
@@ -144,12 +133,13 @@ jQuery(document).ready(function($){
   });
 
 
+  ////////  FADE EFFECT ON PAGE LOAD  ///////////
+
   $('.transition-wrapper').toggleClass("visible");
 
   $('a').click(function(event) {
     // dont fade the link
     if($(this).hasClass("donot")) {
-
       event.preventDefault();
       // Sets the new destination to the href of the link
       newLocation = this.href;
@@ -160,12 +150,11 @@ jQuery(document).ready(function($){
           window.location = newLocation;
       }, 250);
     }
-
-
   });
 
 
-  // Footer scroll up
+  ////////  FOOTER SCROLL UP ///////////
+
   $('.scrollup').click(function () {
       $("html, body").animate({
           scrollTop: 0
@@ -174,10 +163,12 @@ jQuery(document).ready(function($){
   });
 
 
+  ////////  RANDOMIZE TEXT SNIPPETS IN HEADER  ///////////
 
-  ////////  INIT FUNCTIONS ///////////
+  var divs = $(".top-taglines").get().sort(function(){ 
+      return Math.round(Math.random())-0.5;
+  }).slice(0,1);  
+  $(divs).appendTo(divs[0].parentNode).show();
 
-  isotopeInit();
-  // fluidboxInit();
 
 });

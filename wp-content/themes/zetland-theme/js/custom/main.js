@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
     fitHeight();
   });
 
-  ///// Questions Accordion /////
+  ////////  QUESTIONS ACCORDION  ////////  
 
   $('#accordion').find('.accordion-toggle').click(function(e){
     if($(this).hasClass('active')) {
@@ -32,7 +32,7 @@ jQuery(document).ready(function($){
   });
 
 
-  ///// VIDEO CONTRONLS /////
+  ////////  VIDEO CONTRONLS  ////////  
 
   $(".play-video").click(function(e){
     e.preventDefault();
@@ -43,14 +43,16 @@ jQuery(document).ready(function($){
   });
 
 
-  ///// FIT TEXT  /////
+  ////////  FIT TEXT  ////////  
+
   $(".start h1").fitText(0.9, { minFontSize: '20px', maxFontSize: '200px' });
   $(".intro h1").fitText(1.1);
   $(".manifest-intro h1").fitText(0.8, { minFontSize: '20px', maxFontSize: '200px' });
   $(".the-end h1").fitText(0.6, { minFontSize: '20px', maxFontSize: '200px' });
 
 
-  ///// TOP BAR COLOR CHANGER  /////
+  ////////  TOP BAR COLOR CHANGER  ////////  
+
   $(window).scroll(function(e) {
     var el = $('.top-bar'),
         top = $('#change-header').offset().top - $(window).scrollTop();
@@ -72,7 +74,8 @@ jQuery(document).ready(function($){
   });
 
 
-  ///// MENU SCROLL /////
+  ////////  MENU SCROLL  ////////  
+
   $(".name a").click(function(e) {
     e.preventDefault();
       $('html, body').animate({
@@ -96,7 +99,7 @@ jQuery(document).ready(function($){
 
 
 
-  ///// COUNT NUMBERS /////
+  ////////  COUNT UP NUMBERS  ////////  
 
   var options = {
     useEasing : true, 
@@ -127,17 +130,22 @@ jQuery(document).ready(function($){
   });
 
   var currentvalueKick1 = $("#countKick1").html();
-
-
   var menuCountNumbersKick1 = new CountUp("countKick1", 0, currentvalueKick1, 0, 2.5, options);
-
-
 
   $(window).load(function(){
     setTimeout(function(){
       menuCountNumbersKick1.start();
     }, 1000)
   });
+
+
+  ////////  RANDOMIZE TEXT SNIPPETS IN HEADER  ///////////
+
+  var divs = $(".top-taglines").get().sort(function(){ 
+    return Math.round(Math.random())-0.5;
+  }).slice(0,1);  
+  $(divs).appendTo(divs[0].parentNode).show();
+
 
 
 });

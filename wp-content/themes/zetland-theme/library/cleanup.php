@@ -137,6 +137,8 @@ endif;
  * ----------------------------------------------------------------------------
  */
 
+remove_filter ('the_content', 'wpautop');
+
 
 // Remove default inline style of wp-caption
 
