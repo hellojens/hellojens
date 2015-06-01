@@ -132,7 +132,7 @@ jQuery(document).ready(function($){
   var options = {
     useEasing : true, 
     useGrouping : true, 
-    separator : ',', 
+    separator : '.', 
     decimal : '.', 
     prefix : '', 
     suffix : '' 

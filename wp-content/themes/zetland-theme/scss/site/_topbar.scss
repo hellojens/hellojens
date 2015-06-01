@@ -3,6 +3,7 @@
 .top-bar-container, .top-bar {
   // margin-bottom: rem-calc(32);
   height: 60px;
+  overflow: hidden;
 
   &.bg-white {
     background-color: $white;
@@ -22,10 +23,16 @@
       background: $white;
 
       .kickstarter-num {
-        color: #D3D2D2;
+        color: #c3c3c3;
       }
       .kickstarter-tag {
         color: $oilfade;
+      }
+    }
+
+    .name {
+      h1 a { 
+        color: $oil;
       }
     }
 
@@ -37,7 +44,7 @@
     font-weight: bold !important;
     padding: 8px 20px;
     font-size: 16px;
-    color: $orange;
+    color: $white;
     font-family: 'proxima_bold', sans-serif;
   }
 }
@@ -55,7 +62,7 @@ ul.menu {
       padding: 8px 30px 7px 30px !important;
       font-size: 16px;
       font-family: 'proxima_regular', sans-serif;   
-      color: $oilfade;
+      color: $orange;
     }
     &:last-child {
       margin-right: 60px;
@@ -73,7 +80,7 @@ ul.kickstarter-stats {
 
     .kickstarter-num {
       font-size: 18px;
-      color: $oilfade;
+      color: #555;
       font-family: 'proxima_bold', sans-serif;
       line-height: 1;
 

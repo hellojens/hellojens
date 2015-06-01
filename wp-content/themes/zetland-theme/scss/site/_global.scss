@@ -136,6 +136,7 @@ h5 {
 
 p {
 	font-family: 'proxima_regular', sans-serif;
+	color: $oilfade;
 }
 
 @media only screen and (max-width: 40.063em) {
@@ -167,7 +168,7 @@ p {
 }
 
 .strike-top {
-	border-top: 3px solid $white;
+	border-top: 2px solid #e3ddd1;
 }
 
 
@@ -178,7 +179,7 @@ p {
 .default-sand-box {
 	background-color: $sand;
 
-	h1, h2, p {
+	h1, h2 {
 		color: $oil;
 	}
 	h1 {
@@ -193,13 +194,13 @@ p {
 
 	}
 	p {	
-
+		color: $oilfade;
 	}
 	.button {
 		font-size: 20px;
 		background-color: transparent;
 		border: 2px solid $orange;
-		color: $oilfade;
+		color: $orange;
 		padding: 15px 50px;
   -webkit-transition: all 0.1s ease-out; 
           transition: all 0.1s ease-out; 
@@ -207,7 +208,7 @@ p {
 
 		&:hover {
 			background-color: $orange;
-			color: white !important;
+			color: $white !important;
 		}
 	}
 }
@@ -341,14 +342,14 @@ p {
 		}
 	}
 
-	h1, h2, p {
+	h1, h2 {
 		color: $oil;
 	}
 	h2 {
 		color: $oil;
 	  font-size: 3.5rem;
 	  line-height: 1.2;
-	  margin: 15px 0px;
+	  margin: 0px 0px 15px 0px;
 	  padding-right: 60px;
 	}
 	.stats {
@@ -365,6 +366,8 @@ p {
 		padding-right: 5%;
 	  padding-bottom: 60px;
 	  margin: 0px;
+		color: $oilfade;
+
 	}
 
 	.default-sand-box {
@@ -372,6 +375,8 @@ p {
 		 	font-family: 'proxima_regular', sans-serif; 
 		  padding-top: 20px;
 		  padding-bottom: 20px;
+  		color: $oilfade;
+
 		}
 	}
 
@@ -380,7 +385,7 @@ p {
 	  font-weight: normal;
 	  line-height: 1.6;
 	  margin-bottom: 1.25rem;
-	  padding-top: 30px;
+	  padding-top: 45px;
 	}
 
 	.kickstarter-num {
@@ -456,7 +461,7 @@ p {
 	  }
 	}
 
-	h1, h2, p {
+	h1, h2 {
 		color: $oil;
 	}
 	h1 {
@@ -639,12 +644,12 @@ p {
 
   h3 {
   	font-size: 1.5rem;
-  	padding-top: 10px;
-  	border-top: 4px solid white;
+  	padding-top: 20px;
+	  padding-right: 40px;
+	  padding-bottom:20px;
+  	border-top: 2px solid white;
   	color: $orange;
 	  margin: 0px;
-	  padding-right: 40px;
-	  padding-bottom: 8px;
   -webkit-transition: all 0.2s ease-out; 
           transition: all 0.2s ease-out; 
 
