@@ -40,19 +40,72 @@
 
 .top-bar .name {
 	h1 a { 
-    font-weight: bold !important;
     padding: 8px 20px;
     font-size: 16px;
     color: $white;
-    font-family: 'proxima_bold', sans-serif;
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
   }
 }
 .top-bar {
+
+  .action-button {
+    position: relative;
+    z-index: 5;
+
+  }
   .action-button a {
-    background-color: $orange !important;
-    padding: 8px 20px !important;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+
+  }
+  .action-button a span {
+    padding: 8px 25px !important;
     font-size: 16px;
     line-height: 2.8 !important;
+    color: white;
+
+    background-color: $orange !important;
+    display: block;
+
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+
+  }
+  .action-button a::before {
+    content:"Kickstart";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: $orange;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    cursor: pointer;
+
+    -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transform: translateX(-25%);
+
+    padding: 8px 30px 8px 30px !important;
+    font-size: 16px;
+    line-height: 2.8 !important;
+  }
+  .action-button a:hover span {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
+
+  }
+  .action-button a:hover::before {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    transform: translateX(0%);
+
   }
 }
 
@@ -61,7 +114,8 @@ ul.menu {
     a {
       padding: 8px 30px 7px 30px !important;
       font-size: 16px;
-      font-family: 'proxima_regular', sans-serif;   
+      font-family: 'proxima-nova', sans-serif;
+      font-weight: 400;
       color: $orange;
     }
     &:last-child {
@@ -81,7 +135,8 @@ ul.kickstarter-stats {
     .kickstarter-num {
       font-size: 18px;
       color: #555;
-      font-family: 'proxima_bold', sans-serif;
+      font-family: 'proxima-nova', sans-serif;
+      font-weight: 700;
       line-height: 1;
 
     }
@@ -98,13 +153,34 @@ ul.kickstarter-stats {
 
 }
 
+.top-bar-section ul li {
+  background: transparent; 
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+  background: transparent;
+  padding: 0px;
+}
+
+.top-bar-section ul li:hover:not(.has-form)>a {
+  background: transparent;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+  background: transparent;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background: transparent;
+}
+
 // A more subtle background color for the active menu item
-.top-bar-section li.active:not(.has-form) a:not(.button)  {
-	background: #272727;
-}
-.top-bar-section li.active:not(.has-form) a:hover:not(.button) {
-	background: #202020;
-}
+// .top-bar-section li.active:not(.has-form) a:not(.button)  {
+// 	background: #272727;
+// }
+// .top-bar-section li.active:not(.has-form) a:hover:not(.button) {
+// 	background: #202020;
+// }
 
 // Switch between the mobile menu (tab-bar) and desktop menu (topbar) based on a custom $topbar-breakpoint value.
 // The $topbar-breakpoint can be edited in _custom-settings.scss. 

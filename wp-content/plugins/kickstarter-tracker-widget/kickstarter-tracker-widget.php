@@ -304,7 +304,7 @@ class Kickstarter_Widget2 extends WP_Widget {
 			echo $before_title . $title . $after_title;
 
 		if ( $results['data-backers-count'])
-			echo '<li><div class="kickstarter-num"><span id="count1" class="orange-text">'.$results['data-backers-count'].'</span> / 2000 </div>';
+			echo '<li><div class="kickstarter-num"><span id="count1" class="orange-text">'.$results['data-backers-count'].'</span> / 1.000 </div>';
 			echo '<div class="kickstarter-tag"> nye medlemmer</div> </li>';
 
 		// if ( $results['data-pledged'])

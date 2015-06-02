@@ -217,7 +217,7 @@ get_header(); ?>
 
         <div class="backers-item left small-12 medium-6 columns">
           <?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), peopleImageSmall ); ?>
-          <img class="person" src="<?php echo $featuredimage[0]; ?>">
+          <img class="person tooltipster" title="Zetland følger ikke flowet. De er flowet. Vigtigst af alt, er de ikke bange for at tænke ud af boksen, og dét tager jeg hatten af for. " src="<?php echo $featuredimage[0]; ?>">
           <div class="content">
             <h3><?php the_title(); ?></h3>
             <?php if (function_exists('the_subheading')) { the_subheading('<h5>', '</h5>'); } ?> 

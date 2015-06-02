@@ -21,15 +21,30 @@ jQuery(document).ready(function($){
 
   ////////  TYPED PLGUIN  ////////  
 
-  $(function(){
-    $(".typeit").typed({
-        strings: ["^1000 Vi er trætte af nyhedsstøjen. ^1000 Er du? ", " ^2000 Kickstart kvalitetsjournalistik ^500 og <br> ^300 gør alle lidt klogere. ", " ^2000 Et kulørt klubhus ^200 <br> ^600 for nysgerrige mennesker. ", " ^2000 Nutiden i perspektiv, ^200 <br> ^800 nyheder i proportioner. "],
-        typeSpeed: 18,
-        loop: true,
-        startDelay: 2000,
-        backSpeed: -20,
-        backDelay: 4000,
-    });
+  // $(function(){
+  //   $(".typeit").typed({
+  //       strings: ["^1000 Vi er trætte af nyhedsstøjen. ^1000 Er du? ", " ^2000 Kickstart kvalitetsjournalistik ^500 og <br> ^300 gør alle lidt klogere. ", " ^2000 Et kulørt klubhus ^200 <br> ^600 for nysgerrige mennesker. ", " ^2000 Nutiden i perspektiv, ^200 <br> ^800 nyheder i proportioner. "],
+  //       typeSpeed: 18,
+  //       loop: true,
+  //       startDelay: 2000,
+  //       backSpeed: -20,
+  //       backDelay: 4000,
+  //   });
+  // });
+
+
+  ////////  TOOLTIPSTER  ////////  
+
+  $('.tooltipster').tooltipster({
+     animation: 'grow',
+     delay: 0,
+     theme: 'tooltipster-noir',
+     touchDevices: true,
+     trigger: 'hover',
+     iconDesktop: true,
+     position: 'right',
+     icon: 'Q', 
+     maxWidth: '380'
   });
 
 

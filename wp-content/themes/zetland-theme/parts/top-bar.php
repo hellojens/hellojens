@@ -8,7 +8,9 @@
         <section class="top-bar-section">
             <!-- Right Nav Section -->
             <ul class="right">
-              <li class="action-button active" ><a target="_blank" href="https://www.kickstarter.com/projects/1103695810/1896681104?token=bb6e312b">Bliv medlem</a></li>
+                <li class="action-button active">
+                    <a target="_blank" href="https://www.kickstarter.com/projects/1103695810/1896681104?token=bb6e312b"><span>Bliv medlem</span></a>
+                </li>
             </ul>
 
 <!--             <ul class="right menu"> 

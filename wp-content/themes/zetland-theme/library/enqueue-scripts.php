@@ -29,6 +29,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	wp_register_script( 'typed', get_template_directory_uri() . '/js/typed.js', array(), '1.0.0', false );
 	wp_register_script( 'letterCounter', get_template_directory_uri() . '/js/lettercounter.js', array(), '1.0.0', false );
 	wp_register_script( 'vimeoApi', get_template_directory_uri() . '/js/vimeo-api.js', array(), '1.0.0', false );
+	wp_register_script( 'tooltipster', get_template_directory_uri() . '/js/tooltipster.min.js', array(), '1.0.0', false );
 
 
 	// Enqueue all registered scripts
@@ -40,6 +41,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	wp_enqueue_script( 'typed' );
 	wp_enqueue_script( 'letterCounter' );
 	wp_enqueue_script( 'vimeoApi' );
+	wp_enqueue_script( 'tooltipster' );
 
 	}
 
