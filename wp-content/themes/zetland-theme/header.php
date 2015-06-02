@@ -40,7 +40,7 @@
 	
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 	
-	<nav class="tab-bar">
+<!-- 	<nav class="tab-bar">
 		<section class="left-small">
 			<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
 		</section>
@@ -49,7 +49,7 @@
 			<h1 class="title"><?php bloginfo( 'name' ); ?></h1>
 
 		</section>
-	</nav>
+	</nav> -->
 
   <?php 
   // INTRO VIDEO
@@ -60,8 +60,8 @@
     <div class="section-wrapper full-page start">
       <div class="row">
         <div class="small-11 small-centered medium-3 medium-uncentered columns">
-    			<?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), full ); ?>
-        	<img src="<?php echo $featuredimage[0]; ?>">
+    			<?php // $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), full ); ?>
+        	<img width="105%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/kort.png">
         </div>
         <div class="small-11 medium-9 columns">
           <?php remove_filter ("the_content", "wpautop"); ?>
@@ -76,7 +76,7 @@
     
   <?php endwhile; endif; wp_reset_postdata(); ?>
 
-	<?php get_template_part( 'parts/off-canvas-menu' ); ?>
+	<?php // get_template_part( 'parts/off-canvas-menu' ); ?>
 
 	<?php get_template_part( 'parts/top-bar' ); ?>
 

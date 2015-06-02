@@ -1,6 +1,6 @@
-<div class="top-bar-container contain-to-grid show-for-medium-up sticky" data-options="sticky_on: large">
+<div class="top-bar-container contain-to-grid  sticky" data-options="sticky_on: large">
     <nav class="top-bar" data-topbar role="navigation">
-        <ul class="title-area">
+        <ul class="title-area show-for-medium-up">
             <li class="name">
                 <h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
             </li>

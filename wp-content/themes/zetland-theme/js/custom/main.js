@@ -21,16 +21,16 @@ jQuery(document).ready(function($){
 
   ////////  TYPED PLGUIN  ////////  
 
-  // $(function(){
-  //   $(".typeit").typed({
-  //       strings: ["^1000 Vi er trætte af nyhedsstøjen. ^1000 Er du? ", " ^2000 Kickstart kvalitetsjournalistik ^500 og <br> ^300 gør alle lidt klogere. ", " ^2000 Et kulørt klubhus ^200 <br> ^600 for nysgerrige mennesker. ", " ^2000 Nutiden i perspektiv, ^200 <br> ^800 nyheder i proportioner. "],
-  //       typeSpeed: 18,
-  //       loop: true,
-  //       startDelay: 2000,
-  //       backSpeed: -20,
-  //       backDelay: 4000,
-  //   });
-  // });
+  $(function(){
+    $(".typeit").typed({
+        strings: ["^1000 Vi er trætte af nyhedsstøjen. ^1000 Er du? ", " ^2000 Kickstart kvalitetsjournalistik ^500 og <br> ^300 gør alle lidt klogere. ", " ^2000 Et kulørt klubhus ^200 <br> ^600 for nysgerrige mennesker. ", " ^2000 Nutiden i perspektiv, ^200 <br> ^800 nyheder i proportioner. "],
+        typeSpeed: 18,
+        loop: true,
+        startDelay: 2000,
+        backSpeed: -20,
+        backDelay: 4000,
+    });
+  });
 
 
   ////////  TOOLTIPSTER  ////////  
@@ -109,9 +109,9 @@ jQuery(document).ready(function($){
 
   ////////  FIT TEXT  ////////  
 
-  $(".start h1").fitText(0.9, { minFontSize: '20px', maxFontSize: '200px' });
+  $(".start h1").fitText(0.9, { minFontSize: '30px', maxFontSize: '200px' });
   $(".intro h1").fitText(1.1);
-  $(".manifest-intro h1").fitText(0.8, { minFontSize: '20px', maxFontSize: '200px' });
+  $(".manifest-intro h1").fitText(0.7, { minFontSize: '30px', maxFontSize: '200px' });
   $(".the-end h1").fitText(0.6, { minFontSize: '20px', maxFontSize: '200px' });
 
 

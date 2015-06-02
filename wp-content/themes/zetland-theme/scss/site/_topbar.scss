@@ -186,10 +186,28 @@ ul.kickstarter-stats {
 // The $topbar-breakpoint can be edited in _custom-settings.scss. 
 
 @media only screen and (min-width: ($topbar-breakpoint + em-calc(1))) {
-  .tab-bar { display: none; }
+  // .tab-bar { display: none; }
 }
 
 // Hide the topbar when the screen size is smaller than the topbar breakpoint
 @media only screen and (max-width: $topbar-breakpoint) {
-  .top-bar { display: none; }
+  // .top-bar { display: none; }
+  .top-bar-section ul {
+    width: auto;
+
+    &.kickstarter-stats {
+      width: 49%;
+
+      li {
+        display: inline-block;
+        padding: 13px 10% 0px 0px;
+        &:nth-child(1), &:nth-child(3), &:nth-child(4) {
+          display: none;
+        }
+      }
+    }
+  }
+  .top-bar {
+    overflow: visible;
+  }
 }
