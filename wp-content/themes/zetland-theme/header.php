@@ -26,7 +26,9 @@
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-114x114-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-72x72-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/apple-touch-icon-precomposed.png">
-	
+
+    <script src="//use.typekit.net/yov6ayz.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>	
 
 		<?php wp_head(); ?>
 	</head>
@@ -65,11 +67,8 @@
           <?php remove_filter ("the_content", "wpautop"); ?>
           <h1>
             Det nye <span class="white-text">Zetland</span>. <br>
-            <span class="top-taglines"><?php echo get_field("tagline_1"); ?></span>
-            <span class="top-taglines"><?php echo get_field("tagline_2"); ?></span>
-            <span class="top-taglines"><?php echo get_field("tagline_3"); ?></span>
-            <span class="top-taglines"><?php echo get_field("tagline_4"); ?></span>
-
+            <span class="top-taglines typeit"></span>
+            <?php // echo get_field("tagline_1"); ?>
           </h1>
         </div>
       </div>
