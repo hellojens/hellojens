@@ -41,10 +41,11 @@ jQuery(document).ready(function($){
      theme: 'tooltipster-noir',
      touchDevices: true,
      trigger: 'hover',
-     iconDesktop: true,
-     position: 'right',
-     icon: 'Q', 
-     maxWidth: '380'
+     // iconDesktop: true,
+     position: 'bottom-left',
+     // icon: 'Q', 
+     maxWidth: '380',
+     offsetY: '-7',
   });
 
 
