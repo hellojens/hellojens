@@ -87,7 +87,7 @@ get_header(); ?>
             </div>
             <div class="medium-7 columns">
               <p>Bliv pionermedlem og vær med til at skabe Danmarks nye kvalitetsmedie.</p>
-              <a class="button" href="">￼Bliv medlem</a>
+              <a class="button" target="_blank" href="https://www.kickstarter.com/projects/1103695810/1896681104?token=bb6e312b">￼Bliv medlem</a>
             </div>
           </div>
         </div>
@@ -123,20 +123,20 @@ get_header(); ?>
           </div>
           <div class="small-12 medium-7 columns medium-text-right small-text-left">
             <h1>Vi fortæller ikke at noget sker.</h1>
-            <p>Vi fortæller, hvorfor det sker, og hvad det <i>betyder</i>.</p>
+            <p>Vi fortæller, <i>hvorfor</i> det sker, og <i>hvad</i> det betyder.</p>
           </div>
         </div>
 
         <div class="row menifest-intro-item">
           <div class="small-12 medium-5 columns hide-for-medium-up">
-            <img src="http://zetland.hellojens.dev/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
+            <img src="http://zetland.hellojens.com/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
           </div>
           <div class="small-12 medium-7 columns">
             <h1>Hos os tilhører mediet læserne.</h1>
             <p>Vi vil udnytte vores medlemmers viden og bede dem gøre hinanden og os klogere.</p>
           </div>
           <div class="small-12 medium-5 columns text-center show-for-medium-up">
-            <img src="http://zetland.hellojens.dev/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
+            <img src="http://zetland.hellojens.com/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
           </div>
         </div>
 
@@ -184,7 +184,7 @@ get_header(); ?>
         <div class="medium-7 columns">
           <h3>Hop med om bord</h3>
           <p>Bliv pionermedlem og vær med til at skabe Danmarks nye kvalitetsmedie.</p>
-          <a class="button" href="">￼Bliv medlem</a>
+          <a class="button" target="_blank" href="https://www.kickstarter.com/projects/1103695810/1896681104?token=bb6e312b">￼Bliv medlem</a>
         </div>
       </div>
 

@@ -8,13 +8,13 @@
         <section class="top-bar-section">
             <!-- Right Nav Section -->
             <ul class="right">
-              <li class="action-button active"><a href="#">Bliv medlem</a></li>
+              <li class="action-button active" target="_blank"><a href="https://www.kickstarter.com/projects/1103695810/1896681104?token=bb6e312b">Bliv medlem</a></li>
             </ul>
 
-            <ul class="right menu"> 
+<!--             <ul class="right menu"> 
                 <li><a class="manifest" href="#manifest">Manifest</a></li>
                 <li><a class="faq" href="#faq">FAQ</a></li>
-            </ul>
+            </ul> -->
 
             <ul class="right kickstarter-stats">
                 <?php dynamic_sidebar( 'menu-widgets' ); ?>

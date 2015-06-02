@@ -23,6 +23,11 @@ jQuery(document).ready(function($){
   $('#accordion').find('.accordion-toggle').click(function(e){
     if($(this).hasClass('active')) {
       e.preventDefault();
+      $('.accordion-toggle.active').removeClass('active');
+
+      $(this).next().slideToggle('fast');
+      $(".accordion-content").not($(this).next()).slideUp('fast');
+
     } else {
       $('.accordion-toggle.active').removeClass('active');
       $(this).toggleClass('active');
@@ -203,7 +208,6 @@ jQuery(document).ready(function($){
     }
 
   });
-
 
 
   ////////  RANDOMIZE TEXT SNIPPETS IN HEADER  ///////////
