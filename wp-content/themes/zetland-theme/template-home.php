@@ -83,7 +83,7 @@ get_header(); ?>
         <div class="default-sand-box">
           <div class="row">
             <div class="medium-5 columns">
-              <h2>Hop med om bord</h2>
+              <h2>Hop med om bord.</h2>
             </div>
             <div class="medium-7 columns">
               <p>Bliv pionermedlem og vær med til at skabe Danmarks nye kvalitetsmedie.</p>
@@ -106,37 +106,37 @@ get_header(); ?>
 
         <div class="row menifest-intro-item">
           <div class="small-12 medium-5 columns hide-for-medium-up">
-            <img src="http://zetland.hellojens.com/wp-content/uploads/sites/5/2015/06/zetland-fyrtaarn.png">
+            <img width="40%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/zetland-fyrtaarn.png">
           </div>
           <div class="small-12 medium-7 columns">
             <h1>Vi skærer<br> gennem støjen.</h1>
             <p>Vi fokuserer på historier med perspektiv, og vi udgiver aldrig flere, end du kan nå at læse.</p>
           </div>
           <div class="small-12 medium-5 columns text-center show-for-medium-up">
-            <img src="http://zetland.hellojens.com/wp-content/uploads/sites/5/2015/06/zetland-fyrtaarn.png">
+            <img width="40%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/zetland-fyrtaarn.png">
           </div>
         </div>
 
         <div class="row menifest-intro-item">
           <div class="medium-5 columns medium-text-center">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tv.png">
+            <img width="60%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tv.png">
           </div>
           <div class="small-12 medium-7 columns medium-text-right small-text-left">
-            <h1>Vi fortæller ikke at noget sker.</h1>
+            <h1>Vi fortæller ikke, at noget sker.</h1>
             <p>Vi fortæller, <i>hvorfor</i> det sker, og <i>hvad</i> det betyder.</p>
           </div>
         </div>
 
         <div class="row menifest-intro-item">
           <div class="small-12 medium-5 columns hide-for-medium-up">
-            <img src="http://zetland.hellojens.com/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
+            <img width="65%" style="margin-top: 10%; margin-bottom: -2rem;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/key.png">
           </div>
           <div class="small-12 medium-7 columns">
-            <h1>Hos os tilhører mediet læserne.</h1>
+            <h1 style="margin-top: 2rem;">Hos os tilhører mediet læserne.</h1>
             <p>Vi vil udnytte vores medlemmers viden og bede dem gøre hinanden og os klogere.</p>
           </div>
           <div class="small-12 medium-5 columns text-center show-for-medium-up">
-            <img src="http://zetland.hellojens.com/wp-content/uploads/sites/5/2015/05/Screen-Shot-2015-05-26-at-09.41.48.png">
+            <img width="65%" style="margin-top: 30%;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/key.png">
           </div>
         </div>
 
@@ -182,7 +182,7 @@ get_header(); ?>
           <h2>De støtter os allerede</h2>
         </div>
         <div class="medium-7 columns">
-          <h3>Hop med om bord</h3>
+          <h3>Hop med om bord.</h3>
           <p>Bliv pionermedlem og vær med til at skabe Danmarks nye kvalitetsmedie.</p>
           <a class="button" target="_blank" href="https://www.kickstarter.com/projects/1103695810/1896681104?token=bb6e312b">￼Bliv medlem</a>
         </div>

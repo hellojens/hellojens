@@ -14,9 +14,15 @@ jQuery(document).ready(function($){
 
   }; fitHeight();
 
-  $(window).resize(function() {
+  if ( $(window).width() > 480) {     
     fitHeight();
-  });
+    $(window).resize(function() {
+      console.log("resize");
+    });
+  }
+  else { 
+    console.log("small");
+  }
 
 
   ////////  TYPED PLGUIN  ////////  
@@ -109,10 +115,10 @@ jQuery(document).ready(function($){
 
   ////////  FIT TEXT  ////////  
 
-  $(".start h1").fitText(0.9, { minFontSize: '30px', maxFontSize: '200px' });
-  $(".intro h1").fitText(1.1);
-  $(".manifest-intro h1").fitText(0.7, { minFontSize: '30px', maxFontSize: '200px' });
-  $(".the-end h1").fitText(0.6, { minFontSize: '20px', maxFontSize: '200px' });
+  $(".start h1").fitText(0.9, { minFontSize: '35px', maxFontSize: '200px' });
+  $(".intro h1").fitText(1.1, { minFontSize: '35px', maxFontSize: '200px' });
+  $(".manifest-intro h1").fitText(0.7, { minFontSize: '35px', maxFontSize: '200px' });
+  $(".the-end h1").fitText(0.6, { minFontSize: '40px', maxFontSize: '200px' });
 
 
   ////////  TOP BAR COLOR CHANGER  ////////  
@@ -199,7 +205,7 @@ jQuery(document).ready(function($){
   var currentvalueKick2 = $("#countKick2").html();
   var menuCountNumbersKick2 = new CountUp("countKick2", 0, currentvalueKick2, 0, 2, options);
 
-  var currentvalueKick3 = $("#countKick3").attr('data').replace("$", '').replace(',','');
+  var currentvalueKick3 = $("#countKick3").attr('data').replace("kr", '').replace(',','');
   console.log(currentvalueKick3);
   var menuCountNumbersKick3 = new CountUp("countKick3", 0, currentvalueKick3, 0, 2, options);
 
@@ -224,7 +230,7 @@ jQuery(document).ready(function($){
       // Start progress par animation 
       var progress = $(".meter").attr("data");
 
-      if(progress < "100") {
+      if(progress > "100") {
         progress = "100%";
       } else {
         progress = progress + "%"
@@ -243,10 +249,10 @@ jQuery(document).ready(function($){
 
   ////////  RANDOMIZE TEXT SNIPPETS IN HEADER  ///////////
 
-  var divs = $(".top-taglines").get().sort(function(){ 
-    return Math.round(Math.random())-0.5;
-  }).slice(0,1);  
-  $(divs).appendTo(divs[0].parentNode).show();
+  // var divs = $(".top-taglines").get().sort(function(){ 
+  //   return Math.round(Math.random())-0.5;
+  // }).slice(0,1);  
+  // $(divs).appendTo(divs[0].parentNode).show();
 
 
 

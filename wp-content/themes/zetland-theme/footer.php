@@ -3,23 +3,25 @@
 </div>
 
   <div class="section-wrapper the-end">
-    <div class="small-12 medium-11 small-centered columns">
+    <div class="small-12 medium-11 small-centered columns vertical-align">
       <?php 
       // PEOPLE INTRO
       $args = array( 'post_type' => 'page', "posts_per_page" => "1", "offset" => "5"); 
       $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
       while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-        <div class="row">
+        <div class="row ">
           <div class="end-message">
-            <div class="medium-6 columns">
+            <div class="small-10 medium-6 columns">
               <h1><?php the_content(); ?></h1>
             </div>
-            <div class="medium-6 columns">
+            <div class="small-8 medium-6 text-center columns">
               <?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id(), full ); ?>
-              <img class="person" src="<?php echo $featuredimage[0]; ?>">
+              <img width="80%" src="<?php echo $featuredimage[0]; ?>">
             </div>
           </div>
         </div>
+      </div>
+      <div class="small-12 medium-11 small-centered columns">
         <div class="row">
           <div class="social">
             <div class="small-12 columns">

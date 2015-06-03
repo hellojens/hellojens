@@ -48,6 +48,7 @@
   }
 }
 .top-bar {
+  font-family: 'proxima-nova', sans-serif;
 
   .action-button {
     position: relative;
@@ -61,6 +62,8 @@
 
   }
   .action-button a span {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
     padding: 8px 25px !important;
     font-size: 16px;
     line-height: 2.8 !important;
@@ -75,6 +78,8 @@
 
   }
   .action-button a::before {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 700;
     content:"Kickstart";
     position: absolute;
     left: 0;
@@ -147,6 +152,7 @@ ul.kickstarter-stats {
 
     .kickstarter-tag {
       font-size: 12px;
+      font-weight: 400;
     }
 
   }
@@ -196,7 +202,7 @@ ul.kickstarter-stats {
     width: auto;
 
     &.kickstarter-stats {
-      width: 49%;
+      width: 45%;
 
       li {
         display: inline-block;
