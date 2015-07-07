@@ -13,7 +13,7 @@ get_header(); ?>
 
     <div class="section-wrapper intro">
       <div class="video-wrapper">
-        <iframe id="intro-video" src="https://player.vimeo.com/video/129290878?api=1&player_id=player1&?title=0&amp;byline=0&amp;portrait=0&amp;color=FA5700" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe id="intro-video" src="https://player.vimeo.com/video/129758770?api=1&player_id=player1&?title=0&amp;byline=0&amp;portrait=0&amp;color=FA5700" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>      
       <?php $featuredimage = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), full ); ?>
       <div class="background-image" style="background-image: url('<?php echo $featuredimage[0]; ?>');"></div>
@@ -70,7 +70,7 @@ get_header(); ?>
         </div>
 
         <div class="row stats">
-          <div class="small-12 columns">
+          <div class="small-12 medium-12 columns">
             <div class="strike-top"></div>
             <?php dynamic_sidebar( 'kickstart-widgets' ); ?>
           </div>
@@ -82,12 +82,12 @@ get_header(); ?>
 
         <div class="default-sand-box">
           <div class="row">
-            <div class="medium-5 columns">
+            <div class="small-12 medium-5 columns">
               <h2>Hop med om bord.</h2>
             </div>
-            <div class="medium-7 columns">
+            <div class="small-12 medium-7 columns">
               <p>Bliv pionermedlem og vær med til at skabe Danmarks nye kvalitetsmedie.</p>
-              <a class="button" target="_blank" href="https://www.kickstarter.com/projects/1103695810/1896681104?token=bb6e312b">￼Bliv medlem</a>
+              <a class="button" target="_blank" href="https://www.kickstarter.com/projects/1103695810/1896681104?token=bb6e312b">Bliv medlem</a>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ get_header(); ?>
 
         <div class="row menifest-intro-item">
           <div class="small-12 medium-5 columns hide-for-medium-up">
-            <img width="40%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/zetland-fyrtaarn.png">
+            <img width="30%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/zetland-fyrtaarn.png">
           </div>
           <div class="small-12 medium-7 columns">
             <h1>Vi skærer<br> gennem støjen.</h1>
@@ -118,7 +118,7 @@ get_header(); ?>
         </div>
 
         <div class="row menifest-intro-item">
-          <div class="medium-5 columns medium-text-center">
+          <div class="small-12 medium-5 columns medium-text-center">
             <img width="60%" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/tv.png">
           </div>
           <div class="small-12 medium-7 columns medium-text-right small-text-left">
@@ -129,7 +129,7 @@ get_header(); ?>
 
         <div class="row menifest-intro-item">
           <div class="small-12 medium-5 columns hide-for-medium-up">
-            <img width="65%" style="margin-top: 10%; margin-bottom: -2rem;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/key.png">
+            <img width="65%" style="margin-top: -1rem; margin-bottom: -2rem;" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/key.png">
           </div>
           <div class="small-12 medium-7 columns">
             <h1 style="margin-top: 2rem;">Hos os tilhører mediet læserne.</h1>
@@ -157,11 +157,11 @@ get_header(); ?>
     if (have_posts()): while($the_query->have_posts()): $the_query->the_post(); ?>
 
       <div class="row list-item">
-        <div class="medium-5 columns">
+        <div class="small-12 medium-5 columns">
           <?php $counter++; ?>
           <h1><?php echo $counter; ?></h1>
         </div>
-        <div class="medium-7 columns">
+        <div class="small-12 medium-7 columns">
           <h2><?php the_title(); ?></h2>
           <p><?php the_content(); ?></p>
         </div>
@@ -178,13 +178,13 @@ get_header(); ?>
     <div class="small-12 medium-11 small-centered columns">
 
       <div class="row">
-        <div class="medium-5 columns">
+        <div class="small-12 medium-5 columns">
           <h2>De støtter os allerede</h2>
         </div>
-        <div class="medium-7 columns">
+        <div class="small-12 medium-7 columns">
           <h3>Hop med om bord.</h3>
           <p>Bliv pionermedlem og vær med til at skabe Danmarks nye kvalitetsmedie.</p>
-          <a class="button" target="_blank" href="https://www.kickstarter.com/projects/1103695810/1896681104?token=bb6e312b">￼Bliv medlem</a>
+          <a class="button" target="_blank" href="https://www.kickstarter.com/projects/1103695810/1896681104?token=bb6e312b">Bliv medlem</a>
         </div>
       </div>
 
@@ -209,7 +209,7 @@ get_header(); ?>
   <!-- BACKERS  -->
 
   <div class="section-wrapper backers">
-    <div class="small-12 medium-10 small-centered columns">
+    <div class="small-12 medium-11 large-10 small-centered columns">
       <div class="row">
       <?php 
       $the_query = new WP_Query( array("post_type" => "backers" ) ); 
@@ -240,10 +240,10 @@ get_header(); ?>
       $the_query = new WP_Query( $args ); if ( $the_query->have_posts() ) :
       while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <div class="row people-intro">
-          <div class="medium-5 columns">
+          <div class="small-12 medium-5 columns">
             <h2><?php the_title(); ?></h2>
           </div>
-          <div class="medium-7 columns">
+          <div class="small-12 medium-7 columns">
             <p><?php the_content(); ?></p>
           </div>
         </div>
@@ -280,10 +280,10 @@ get_header(); ?>
   <div class="section-wrapper qanda strike-top">
     <div class="small-12 medium-11 small-centered columns">
       <div class="row">
-        <div class="medium-5 columns">
+        <div class="small-12 medium-5 columns">
           <h2>13 spørgsmål om det nye Zetland</h2>
         </div>
-        <div class="medium-7 columns">
+        <div class="small-12 medium-7 columns">
           
           <div id="accordion">
 

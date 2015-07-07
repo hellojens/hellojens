@@ -1,5 +1,5 @@
 <div class="top-bar-container contain-to-grid sticky" >
-    <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: [medium,large]">
+    <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: [small, medium, large]">
         <ul class="title-area show-for-medium-up">
             <li class="name">
                 <h1><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>

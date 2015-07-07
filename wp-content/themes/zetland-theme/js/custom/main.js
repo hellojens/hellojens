@@ -5,8 +5,13 @@ jQuery(document).ready(function($){
 
     vpw = $(window).width();
     vph = $(window).height();
-   
-    $('.start').height(vph - 120);
+
+    if ( $(window).width() > 480) {     
+      $('.start').height(vph - 100);
+    } else {
+      $('.start').height(vph - 80);
+    }
+
     $('.intro').height(vph);
     $('.inner-wrap').css("margin-bottom", vph);
     $('.the-end').height(vph);
@@ -15,9 +20,8 @@ jQuery(document).ready(function($){
   }; fitHeight();
 
   if ( $(window).width() > 480) {     
-    fitHeight();
     $(window).resize(function() {
-      console.log("resize");
+      fitHeight();
     });
   }
   else { 
@@ -29,12 +33,13 @@ jQuery(document).ready(function($){
 
   $(function(){
     $(".typeit").typed({
-        strings: ["^1000 Vi er trætte af nyhedsstøjen. ^1000 Er du? ", " ^2000 Kickstart kvalitetsjournalistik ^500 og <br> ^300 gør alle lidt klogere. ", " ^2000 Et kulørt klubhus ^200 <br> ^600 for nysgerrige mennesker. ", " ^2000 Nutiden i perspektiv, ^200 <br> ^800 nyheder i proportioner. "],
+        strings: ["^1000 Vi er trætte af nyhedsstøjen. ^500 <br> ^800 Er du? ^3000 ", " ^2000 Kickstarter ^200 ", "Kickstart ^300 kvalitetsjournalistik ^500 <br> ^500 og gør alle lidt klogere. ^3000 ", " ^2000 Et kulørt klubhus ^400 <br> ^600 for nysgerrige mennesker. ^3000 ", " ^2000 Nutiden i perspektiv, ^200 <br> ^800 nyheder i proportioner. ^3000 "],
         typeSpeed: 18,
         loop: true,
-        startDelay: 2000,
+        loopCount: 3,
+        startDelay: 000,
         backSpeed: -20,
-        backDelay: 4000,
+        // backDelay: 4000,
     });
   });
 
@@ -42,10 +47,11 @@ jQuery(document).ready(function($){
   ////////  TOOLTIPSTER  ////////  
 
   $('.tooltipster').tooltipster({
-     animation: 'grow',
+     animation: 'fade',
      delay: 0,
      theme: 'tooltipster-noir',
-     touchDevices: true,
+     touchDevices: false,
+     loopCount: 3,
      trigger: 'hover',
      // iconDesktop: true,
      position: 'bottom-left',
@@ -64,7 +70,7 @@ jQuery(document).ready(function($){
 
       $(this).next().slideToggle('fast');
       $(".accordion-content").not($(this).next()).slideUp('fast');
-
+ s
     } else {
       $('.accordion-toggle.active').removeClass('active');
       $(this).toggleClass('active');
@@ -115,7 +121,7 @@ jQuery(document).ready(function($){
 
   ////////  FIT TEXT  ////////  
 
-  $(".start h1").fitText(0.9, { minFontSize: '35px', maxFontSize: '200px' });
+  // $(".start h1").fitText(0.8, { minFontSize: '35px', maxFontSize: '200px' });
   $(".intro h1").fitText(1.1, { minFontSize: '35px', maxFontSize: '200px' });
   $(".manifest-intro h1").fitText(0.7, { minFontSize: '35px', maxFontSize: '200px' });
   $(".the-end h1").fitText(0.6, { minFontSize: '40px', maxFontSize: '200px' });
@@ -168,7 +174,6 @@ jQuery(document).ready(function($){
   });
 
 
-
   ////////  COUNT UP NUMBERS  ////////  
 
   var options = {
@@ -176,8 +181,6 @@ jQuery(document).ready(function($){
     useGrouping : true, 
     separator : '.', 
     decimal : '.', 
-    prefix : '', 
-    suffix : '' 
   };
 
   var currentvalue1 = $("#count1").html();
@@ -230,7 +233,7 @@ jQuery(document).ready(function($){
       // Start progress par animation 
       var progress = $(".meter").attr("data");
 
-      if(progress > "100") {
+      if(progress < "100") {
         progress = "100%";
       } else {
         progress = progress + "%"
@@ -253,8 +256,6 @@ jQuery(document).ready(function($){
   //   return Math.round(Math.random())-0.5;
   // }).slice(0,1);  
   // $(divs).appendTo(divs[0].parentNode).show();
-
-
 
 });
 

@@ -45,6 +45,7 @@
     color: $white;
     font-family: 'proxima-nova', sans-serif;
     font-weight: 700;
+    width: 100%;
   }
 }
 .top-bar {
@@ -72,9 +73,12 @@
     background-color: $orange !important;
     display: block;
 
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    transition: transform 0.3s;
+    // -webkit-transition: -webkit-transform 0.3s;
+    // -moz-transition: -moz-transform 0.3s;
+    // transition: transform 0.3s;
+
+  -webkit-transition: all 0.1s ease-out; 
+          transition: all 0.1s ease-out; 
 
   }
   .action-button a::before {
@@ -91,25 +95,26 @@
     z-index: -1;
     cursor: pointer;
 
-    -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
-  transition: transform 0.3s;
-  -webkit-transform: translateX(-25%);
+  //   -webkit-transition: -webkit-transform 0.3s;
+  // -moz-transition: -moz-transform 0.3s;
+  // transition: transform 0.3s;
+  // -webkit-transform: translateX(-25%);
 
     padding: 8px 30px 8px 30px !important;
     font-size: 16px;
     line-height: 2.8 !important;
   }
   .action-button a:hover span {
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    transform: translateX(100%);
+    // -webkit-transform: translateX(100%);
+    // -moz-transform: translateX(100%);
+    // transform: translateX(100%);
+    opacity: 0;
 
   }
   .action-button a:hover::before {
-    -webkit-transform: translateX(0%);
-    -moz-transform: translateX(0%);
-    transform: translateX(0%);
+    // -webkit-transform: translateX(0%);
+    // -moz-transform: translateX(0%);
+    // transform: translateX(0%);
 
   }
 }
@@ -159,6 +164,10 @@ ul.kickstarter-stats {
 
 }
 
+.top-bar .title-area {
+  float: left;
+}
+
 .top-bar-section ul li {
   background: transparent; 
 }
@@ -202,18 +211,30 @@ ul.kickstarter-stats {
     width: auto;
 
     &.kickstarter-stats {
-      width: 45%;
+      width: 50%;
 
       li {
         display: inline-block;
         padding: 13px 10% 0px 0px;
-        &:nth-child(1), &:nth-child(3), &:nth-child(4) {
-          display: none;
-        }
       }
     }
   }
   .top-bar {
     overflow: visible;
   }
+}
+
+
+@media only screen and (max-width: 40.063em) {
+
+  .top-bar-section ul {
+    &.kickstarter-stats {
+      li {
+        &:nth-child(1), &:nth-child(3), &:nth-child(4) {
+          display: none;
+        }
+      }
+    }
+  }
+
 }
