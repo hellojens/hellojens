@@ -19,7 +19,13 @@
             </ul> -->
 
             <ul class="right kickstarter-stats">
-                <?php dynamic_sidebar( 'menu-widgets' ); ?>
+                <?php // dynamic_sidebar( 'menu-widgets' ); ?>
+                <li><div class="kickstarter-num"><span id="count1" class="orange-text">1388</span> / 1.000 </div>
+                <div class="kickstarter-tag"> nye medlemmer</div> </li>
+                <li><div class="kickstarter-num"><span id="count2" class="orange-text">310</span> %</div>
+                <div class="kickstarter-tag">finansieret</div></li>
+<!--                 <li><div class="kickstarter-num"><span id="count3" class="orange-text">32</span> / 32</div>
+                <div class="kickstarter-tag">dage</div></li> -->
             </ul>
         </section>
     </nav>

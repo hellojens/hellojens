@@ -315,7 +315,7 @@ class Kickstarter_Widget2 extends WP_Widget {
 			echo '<div class="kickstarter-tag">finansieret</div></li>';
 
 		if (($results['data-hours-remaining']) && ($results['data-backers-count']))
-			echo '<li><div class="kickstarter-num"><span id="count3" class="orange-text">'.$results['data-hours-remaining'].'</span> / 32</div>';
+			echo '<li><div class="kickstarter-num"><span id="count3" class="orange-text">'.$results['data-hours-remaining'].'</span> / 30</div>';
 			echo '<div class="kickstarter-tag">'.$results['time-unit'].'</div></li>';
 			$timeleft = $results['data-hours-remaining'] * 0.3;
 		

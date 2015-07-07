@@ -185,10 +185,10 @@ jQuery(document).ready(function($){
 
   var currentvalue1 = $("#count1").html();
   var currentvalue2 = $("#count2").html();
-  var currentvalue3 = $("#count3").html();
+  // var currentvalue3 = $("#count3").html();
   var menuCountNumbers1 = new CountUp("count1", 0, currentvalue1, 0, 2.5, options);
   var menuCountNumbers2 = new CountUp("count2", 0, currentvalue2, 0, 3.5, options);
-  var menuCountNumbers3 = new CountUp("count3", 0, currentvalue3, 0, 4.5, options);
+  // var menuCountNumbers3 = new CountUp("count3", 0, currentvalue3, 0, 4.5, options);
 
   $(window).load(function(){
     setTimeout(function(){
@@ -197,9 +197,6 @@ jQuery(document).ready(function($){
     setTimeout(function(){
       menuCountNumbers2.start();
     }, 2000)
-    setTimeout(function(){
-      menuCountNumbers3.start();
-    }, 3000)
   });
 
   var currentvalueKick1 = $("#countKick1").html();
@@ -212,8 +209,8 @@ jQuery(document).ready(function($){
   console.log(currentvalueKick3);
   var menuCountNumbersKick3 = new CountUp("countKick3", 0, currentvalueKick3, 0, 2, options);
 
-  var currentvalueKick4 = $("#countKick4").html();
-  var menuCountNumbersKick4 = new CountUp("countKick4", 0, currentvalueKick4, 0, 3, options);
+  // var currentvalueKick4 = $("#countKick4").html();
+  // var menuCountNumbersKick4 = new CountUp("countKick4", 0, currentvalueKick4, 0, 3, options);
 
   var fired = 0;
 
@@ -228,7 +225,8 @@ jQuery(document).ready(function($){
       menuCountNumbersKick1.start(); 
       menuCountNumbersKick2.start(); 
       menuCountNumbersKick3.start(); 
-      menuCountNumbersKick4.start(); 
+      // menuCountNumbersKick4.start(); 
+
 
       // Start progress par animation 
       var progress = $(".meter").attr("data");

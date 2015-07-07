@@ -72,7 +72,26 @@ get_header(); ?>
         <div class="row stats">
           <div class="small-12 medium-12 columns">
             <div class="strike-top"></div>
-            <?php dynamic_sidebar( 'kickstart-widgets' ); ?>
+            <?php // dynamic_sidebar( 'kickstart-widgets' ); ?>
+
+<br>
+<h2><span id="countKick2" class="orange-text">1388</span> nye medlemmer</h2> 
+
+
+<h2><span id="countKick3" data="533837" class="orange-text">533837</span> nye kroner </h2>
+
+
+<!-- <h2><span id="countKick4" class="orange-text">'.$results['data-hours-remaining'].'</span> '.$results['time-unit'].'</h2> -->
+
+<!-- <div class="kickstarter-num" id="countKick2">'.$results['data-hours-remaining'].'</div> -->
+<!-- <div class="kickstarter-tag">'.$results['time-unit'].'</div> -->
+
+
+<div class="kickstarter-num"><span id="countKick1">310</span>%</div>
+<div class="kickstarter-tag">finansieret</div><br />
+<div class="progress"><span data="100%" class="meter" style="width:0%;"></span></div>
+
+
           </div>
         </div>
 
